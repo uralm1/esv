@@ -1,0 +1,111 @@
+% layout 'default';
+% my $toast_msg = flash 'oper';
+% if ($toast_msg) {
+%   content_with done_toast => begin
+<script>$(document).ready(function(){M.toast({html:'<%= $toast_msg %>',displayLength:3000})});</script>
+%   end
+% }
+<header>
+<div class="navbar-fixed">
+  <nav class="navbar green lighten-2 white-text">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Отчёты&nbsp;по&nbsp;периодам</a>
+      <ul id="nav-mobile" class="right">
+	<li><a href="javascript:void(0)" class="refreshnav waves-effect white-text" title="Обновить страницу"><i class="material-icons">refresh</i></a></li>
+	<li><a href="#!" data-target="dropdown-other" class="dropdown-trigger waves-effect white-text" title="Инструменты"><i class="material-icons">settings</i></a></li>
+      </ul>
+      <a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons white-text">menu</i></a>
+    </div>
+  </nav>
+</div>
+%= include 'sidenav', sidenav_active_page => 'rep', sidenav_no_date => 1
+%= include 'dropdown-other'
+</header>
+
+<main>
+<div class="scont">
+<h5 id="top">Выберите тип и параметры отчёта</h5>
+%= form_for reppreview => (method=>'POST', id=>'period-form') => begin
+% my $rt = $def->{type};
+<div class="row">
+  <div class="col s10">
+    <p><label>
+      <input name="rep" type="radio" value="podyom"<%== ($rt eq 'podyom')?' checked':'' %>/>
+      <span>Объёмы, поднято I подъёмами</span>
+    </label></p>
+    <p><label>
+      <input name="rep" type="radio" value="gorod"<%== ($rt eq 'gorod')?' checked':'' %>/>
+      <span>Объёмы, подано воды в город</span>
+    </label></p>
+    <p><label>
+      <input name="rep" type="radio" value="reka"<%== ($rt eq 'reka')?' checked':'' %>/>
+      <span>Уровень р.Уфа и основные параметры работы Павловского водохранилища</span>
+    </label></p>
+    <p><label>
+      <input name="rep" type="radio" value="gosk"<%== ($rt eq 'gosk')?' checked':'' %>/>
+      <span>Принято сточных вод на механическую очистку и БОС ГОСК</span>
+    </label></p>
+    <p><label>
+      <input name="rep" type="radio" value="dck"<%== ($rt eq 'dck')?' checked':'' %>/>
+      <span>Очищено сточной воды ДЦК</span>
+    </label></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col s3 input-field">
+    <input name="pstart" type="text" id="p-start" class="datepicker" value="<%== $def->{pstart} %>" placeholder="дд.мм.гггг">
+    <label for="p-start">Начальная дата</label>
+  </div>
+  <div class="col s3 input-field">
+    <input name="pend" type="text" id="p-end" class="datepicker" value="<%== $def->{pend} %>" placeholder="дд.мм.гггг">
+    <label for="p-end">Конечная дата</label>
+  </div>
+</div>
+<div class="row bot-margin">
+  <div class="col s4">
+    Включать график в отчёт
+  </div>
+  <div class="col s4 switch">
+    <label>
+	Нет
+	<input name="graph" type="checkbox" checked>
+	<span class="lever"></span>
+	Да
+    </label>
+  </div>
+</div>
+<div class="row bot-margin">
+  <div class="col s4">
+    Включать таблицу значений в отчёт
+  </div>
+  <div class="col s4 switch">
+    <label>
+	Нет
+	<input name="table" type="checkbox" checked>
+	<span class="lever"></span>
+	Да
+    </label>
+  </div>
+</div>
+%= hidden_field csv => '0', id => 'csv';
+<div class="row">
+  <div class="col s3">
+    <a href="javascript:void(0)" id="repbtn" class="btn waves-effect waves-light">Создать отчёт</a>
+  </div>
+  <div class="col s5">
+    <a href="javascript:void(0)" id="csvbtn" class="btn-flat waves-effect waves-light">Загрузить таблицу в CSV</a>
+  </div>
+</div>
+% end
+</div>
+</main>
+% content_for script0 => begin
+<script>
+$(document).ready(function(){
+  $('.dropdown-trigger').dropdown({coverTrigger:false,constrainWidth:false});
+  $('.refreshnav').click(function(){location.reload()});
+  $('#repbtn').click(function(){$('#csv').val(0);$('#period-form').submit();});
+  $('#csvbtn').click(function(){$('#csv').val(1);$('#period-form').submit();});
+});
+</script>
+% end

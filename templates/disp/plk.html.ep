@@ -1,0 +1,331 @@
+% layout 'default';
+<header>
+<div class="navbar-fixed">
+  <nav class="navbar green lighten-2 white-text">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Диспетчер&nbsp;ЦАДС</a>
+      <ul id="nav-mobile" class="right">
+	<li><a href="javascript:void(0)" class="refreshnav waves-effect" title="Обновить страницу"><i class="material-icons">refresh</i></a></li>
+	<li><a href="#!" data-target="dropdown-other" class="dropdown-trigger waves-effect" title="Инструменты"><i class="material-icons">settings</i></a></li>
+      </ul>
+      <a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
+    </div>
+  </nav>
+</div>
+%= include 'sidenav', sidenav_active_page => 'podano'
+%= include 'dropdown-other'
+</header>
+
+<main>
+<div class="">
+  <div class="row anchorfix" id="h-podano">
+    <div class="col s12">
+      <h5>Подано воды</h5>
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-upr">
+    <div class="col s12 greenbg">
+      <h6>По управлению (расчётные поля)</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'upr-podyom', label=>'Поднято 1е подъёмы', span=>'м<sup>3</sup>/сут.')
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'upr-gorod', label=>'Подано в город', span=>'м<sup>3</sup>/сут.')
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'upr-deltamonth', label=>'+/- с начала месяца', span=>'м<sup>3</sup>/сут.')
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'upr-deltamonth-gendir', label=>'+/- для ген.дир-ра', span=>'м<sup>3</sup>/сут.')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-sgv">
+    <div class="col s12 greenbg">
+      <h6>СГВ</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sgv.podyom')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sgv.gorod')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth')
+    </div>
+    <div class="col s2">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'zhost.sgv.max')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-skv">
+    <div class="col s12 greenbg">
+      <h6>Ковшовый СКВ</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.skv.podyom')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.skv.gorod')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.skv.deltamonth')
+    </div>
+    <div class="col s2">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.skv.svob.max', metric_min=>'ostcl.skv.svob.min')
+      <div class="fielddivider"></div>
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.skv.svaz.max', metric_min=>'ostcl.skv.svaz.min')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'zhost.skv.max')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-uv">
+    <div class="col s12 greenbg">
+      <h6>ЮГВ</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.uv.podyom')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.uv.gorod')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.uv.deltamonth')
+    </div>
+    <div class="col s2">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.uv.max', metric_min=>'ostcl.uv.min')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'zhost.uv.max')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-dema">
+    <div class="col s12 greenbg">
+      <h6>Дёма</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.dema.podyom')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.dema.dema_2p.gorod')
+      <div class="fielddivider"></div>
+      %== form_el(class=>'textcb', metric=>'podacha.dema.dema_gorod.gorod')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.dema.deltamonth')
+      <div class="fielddivider"></div>
+      %== form_el(class=>'textcb', metric=>'podacha.dema.gendir.deltamonth')
+    </div>
+    <div class="col s2">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.dema.svob.max', metric_min=>'ostcl.dema.svob.min')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'zhost.dema.max')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_date_el(class=>'datecb', metric=>'zhost.dema.date')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-iz">
+    <div class="col s12 greenbg">
+      <h6>Изяк</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.iz.podyom')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.iz.gorod')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.iz.deltamonth')
+    </div>
+    <div class="col s2">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.iz.svob.max', metric_min=>'ostcl.iz.svob.min')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'zhost.iz.max')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-sh">
+    <div class="col s12 greenbg">
+      <h6>Шакша</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sh.podyom')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sh.gorod')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sh.deltamonth')
+    </div>
+    <div class="col s2">
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'zhost.sh.max')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_date_el(class=>'datecb', metric=>'zhost.sh.date')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-kp">
+    <div class="col s12 greenbg">
+      <h6>Кооперативная поляна</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.kp.kp_itogo.podyom')
+      <div class="fielddivider"></div>
+      %== form_el(class=>'textcb', metric=>'podacha.kp.kp_ikea.podyom')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.kp.kp_itogo.gorod')
+      <div class="fielddivider"></div>
+      %== form_el(class=>'textcb', metric=>'podacha.kp.kp_ikea.gorod')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.kp.deltamonth')
+    </div>
+    <div class="col s2">
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'zhost.kp.max')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_date_el(class=>'datecb', metric=>'zhost.kp.date')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-podano-nag">
+    <div class="col s12 greenbg">
+      <h6>Нагаево</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.nag.podyom')
+    </div>
+    <div class="col s2">
+      %#== form_el(class=>'textcb', metric=>'podacha.nag.gorod')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.nag.deltamonth')
+    </div>
+    <div class="col s2">
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'zhost.nag.max')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_date_el(class=>'datecb', metric=>'zhost.nag.date')
+    </div>
+  </div>
+</div>
+</main>
+% content_for script0 => begin
+<script src="/js/numeral.min.js"></script>
+<script src="/js/base64.min.js"></script>
+<script src="/js/formutils.js?v=021"></script>
+<script>
+$(document).ready(function(){
+  % my $idslt = stash 'idslt';
+  var idm=idmapper('<%== $idslt->[0] %>', <%== $idslt->[1] %>);
+
+  $('.dropdown-trigger').dropdown({coverTrigger:false,constrainWidth:false});
+  $('.refreshnav').click(function(){location.reload()});
+ 
+  var update_upr_fields = function(){
+    var d = {sgv:{},skv:{},uv:{},dema:{},iz:{},sh:{},kp:{},nag:{}};
+    d.sgv.podyom = idm.zfloat('podacha.sgv.podyom');
+    d.skv.podyom = idm.zfloat('podacha.skv.podyom');
+    d.uv.podyom = idm.zfloat('podacha.uv.podyom');
+    d.dema.podyom = idm.zfloat('podacha.dema.podyom');//FIXME
+    d.iz.podyom = idm.zfloat('podacha.iz.podyom');
+    d.sh.podyom = idm.zfloat('podacha.sh.podyom');
+    d.kp.podyom = idm.zfloat('podacha.kp.kp_itogo.podyom');
+    d.nag.podyom = idm.zfloat('podacha.nag.podyom');
+
+    d.sgv.gorod = idm.zfloat('podacha.sgv.gorod');
+    d.skv.gorod = idm.zfloat('podacha.skv.gorod');
+    d.uv.gorod = idm.zfloat('podacha.uv.gorod');
+    d.dema.gorod = idm.zfloat('podacha.dema.dema_2p.gorod');
+    d.iz.gorod = idm.zfloat('podacha.iz.gorod');
+    d.sh.gorod = idm.zfloat('podacha.sh.gorod');
+    d.kp.gorod = idm.zfloat('podacha.kp.kp_itogo.gorod');
+    d.nag.gorod = 0;//idm.zfloat('podacha.nag.gorod');
+
+    d.sgv.deltamonth = idm.zfloat('podacha.sgv.deltamonth');
+    d.skv.deltamonth = idm.zfloat('podacha.skv.deltamonth');
+    d.uv.deltamonth = idm.zfloat('podacha.uv.deltamonth');
+    d.dema.deltamonth = idm.zfloat('podacha.dema.deltamonth');
+    d.iz.deltamonth = idm.zfloat('podacha.iz.deltamonth');
+    d.sh.deltamonth = idm.zfloat('podacha.sh.deltamonth');
+    d.kp.deltamonth = idm.zfloat('podacha.kp.deltamonth');
+    d.nag.deltamonth = idm.zfloat('podacha.nag.deltamonth');
+
+    d.dema.deltamonth_gendir = idm.zfloat('podacha.dema.gendir.deltamonth');
+
+    var upr = {podyom:0,gorod:0,deltamonth:0,deltamonth_gendir:0};
+    for (var k in d) {
+      for (var ki in upr) {
+	var ki2 = (ki=='deltamonth_gendir' && k!='dema')?'deltamonth':ki;
+        upr[ki] += d[k][ki2];
+    }}
+    $('#upr-podyom').val(floattext(upr.podyom));
+    $('#upr-gorod').val(floattext(upr.gorod));
+    $('#upr-deltamonth').val(floattext(upr.deltamonth));
+    $('#upr-deltamonth-gendir').val(floattext(upr.deltamonth_gendir));
+    M.updateTextFields();
+  };
+ 
+  var process_submit = function(s,url,update_func){
+    var p=$.post(url,{id:s.get(0).id,v:s.val()});
+    p.done(function(d){
+      s.removeClass('invalid').addClass('valid');
+      s.siblings('.helper-text').attr('data-success','Сохранено: '+d.msg);
+      if('v' in d){
+        s.val(d.v);
+	if(update_func!==undefined){update_func()}
+      };
+    });
+    p.fail(function(o,t){
+      s.removeClass('valid').addClass('invalid');
+      s.siblings('.helper-text').attr('data-error','Ошибка: '+o.responseJSON.msg);
+      if('v' in o.responseJSON){s.val(o.responseJSON.v)};
+    });
+  };
+
+  $('input.textcb').change(function(){process_submit($(this), '/disp/plk/submit1', update_upr_fields)});
+  $('input.maxmincb').change(function(){process_submit($(this), '/disp/plk/submit2')});
+  $('.datepicker.datecb').change(function(){process_submit($(this), '/disp/plk/submit1')});
+  update_upr_fields();
+});
+</script>
+% end
+

@@ -1,0 +1,401 @@
+% layout 'default';
+<header>
+<div class="navbar-fixed">
+  <nav class="navbar green lighten-2 white-text">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Ежедневная&nbsp;сводка:&nbsp;Диспетчер&nbsp;ЦАДС</a>
+      <ul id="nav-mobile" class="right">
+	<li><a href="javascript:void(0)" class="refreshnav waves-effect" title="Обновить страницу"><i class="material-icons">refresh</i></a></li>
+	<li><a href="#!" data-target="dropdown-other" class="dropdown-trigger waves-effect" title="Инструменты"><i class="material-icons">settings</i></a></li>
+      </ul>
+      <a id="menubtn" href="#!" data-target="sidenav-left" class="sidenav-trigger left show-on-large"><i class="material-icons black-text">menu</i></a>
+    </div>
+  </nav>
+</div>
+%= include 'sidenav', sidenav_active_page => 'podano2'
+%= include 'dropdown-other'
+</header>
+
+<main>
+% my $menu_feature = check_newfeature(2, 1);
+% if ($menu_feature) {
+<div class="tap-target cyan" data-target="menubtn">
+  <div class="tap-target-content white-text">
+    <h5>Кнопка &quot;Меню&quot;</h5>
+    <p class="white-text">На широкоэкранных формах ввода или на мобильных устройствах для открытия меню применяется эта кнопка.<br>
+    Подробнее - см. <a class="yellow-text" href="https://faq.uwc.ufanet.ru/doku.php?id=esv">Руководство пользователя</a>.</p>
+  </div>
+</div>
+% }
+<div class="">
+  <div class="row anchorfix" id="h-podano">
+    <div class="col s12">
+      <h5>Подано воды, сводка: <%== get_oper_date(1) %></h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 graybg">
+      <b>Подано воды</b>
+    </div>
+    <div class="col s2 graybg">
+      <b>Поднято 1 подъём</b>
+    </div>
+    <div class="col s2 graybg">
+      <b>Подано в город</b>
+    </div>
+    <div class="col s2 graybg">
+      <b>+/- с начала месяца</b>
+    </div>
+    <div class="col s2 graybg">
+      <b>Остаточный хлор</b>
+    </div>
+    <div class="col s1 graybg">
+      <b>Жесткость</b>
+    </div>
+    <div class="col s1 graybg">
+      <b>Дата</b>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 graybg">
+      По управлению (расчётные поля)
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'upr-podyom', style=>'small')
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'upr-gorod', style=>'small')
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'upr-deltamonth', span=>'+/-', style=>'small', font=>'small')
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'upr-deltamonth-gendir', span=>'+/- ген.дир.', style=>'small', font=>'small')
+    </div>
+    <div class="col s2 graybg">
+    </div>
+    <div class="col s2 graybg">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2">
+      СГВ
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sgv.podyom', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sgv.gorod', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1">
+      %== form_el(class=>'textcb', metric=>'zhost.sgv.max', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 evenbg">
+      Ковшовый СКВ
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.skv.podyom', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.skv.gorod', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.skv.deltamonth', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1 evenbg">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.skv.svob.max', metric_min=>'ostcl.skv.svob.min', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1 evenbg">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.skv.svaz.max', metric_min=>'ostcl.skv.svaz.min', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1 evenbg">
+      %== form_el(class=>'textcb', metric=>'zhost.skv.max', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1 evenbg">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2">
+      ЮГВ
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.uv.podyom', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.uv.gorod', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.uv.deltamonth', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.uv.max', metric_min=>'ostcl.uv.min', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1">
+      %== form_el(class=>'textcb', metric=>'zhost.uv.max', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 evenbg">
+      Дёма
+    </div>
+    <div class="col s2 evenbg">
+      1 п.
+      %== form_el(class=>'textcb', metric=>'podacha.dema.podyom', style=>'smallinline', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      2 п.
+      %== form_el(class=>'textcb', metric=>'podacha.dema.dema_2p.gorod', style=>'smallinline', unit=>'no')
+      <br>гор.
+      %== form_el(class=>'textcb', metric=>'podacha.dema.dema_gorod.gorod', style=>'smallinline', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.dema.deltamonth', style=>'smallinline', unit=>'no')
+      <br>ген.
+      %== form_el(class=>'textcb', metric=>'podacha.dema.gendir.deltamonth', style=>'smallinline', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.dema.svob.max', metric_min=>'ostcl.dema.svob.min', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1 evenbg">
+      %== form_el(class=>'textcb', metric=>'zhost.dema.max', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1 evenbg">
+      %== form_date_el(class=>'datecb', metric=>'zhost.dema.date', style=>'small', unit=>'no')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2">
+      Изяк
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.iz.podyom', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.iz.gorod', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.iz.deltamonth', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+      %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.iz.svob.max', metric_min=>'ostcl.iz.svob.min', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1">
+      %== form_el(class=>'textcb', metric=>'zhost.iz.max', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 evenbg">
+      Шакша
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.sh.podyom', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.sh.gorod', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.sh.deltamonth', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+    </div>
+    <div class="col s1 evenbg">
+      %== form_el(class=>'textcb', metric=>'zhost.sh.max', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1 evenbg">
+      %== form_date_el(class=>'datecb', metric=>'zhost.sh.date', style=>'small', unit=>'no')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s1">
+      Кооп-я поляна
+    </div>
+    <div class="col s1">
+      <div class="row">
+        <div class="col s12 mh">
+	  Итого
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+	  на Икеа
+        </div>
+      </div>
+    </div>
+    <div class="col s2">
+      <div class="row">
+        <div class="col s12 mh">
+          %== form_el(class=>'textcb', metric=>'podacha.kp.kp_itogo.podyom', style=>'small', unit=>'no')
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          %== form_el(class=>'textcb', metric=>'podacha.kp.kp_ikea.podyom', style=>'small', unit=>'no')
+        </div>
+      </div>
+    </div>
+    <div class="col s2">
+      <div class="row">
+        <div class="col s12 mh">
+          %== form_el(class=>'textcb', metric=>'podacha.kp.kp_itogo.gorod', style=>'small', unit=>'no')
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          %== form_el(class=>'textcb', metric=>'podacha.kp.kp_ikea.gorod', style=>'small', unit=>'no')
+        </div>
+      </div>
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'podacha.kp.deltamonth', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2">
+    </div>
+    <div class="col s1">
+      %== form_el(class=>'textcb', metric=>'zhost.kp.max', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1">
+      %== form_date_el(class=>'datecb', metric=>'zhost.kp.date', style=>'small', unit=>'no')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 evenbg">
+      Нагаево
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.nag.podyom', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      %#== form_el(class=>'textcb', metric=>'podacha.nag.gorod', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'podacha.nag.deltamonth', style=>'small', unit=>'no')
+    </div>
+    <div class="col s2 evenbg">
+    </div>
+    <div class="col s1 evenbg">
+      %== form_el(class=>'textcb', metric=>'zhost.nag.max', style=>'small', unit=>'no')
+    </div>
+    <div class="col s1 evenbg">
+      %== form_date_el(class=>'datecb', metric=>'zhost.nag.date', style=>'small', unit=>'no')
+    </div>
+  </div>
+</div>
+</main>
+% content_for script0 => begin
+<script src="/js/jquery.matchHeight-min.js"></script>
+<script src="/js/numeral.min.js"></script>
+<script src="/js/base64.min.js"></script>
+<script src="/js/formutils.js?v=021"></script>
+<script src="/js/jquery.tabbable.min.js"></script>
+<script>
+$(document).ready(function(){
+  % my $idslt = stash 'idslt';
+  var idm=idmapper('<%== $idslt->[0] %>', <%== $idslt->[1] %>);
+
+  $('.dropdown-trigger').dropdown({coverTrigger:false,constrainWidth:false});
+  $('.refreshnav').click(function(){location.reload()});
+  $('.mh').matchHeight();
+  $('.evenbg').matchHeight();
+  $('.graybg').matchHeight();
+ 
+  var update_upr_fields = function(){
+    var d = {sgv:{},skv:{},uv:{},dema:{},iz:{},sh:{},kp:{},nag:{}};
+    d.sgv.podyom = idm.zfloat('podacha.sgv.podyom');
+    d.skv.podyom = idm.zfloat('podacha.skv.podyom');
+    d.uv.podyom = idm.zfloat('podacha.uv.podyom');
+    d.dema.podyom = idm.zfloat('podacha.dema.podyom');//FIXME
+    d.iz.podyom = idm.zfloat('podacha.iz.podyom');
+    d.sh.podyom = idm.zfloat('podacha.sh.podyom');
+    d.kp.podyom = idm.zfloat('podacha.kp.kp_itogo.podyom');
+    d.nag.podyom = idm.zfloat('podacha.nag.podyom');
+
+    d.sgv.gorod = idm.zfloat('podacha.sgv.gorod');
+    d.skv.gorod = idm.zfloat('podacha.skv.gorod');
+    d.uv.gorod = idm.zfloat('podacha.uv.gorod');
+    d.dema.gorod = idm.zfloat('podacha.dema.dema_2p.gorod');
+    d.iz.gorod = idm.zfloat('podacha.iz.gorod');
+    d.sh.gorod = idm.zfloat('podacha.sh.gorod');
+    d.kp.gorod = idm.zfloat('podacha.kp.kp_itogo.gorod');
+    d.nag.gorod = 0;//idm.zfloat('podacha.nag.gorod');
+
+    d.sgv.deltamonth = idm.zfloat('podacha.sgv.deltamonth');
+    d.skv.deltamonth = idm.zfloat('podacha.skv.deltamonth');
+    d.uv.deltamonth = idm.zfloat('podacha.uv.deltamonth');
+    d.dema.deltamonth = idm.zfloat('podacha.dema.deltamonth');
+    d.iz.deltamonth = idm.zfloat('podacha.iz.deltamonth');
+    d.sh.deltamonth = idm.zfloat('podacha.sh.deltamonth');
+    d.kp.deltamonth = idm.zfloat('podacha.kp.deltamonth');
+    d.nag.deltamonth = idm.zfloat('podacha.nag.deltamonth');
+
+    d.dema.deltamonth_gendir = idm.zfloat('podacha.dema.gendir.deltamonth');
+
+    var upr = {podyom:0,gorod:0,deltamonth:0,deltamonth_gendir:0};
+    for (var k in d) {
+      for (var ki in upr) {
+	var ki2 = (ki=='deltamonth_gendir' && k!='dema')?'deltamonth':ki;
+        upr[ki] += d[k][ki2];
+    }}
+    $('#upr-podyom').val(floattext(upr.podyom));
+    $('#upr-gorod').val(floattext(upr.gorod));
+    $('#upr-deltamonth').val(floattext(upr.deltamonth));
+    $('#upr-deltamonth-gendir').val(floattext(upr.deltamonth_gendir));
+    M.updateTextFields();
+  };
+ 
+  var process_submit = function(s,url,update_func){
+    var p=$.post(url,{id:s.get(0).id,v:s.val()});
+    p.done(function(d){
+      s.removeClass('invalid').addClass('valid');
+      s.siblings('.helper-text').attr('data-success',d.msg);
+      if('v' in d){
+        s.val(d.v);
+	if(update_func!==undefined){update_func()}
+      };
+    });
+    p.fail(function(o,t){
+      s.removeClass('valid').addClass('invalid');
+      s.siblings('.helper-text').attr('data-error',o.responseJSON.msg);
+      if('v' in o.responseJSON){s.val(o.responseJSON.v)};
+    });
+  };
+
+  $('input.textcb').change(function(){process_submit($(this), '/disp/plk/submit1', update_upr_fields)});
+  $('input.maxmincb').change(function(){process_submit($(this), '/disp/plk/submit2')});
+  $('.datepicker.datecb').change(function(){process_submit($(this), '/disp/plk/submit1')});
+  update_upr_fields();
+
+  $('input.textcb').keypress(function(e){if(e.which==13){e.preventDefault();$.tabNext();}});
+  $('input.maxmincb').keypress(function(e){if(e.which==13){e.preventDefault();$.tabNext();}});
+
+% if ($menu_feature) {
+  $('.tap-target').tapTarget();
+  $('.tap-target').tapTarget('open');
+% }
+});
+</script>
+% end
+

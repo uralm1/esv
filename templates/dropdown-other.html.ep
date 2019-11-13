@@ -1,0 +1,12 @@
+<ul id="dropdown-other" class="dropdown-content">
+  <li><%= link_to mc => begin %><i class="material-icons">extension</i>Каталог измерений<% end %></li>
+  <li><%= link_to settings => begin %><i class="material-icons">settings</i>Настройки<% end %></li>
+  <li class="divider" tabindex="-1"></li>
+  <li><a href="https://auth.uwc.ufanet.ru" target="_blank"><i class="material-icons">wifi</i>Корпоративная сеть</a></li>
+  <li><a href="https://rc.uwc.ufanet.ru" target="_blank"><i class="material-icons">mail_outline</i>Корпоративная почта</a></li>
+  <li><a href="https://otk.uwc.ufanet.ru/otrs/customer.pl" target="_blank"><i class="material-icons">person_outline</i>Техподдержка службы АСУ</a></li>
+  <li><a href="https://faq.uwc.ufanet.ru" target="_blank"><i class="material-icons">help</i>База знаний / Часто задаваемые вопросы</a></li>
+  <li class="divider" tabindex="-1"></li>
+  <li><a href="<%= config 'help_url' %>" target="_blank"><i class="material-icons">local_library</i>Руководство пользователя</a></li>
+  <li><%= link_to about => begin %><i class="material-icons">copyright</i>О программе<% end %></li>
+</ul>

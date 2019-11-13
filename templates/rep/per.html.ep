@@ -1,0 +1,127 @@
+% layout 'print', title => 'Отчёт по периоду';
+<div class="nba">
+<h1><%== $r->title %></h1>
+<p class="date">Период: <%== $r->report_period %></p>
+<p><b>Сформировано:</b> <%== $r->creation_user . ', ' . $r->creation_date %></p>
+</div>
+% if ($r->show_graph) {
+<div style="width:95%;">
+<canvas id="chart1"></canvas>
+</div>
+% } # if (show_graph)
+% if ($r->show_table) {
+<div class="block">
+% if ($r->show_graph) {
+<div class="nba">
+<p><b>Таблица значений</b></p>
+</div>
+% } #if (show_graph)
+<table class="br">
+<tr>
+<th>Дата</th>
+% for (@{$r->names_list}) {
+<th><%= $_ %></th>
+% }
+</tr>
+% my $t = $r->data_table;
+%#= dumper $r->{t};#$t;
+% my $tabcb = sub { 
+%   my $e = shift;
+%   my $dt = DateTime->from_epoch(epoch=>$e, locale=>'ru', time_zone=>stash('utc_tz'));
+<tr>
+  <td><%== $dt->strftime('%d.%m.%Y') %></td>
+  % for (@{$r->metrics_list}) {
+  <td><%== (defined $t->{$e}{$_}) ? $t->{$e}{$_} : 'н/д' %></td>
+  % }
+</tr>
+% }; #sub
+% $r->every_day($tabcb);
+</table>
+</div>
+% } # if (show_table)
+% unless ($r->show_graph || $r->show_table) {
+<h2>Отчёт пуст</h2>
+% }
+% content_for script0 => begin
+<script src="/js/moment.min.js"></script>
+<script src="/js/Chart.min.js"></script>
+% if ($r->show_graph) {
+<script>
+var chart1 = new Chart(document.getElementById('chart1'), {
+  type: '<%== $r->js_type %>',
+  data: {
+    datasets: [
+    <%== $r->js_datasets %>
+    ]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      xAxes: [{
+        type: 'time',
+        display: true,
+	time: {
+	  displayFormats: {
+	    minute: 'H:mm D.MM',
+	    hour: 'H:mm D.MM',
+            day: 'D.MM.YY',
+	    week: 'D.MM.YY',
+	    month: 'MM.YYYY',
+	    year: 'YYYY'
+	  },
+	  tooltipFormat: 'D.MM.YYYY',
+	  isoWeekday: true
+	},
+        ticks: {
+          major: {
+	    fontStyle: 'bold'
+	  },
+	  maxRotation: 0,
+          autoSkip: true
+        },
+      }],
+      yAxes: [{
+	type: 'linear',
+        display: true,
+	position: 'left',
+	id: 'y-axis-1',
+	scaleLabel: {
+	  display: true,
+	  labelString: '<%== $r->unit(1) %>'
+	},
+        ticks: {
+	  %== $r->js_suggested(1);
+        }
+      }
+% if ($r->js_axis2) {
+      ,{
+	type: 'linear',
+        display: true,
+	position: 'right',
+	id: 'y-axis-2',
+	scaleLabel: {
+	  display: true,
+	  labelString: '<%== $r->unit(2) %>'
+	},
+        ticks: {
+	  %== $r->js_suggested(2);
+        }
+      }	
+% }
+      ]
+    },
+    tooltips: {
+      position: 'nearest',
+      mode: 'index',
+      intersect: true
+    },
+    legend: {
+      labels: {
+        usePointStyle: <%== $r->js_use_point_style %>
+      }
+    }
+  }
+});
+</script>
+% } #if (show_graph)
+% end

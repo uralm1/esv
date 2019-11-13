@@ -1,0 +1,482 @@
+% layout 'print', title => 'Сводка для генерального директора';
+<div class="nba">
+<h1>Ежедневная сводка по предприятию &quot;Уфаводоканал&quot;</h1>
+<p class="date"><%== $r->report_date %></p>
+<p><b>Сформировано:</b> <%== $r->creation_user . ', ' . $r->creation_date %></p>
+</div>
+<div class="block">
+<table class="nb">
+<tr>
+  <th>Подано воды</th>
+  <th>Поднято 1 подъём,<br>м<sup>3</sup>/сут.</th>
+  <th>Подано в город,<br>м<sup>3</sup>/сут.</th>
+  <th>+/- с начала месяца,<br>м<sup>3</sup>/сут.</th>
+  <th>Очистные,<br>м<sup>3</sup>/сут.</th>
+  <th colspan="2">Жесткость,<br>&deg;ж</th>
+</tr>
+% my $pod = {
+%   sgv => {
+%     podyom => get_formula('podacha.sgv.podyom'),
+%     gorod => get_formula('podacha.sgv.gorod'),
+%     deltamonth => get_formula('podacha.sgv.deltamonth'),
+%   },
+%   skv => {
+%     podyom => get_formula('podacha.skv.podyom'),
+%     gorod => get_formula('podacha.skv.gorod'),
+%     deltamonth => get_formula('podacha.skv.deltamonth'),
+%   },
+%   uv => {
+%     podyom => get_formula('podacha.uv.podyom'),
+%     gorod => get_formula('podacha.uv.gorod'),
+%     deltamonth => get_formula('podacha.uv.deltamonth'),
+%   },
+%   dema => {
+%     podyom => get_formula('podacha.dema.podyom'),
+%     gorod => get_formula('podacha.dema.dema_2p.gorod'),
+%     deltamonth => get_formula('podacha.dema.gendir.deltamonth'),
+%   },
+%   iz => {
+%     podyom => get_formula('podacha.iz.podyom'),
+%     gorod => get_formula('podacha.iz.gorod'),
+%     deltamonth => get_formula('podacha.iz.deltamonth'),
+%   },
+%   sh => {
+%     podyom => get_formula('podacha.sh.podyom'),
+%     gorod => get_formula('podacha.sh.gorod'),
+%     deltamonth => get_formula('podacha.sh.deltamonth'),
+%   },
+%   kp => {
+%     podyom => get_formula('podacha.kp.kp_itogo.podyom'),
+%     gorod => get_formula('podacha.kp.kp_itogo.gorod'),
+%     deltamonth => get_formula('podacha.kp.deltamonth'),
+%   },
+%   nag => {
+%     podyom => get_formula('podacha.nag.podyom'),
+%     gorod => 0,#get_formula('podacha.nag.gorod'),
+%     deltamonth => get_formula('podacha.nag.deltamonth'),
+%   },
+% };
+% my $pod_sum_func = sub {my $s=0; $s+=$pod->{$_}{$_[0]} for (qw/sgv skv uv dema iz sh kp nag/); $s};
+% # calculation algorithm was copied from original ---
+% my $gor5 = get_formula('podacha.dema.dema_gorod.gorod');
+% my $pod_upr = $pod_sum_func->('gorod');
+% if ($pod->{dema}{gorod} - $gor5 > 0) {
+%   $pod_upr -= $gor5; 
+% } else {
+%   $pod_upr -= $pod->{dema}{gorod};
+% }
+<tr>
+  <th class="dest">По управлению</td>
+  <td><%== float_text $pod_sum_func->('podyom') %></td>
+  <td><%== float_text $pod_upr %></td>
+  <td><%== float_text $pod_sum_func->('deltamonth') %></td>
+  <td></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th class="dest">СГВ</td>
+  <td><%== get 'podacha.sgv.podyom' %></td>
+  <td><%== get 'podacha.sgv.gorod' %></td>
+  <td><%== get 'podacha.sgv.deltamonth' %></td>
+  <td></td>
+  <td><%== get 'zhost.sgv.max' %></td>
+  <td></td>
+</tr>
+<tr>
+  <th class="dest">Ковшовый СКВ</td>
+  <td><%== get 'podacha.skv.podyom' %></td>
+  <td><%== get 'podacha.skv.gorod' %></td>
+  <td><%== get 'podacha.skv.deltamonth' %></td>
+  <td><%== get 'podacha.skv.podyom' %></td>
+  <td><%== get 'zhost.skv.max' %></td>
+  <td></td>
+</tr>
+<tr>
+  <th class="dest">ЮВ</td>
+  <td><%== get 'podacha.uv.podyom' %></td>
+  <td><%== get 'podacha.uv.gorod' %></td>
+  <td><%== get 'podacha.uv.deltamonth' %></td>
+  <td></td>
+  <td><%== get 'zhost.uv.max' %></td>
+  <td></td>
+</tr>
+<tr>
+  <th class="dest">Дёма</td>
+  <td><%== get 'podacha.dema.podyom' %></td>
+  <td><%== get 'podacha.dema.dema_2p.gorod' %></td>
+  <td><%== get 'podacha.dema.gendir.deltamonth' %></td>
+  <td></td>
+  <td><%== get 'zhost.dema.max' %></td>
+  <td><%== get 'zhost.dema.date' %></td>
+</tr>
+<tr>
+  <th class="dest">Изяк</td>
+  <td><%== get 'podacha.iz.podyom' %></td>
+  <td><%== get 'podacha.iz.gorod' %></td>
+  <td><%== get 'podacha.iz.deltamonth' %></td>
+  <td></td>
+  <td><%== get 'zhost.iz.max' %></td>
+  <td></td>
+</tr>
+<tr>
+  <th class="dest">Шакша</td>
+  <td><%== get 'podacha.sh.podyom' %></td>
+  <td><%== get 'podacha.sh.gorod' %></td>
+  <td><%== get 'podacha.sh.deltamonth' %></td>
+  <td></td>
+  <td><%== get 'zhost.sh.max' %></td>
+  <td><%== get 'zhost.sh.date' %></td>
+</tr>
+<tr>
+  <th class="dest">Кооперативная поляна</td>
+  <td><%== get 'podacha.kp.kp_itogo.podyom' %></td>
+  <td><%== get 'podacha.kp.kp_itogo.gorod' %></td>
+  <td><%== get 'podacha.kp.deltamonth' %></td>
+  <td></td>
+  <td><%== get 'zhost.kp.max' %></td>
+  <td><%== get 'zhost.kp.date' %></td>
+</tr>
+<tr>
+  <th class="dest">Нагаево</td>
+  <td><%== get 'podacha.nag.podyom' %></td>
+  <td>-</td>
+  <td><%== get 'podacha.nag.deltamonth' %></td>
+  <td></td>
+  <td><%== get 'zhost.nag.max' %></td>
+  <td><%== get 'zhost.nag.date' %></td>
+</tr>
+</table>
+</div>
+
+<div class="block">
+<div class="nba">
+<h2>Работа скважин</h2>
+</div>
+<table class="nb">
+<tr>
+<th rowspan="2">Скважины</th>
+<th rowspan="2">в работе</th>
+<th colspan="8">в ремонте</th>
+<th rowspan="2">отключены</th>
+<th rowspan="2">в резерве</th>
+<th rowspan="2">итого</th>
+</tr>
+<tr>
+<th>в откачке</th>
+<th>насосы</th>
+<th>без воды</th>
+<th>скважины</th>
+<th>КИПиА</th>
+<th>Эл.часть</th>
+<th>АСУ</th>
+<th>всего</th>
+</tr>
+% my $skv = {
+%   sgv => { num_rab => get_formula('skvag.sgv.num_rab'),
+%            num_res => get_formula('skvag.sgv.num_res'), 
+%            num_otkl => get_formula('skvag.sgv.num_otkl'), 
+%            num_rem_all => get_formula('skvag.sgv.rem_all.num_rem'), 
+%            num_rem_otkach => get_formula('skvag.sgv.rem_otkach.num_rem'), 
+%            num_rem_nasos => get_formula('skvag.sgv.rem_nasos.num_rem'), 
+%            num_rem_bezvod => get_formula('skvag.sgv.rem_bezvod.num_rem'), 
+%            num_rem_skvag => get_formula('skvag.sgv.rem_skvag.num_rem'), 
+%            num_rem_kipa => get_formula('skvag.sgv.rem_kipa.num_rem'), 
+%            num_rem_elec => get_formula('skvag.sgv.rem_elec.num_rem'), 
+%            num_rem_asu => get_formula('skvag.sgv.rem_asu.num_rem'), 
+%          },
+%   uv =>  { num_rab => get_formula('skvag.uv.num_rab'),
+%            num_res => get_formula('skvag.uv.num_res'), 
+%            num_otkl => get_formula('skvag.uv.num_otkl'), 
+%            num_rem_all => get_formula('skvag.uv.rem_all.num_rem'), 
+%            num_rem_otkach => get_formula('skvag.uv.rem_otkach.num_rem'), 
+%            num_rem_nasos => get_formula('skvag.uv.rem_nasos.num_rem'), 
+%            num_rem_bezvod => get_formula('skvag.uv.rem_bezvod.num_rem'), 
+%            num_rem_skvag => get_formula('skvag.uv.rem_skvag.num_rem'), 
+%            num_rem_kipa => get_formula('skvag.uv.rem_kipa.num_rem'), 
+%            num_rem_elec => get_formula('skvag.uv.rem_elec.num_rem'), 
+%            num_rem_asu => get_formula('skvag.uv.rem_asu.num_rem'), 
+%          },
+%   dema => { num_rab => get_formula('skvag.dema.num_rab'),
+%            num_res => get_formula('skvag.dema.num_res'), 
+%            num_otkl => get_formula('skvag.dema.num_otkl'), 
+%            num_rem_all => get_formula('skvag.dema.rem_all.num_rem'), 
+%            num_rem_otkach => get_formula('skvag.dema.rem_otkach.num_rem'), 
+%            num_rem_nasos => get_formula('skvag.dema.rem_nasos.num_rem'), 
+%            num_rem_bezvod => get_formula('skvag.dema.rem_bezvod.num_rem'), 
+%            num_rem_skvag => get_formula('skvag.dema.rem_skvag.num_rem'), 
+%            num_rem_kipa => get_formula('skvag.dema.rem_kipa.num_rem'), 
+%            num_rem_elec => get_formula('skvag.dema.rem_elec.num_rem'), 
+%            num_rem_asu => get_formula('skvag.dema.rem_asu.num_rem'), 
+%          },
+%   iz =>  { num_rab => get_formula('skvag.iz.num_rab'),
+%            num_res => get_formula('skvag.iz.num_res'), 
+%            num_otkl => get_formula('skvag.iz.num_otkl'), 
+%            num_rem_all => get_formula('skvag.iz.rem_all.num_rem'), 
+%            num_rem_otkach => get_formula('skvag.iz.rem_otkach.num_rem'), 
+%            num_rem_nasos => get_formula('skvag.iz.rem_nasos.num_rem'), 
+%            num_rem_bezvod => get_formula('skvag.iz.rem_bezvod.num_rem'), 
+%            num_rem_skvag => get_formula('skvag.iz.rem_skvag.num_rem'), 
+%            num_rem_kipa => get_formula('skvag.iz.rem_kipa.num_rem'), 
+%            num_rem_elec => get_formula('skvag.iz.rem_elec.num_rem'), 
+%            num_rem_asu => get_formula('skvag.iz.rem_asu.num_rem'), 
+%          },
+%   sh =>  { num_rab => get_formula('skvag.sh.num_rab'),
+%            num_res => get_formula('skvag.sh.num_res'), 
+%            num_otkl => get_formula('skvag.sh.num_otkl'), 
+%            num_rem_all => get_formula('skvag.sh.rem_all.num_rem'), 
+%            num_rem_otkach => get_formula('skvag.sh.rem_otkach.num_rem'), 
+%            num_rem_nasos => get_formula('skvag.sh.rem_nasos.num_rem'), 
+%            num_rem_bezvod => get_formula('skvag.sh.rem_bezvod.num_rem'), 
+%            num_rem_skvag => get_formula('skvag.sh.rem_skvag.num_rem'), 
+%            num_rem_kipa => get_formula('skvag.sh.rem_kipa.num_rem'), 
+%            num_rem_elec => get_formula('skvag.sh.rem_elec.num_rem'), 
+%            num_rem_asu => get_formula('skvag.sh.rem_asu.num_rem'), 
+%          },
+%   kp =>  { num_rab => get_formula('skvag.kp.num_rab'),
+%            num_res => get_formula('skvag.kp.num_res'), 
+%            num_otkl => get_formula('skvag.kp.num_otkl'), 
+%            num_rem_all => get_formula('skvag.kp.rem_all.num_rem'), 
+%            num_rem_otkach => get_formula('skvag.kp.rem_otkach.num_rem'), 
+%            num_rem_nasos => get_formula('skvag.kp.rem_nasos.num_rem'), 
+%            num_rem_bezvod => get_formula('skvag.kp.rem_bezvod.num_rem'), 
+%            num_rem_skvag => get_formula('skvag.kp.rem_skvag.num_rem'), 
+%            num_rem_kipa => get_formula('skvag.kp.rem_kipa.num_rem'), 
+%            num_rem_elec => get_formula('skvag.kp.rem_elec.num_rem'), 
+%            num_rem_asu => get_formula('skvag.kp.rem_asu.num_rem'), 
+%          },
+%   nag => { num_rab => get_formula('skvag.nag.num_rab'),
+%            num_res => get_formula('skvag.nag.num_res'), 
+%            num_otkl => get_formula('skvag.nag.num_otkl'), 
+%            num_rem_all => get_formula('skvag.nag.rem_all.num_rem'), 
+%            num_rem_otkach => get_formula('skvag.nag.rem_otkach.num_rem'), 
+%            num_rem_nasos => get_formula('skvag.nag.rem_nasos.num_rem'), 
+%            num_rem_bezvod => get_formula('skvag.nag.rem_bezvod.num_rem'), 
+%            num_rem_skvag => get_formula('skvag.nag.rem_skvag.num_rem'), 
+%            num_rem_kipa => get_formula('skvag.nag.rem_kipa.num_rem'), 
+%            num_rem_elec => get_formula('skvag.nag.rem_elec.num_rem'), 
+%            num_rem_asu => get_formula('skvag.nag.rem_asu.num_rem'), 
+%          },
+% };
+<tr>
+<th class="dest">СГВ</th>
+<td><%= get_nond 'skvag.sgv.num_rab' %></td>
+<td><%= get_nond 'skvag.sgv.rem_otkach.num_rem' %></td>
+<td><%= get_nond 'skvag.sgv.rem_nasos.num_rem' %></td>
+<td><%= get_nond 'skvag.sgv.rem_bezvod.num_rem' %></td>
+<td><%= get_nond 'skvag.sgv.rem_skvag.num_rem' %></td>
+<td><%= get_nond 'skvag.sgv.rem_kipa.num_rem' %></td>
+<td><%= get_nond 'skvag.sgv.rem_elec.num_rem' %></td>
+<td><%= get_nond 'skvag.sgv.rem_asu.num_rem' %></td>
+<td><%= get_nond 'skvag.sgv.rem_all.num_rem' %></td>
+<td><%= get_nond 'skvag.sgv.num_otkl' %></td>
+<td><%= get_nond 'skvag.sgv.num_res' %></td>
+<td class="sel"><%= $skv->{sgv}{num_rab} + $skv->{sgv}{num_rem_all} + $skv->{sgv}{num_otkl} + $skv->{sgv}{num_res} %></td>
+</tr>
+<tr>
+<th class="dest">ЮВ</th>
+<td><%= get_nond 'skvag.uv.num_rab' %></td>
+<td><%= get_nond 'skvag.uv.rem_otkach.num_rem' %></td>
+<td><%= get_nond 'skvag.uv.rem_nasos.num_rem' %></td>
+<td><%= get_nond 'skvag.uv.rem_bezvod.num_rem' %></td>
+<td><%= get_nond 'skvag.uv.rem_skvag.num_rem' %></td>
+<td><%= get_nond 'skvag.uv.rem_kipa.num_rem' %></td>
+<td><%= get_nond 'skvag.uv.rem_elec.num_rem' %></td>
+<td><%= get_nond 'skvag.uv.rem_asu.num_rem' %></td>
+<td><%= get_nond 'skvag.uv.rem_all.num_rem' %></td>
+<td><%= get_nond 'skvag.uv.num_otkl' %></td>
+<td><%= get_nond 'skvag.uv.num_res' %></td>
+<td class="sel"><%= $skv->{uv}{num_rab} + $skv->{uv}{num_rem_all} + $skv->{uv}{num_otkl} + $skv->{uv}{num_res} %></td>
+</tr>
+<tr>
+<th class="dest">Дёма</th>
+<td><%= get_nond 'skvag.dema.num_rab' %></td>
+<td><%= get_nond 'skvag.dema.rem_otkach.num_rem' %></td>
+<td><%= get_nond 'skvag.dema.rem_nasos.num_rem' %></td>
+<td><%= get_nond 'skvag.dema.rem_bezvod.num_rem' %></td>
+<td><%= get_nond 'skvag.dema.rem_skvag.num_rem' %></td>
+<td><%= get_nond 'skvag.dema.rem_kipa.num_rem' %></td>
+<td><%= get_nond 'skvag.dema.rem_elec.num_rem' %></td>
+<td><%= get_nond 'skvag.dema.rem_asu.num_rem' %></td>
+<td><%= get_nond 'skvag.dema.rem_all.num_rem' %></td>
+<td><%= get_nond 'skvag.dema.num_otkl' %></td>
+<td><%= get_nond 'skvag.dema.num_res' %></td>
+<td class="sel"><%= $skv->{dema}{num_rab} + $skv->{dema}{num_rem_all} + $skv->{dema}{num_otkl} + $skv->{dema}{num_res} %></td>
+</tr>
+<tr>
+<th class="dest">Изяк</th>
+<td><%= get_nond 'skvag.iz.num_rab' %></td>
+<td><%= get_nond 'skvag.iz.rem_otkach.num_rem' %></td>
+<td><%= get_nond 'skvag.iz.rem_nasos.num_rem' %></td>
+<td><%= get_nond 'skvag.iz.rem_bezvod.num_rem' %></td>
+<td><%= get_nond 'skvag.iz.rem_skvag.num_rem' %></td>
+<td><%= get_nond 'skvag.iz.rem_kipa.num_rem' %></td>
+<td><%= get_nond 'skvag.iz.rem_elec.num_rem' %></td>
+<td><%= get_nond 'skvag.iz.rem_asu.num_rem' %></td>
+<td><%= get_nond 'skvag.iz.rem_all.num_rem' %></td>
+<td><%= get_nond 'skvag.iz.num_otkl' %></td>
+<td><%= get_nond 'skvag.iz.num_res' %></td>
+<td class="sel"><%= $skv->{iz}{num_rab} + $skv->{iz}{num_rem_all} + $skv->{iz}{num_otkl} + $skv->{iz}{num_res} %></td>
+</tr>
+<tr>
+<th class="dest">Шакша</th>
+<td><%= get_nond 'skvag.sh.num_rab' %></td>
+<td><%= get_nond 'skvag.sh.rem_otkach.num_rem' %></td>
+<td><%= get_nond 'skvag.sh.rem_nasos.num_rem' %></td>
+<td><%= get_nond 'skvag.sh.rem_bezvod.num_rem' %></td>
+<td><%= get_nond 'skvag.sh.rem_skvag.num_rem' %></td>
+<td><%= get_nond 'skvag.sh.rem_kipa.num_rem' %></td>
+<td><%= get_nond 'skvag.sh.rem_elec.num_rem' %></td>
+<td><%= get_nond 'skvag.sh.rem_asu.num_rem' %></td>
+<td><%= get_nond 'skvag.sh.rem_all.num_rem' %></td>
+<td><%= get_nond 'skvag.sh.num_otkl' %></td>
+<td><%= get_nond 'skvag.sh.num_res' %></td>
+<td class="sel"><%= $skv->{sh}{num_rab} + $skv->{sh}{num_rem_all} + $skv->{sh}{num_otkl} + $skv->{sh}{num_res} %></td>
+</tr>
+<tr>
+<th class="dest">Кооп-ая поляна</th>
+<td><%= get_nond 'skvag.kp.num_rab' %></td>
+<td><%= get_nond 'skvag.kp.rem_otkach.num_rem' %></td>
+<td><%= get_nond 'skvag.kp.rem_nasos.num_rem' %></td>
+<td><%= get_nond 'skvag.kp.rem_bezvod.num_rem' %></td>
+<td><%= get_nond 'skvag.kp.rem_skvag.num_rem' %></td>
+<td><%= get_nond 'skvag.kp.rem_kipa.num_rem' %></td>
+<td><%= get_nond 'skvag.kp.rem_elec.num_rem' %></td>
+<td><%= get_nond 'skvag.kp.rem_asu.num_rem' %></td>
+<td><%= get_nond 'skvag.kp.rem_all.num_rem' %></td>
+<td><%= get_nond 'skvag.kp.num_otkl' %></td>
+<td><%= get_nond 'skvag.kp.num_res' %></td>
+<td class="sel"><%= $skv->{kp}{num_rab} + $skv->{kp}{num_rem_all} + $skv->{kp}{num_otkl} + $skv->{kp}{num_res} %></td>
+</tr>
+<tr>
+<th class="dest">Нагаево</th>
+<td><%= get_nond 'skvag.nag.num_rab' %></td>
+<td><%= get_nond 'skvag.nag.rem_otkach.num_rem' %></td>
+<td><%= get_nond 'skvag.nag.rem_nasos.num_rem' %></td>
+<td><%= get_nond 'skvag.nag.rem_bezvod.num_rem' %></td>
+<td><%= get_nond 'skvag.nag.rem_skvag.num_rem' %></td>
+<td><%= get_nond 'skvag.nag.rem_kipa.num_rem' %></td>
+<td><%= get_nond 'skvag.nag.rem_elec.num_rem' %></td>
+<td><%= get_nond 'skvag.nag.rem_asu.num_rem' %></td>
+<td><%= get_nond 'skvag.nag.rem_all.num_rem' %></td>
+<td><%= get_nond 'skvag.nag.num_otkl' %></td>
+<td><%= get_nond 'skvag.nag.num_res' %></td>
+<td class="sel"><%= $skv->{nag}{num_rab} + $skv->{nag}{num_rem_all} + $skv->{nag}{num_otkl} + $skv->{nag}{num_res} %></td>
+</tr>
+<tr class="sel">
+<th class="dest">Итого</th>
+% my $sum_func = sub {my $s=0; $s+=$skv->{$_}{$_[0]} for (qw/sgv uv dema iz sh kp nag/); $s};
+% my $sum_num_rab = $sum_func->('num_rab');
+% my $sum_num_rem_all = $sum_func->('num_rem_all');
+% my $sum_num_otkl = $sum_func->('num_otkl');
+% my $sum_num_res = $sum_func->('num_res');
+<td><%= $sum_num_rab %></td>
+<td><%= $sum_func->('num_rem_otkach') %></td>
+<td><%= $sum_func->('num_rem_nasos') %></td>
+<td><%= $sum_func->('num_rem_bezvod') %></td>
+<td><%= $sum_func->('num_rem_skvag') %></td>
+<td><%= $sum_func->('num_rem_kipa') %></td>
+<td><%= $sum_func->('num_rem_elec') %></td>
+<td><%= $sum_func->('num_rem_asu') %></td>
+<td><%= $sum_num_rem_all %></td>
+<td><%= $sum_num_otkl %></td>
+<td><%= $sum_num_res %></td>
+<td class="sel"><%= $sum_num_rab + $sum_num_rem_all + $sum_num_otkl + $sum_num_res %></td>
+</tr>
+</table>
+</div>
+
+<div class="block">
+<div class="nba">
+<h2>Давление в контрольных точках</h2>
+</div>
+<table class="nb">
+<tr>
+<th colspan="3">Справочное, кгс/см<sup>2</sup></th>
+<th colspan="2">Прочие контрольные точки, кгс/см<sup>2</sup></th>
+</tr>
+<tr>
+<th></th>
+<th>не ниже</th>
+<th>фактически</th>
+<th></th>
+<th>фактически</th>
+</tr>
+<tr>
+<th class="dest">II подъём СГВ</th>
+<td><%== get 'kt.sgv_2p.sprav' %></td>
+<td><%== get('kt.sgv_2p.fact.max', 'kt.sgv_2p.fact.min') %></td>
+<th class="dest">Драмтеатр</th>
+<td><%== get('kt.dram.fact.max', 'kt.dram.fact.min') %></td>
+</tr>
+<tr>
+<th class="dest">III подъём СГВ</th>
+<td><%== get 'kt.sgv_3p.sprav' %></td>
+<td><%== get('kt.sgv_3p.fact.max', 'kt.sgv_3p.fact.min') %></td>
+<th class="dest">Окт.РВК</th>
+<td><%== get('kt.oktrvk.fact.max', 'kt.oktrvk.fact.min') %></td>
+</tr>
+<tr>
+<th class="dest">Горсовет</th>
+<td><%== get 'kt.gors.sprav' %></td>
+<td><%== get('kt.gors.fact.max', 'kt.gors.fact.min') %></td>
+<th class="dest">Телецентр</th>
+<td><%== get('kt.telc.fact.max', 'kt.telc.fact.min') %></td>
+</tr>
+<tr>
+<th rowspan="2" class="dest">ПЛК</th>
+<td rowspan="2"><%== get 'kt.plk.sprav' %></td>
+<td rowspan="2"><%== get('kt.plk.fact.max', 'kt.plk.fact.min') %></td>
+<th class="dest">Динамо</th>
+<td><%== get('kt.dynamo.fact.max', 'kt.dynamo.fact.min') %></td>
+</tr>
+<tr>
+<th>Подано птицефабрика, м<sup>3</sup>/сут.</th>
+<td><%== get 'kt.ptfab.podacha' %></td>
+</tr>
+</table>
+</div>
+
+<div class="block">
+<div class="nba">
+<h2>Прочие показатели</h2>
+</div>
+<table class="nb">
+<tr>
+<th>Уровень реки, м</th>
+<td><%== get 'podacha.reka.uroven' %></td>
+<th>Мутность реки,<br>мг/дм<sup>3</sup></th>
+<td><%== get 'podacha.reka.mutnost' %></td>
+</tr>
+<tr>
+<th>Мутность резервуара СГВ,<br>мг/дм<sup>3</sup></th>
+<td>&lt;<%== get 'podacha.sgv.mutnost' %></td>
+<th>Очищено сточных вод (ГОСК),<br>м<sup>3</sup>/сут.</th>
+<td><%== get 'stok.gosk.gosk_meh.och' %></td>
+</tr>
+<tr>
+<th>Мутность резервуара СКВ,<br>мг/дм<sup>3</sup></th>
+<td>&lt;<%== get 'podacha.skv.mutnost' %></td>
+<th>Очищено сточных вод (ДОСК),<br>м<sup>3</sup>/сут.</th>
+<td><%== get 'stok.dck.och' %></td>
+</tr>
+<tr>
+<th>Вода на собственные нужды СКВ,<br>м<sup>3</sup>/сут.</th>
+<td><%== get 'podacha.skv.sob_nuzhdy' %></td>
+<th></th>
+<td></td>
+</tr>
+</table>
+</div>
+
+<div class="block">
+<div class="nba">
+<h2>Плановые отключения на <%== $r->plan_otkl_date %></h2>
+</div>
+<table class="w100">
+<tr>
+<td>
+%== get 'otkl.plan'
+</td>
+</tr>
+</table>
+</div>

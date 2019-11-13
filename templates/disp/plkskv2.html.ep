@@ -1,0 +1,630 @@
+% layout 'default';
+<header>
+<div class="navbar-fixed">
+  <nav class="navbar green lighten-2 white-text">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Ежедневная&nbsp;сводка:&nbsp;Диспетчер&nbsp;ЦАДС</a>
+      <ul id="nav-mobile" class="right">
+	<li><a href="javascript:void(0)" class="refreshnav waves-effect" title="Обновить страницу"><i class="material-icons">refresh</i></a></li>
+	<li><a href="#!" data-target="dropdown-other" class="dropdown-trigger waves-effect" title="Инструменты"><i class="material-icons">settings</i></a></li>
+      </ul>
+      <a href="#!" data-target="sidenav-left" class="sidenav-trigger left show-on-large"><i class="material-icons black-text">menu</i></a>
+    </div>
+  </nav>
+</div>
+%= include 'sidenav', sidenav_active_page => 'skvazh2'
+%= include 'dropdown-other'
+</header>
+
+<main>
+<div class="">
+  <div class="row anchorfix" id="h-skvazh">
+    <div class="col s12">
+      <h5>Работа скважин, сводка: <%== get_oper_date(1) %></h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s2 graybg">
+	  <b>Скважин в работе</b>
+        </div>
+        <div class="col s8 graybg">
+	  <div class="center-align"><b>Скважин в ремонте</b></div>
+        </div>
+        <div class="col s1 graybg">
+	  <b>Откл.</b>
+        </div>
+        <div class="col s1 graybg">
+	  <b>Резерв</b>
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      <b>Всего</b>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s2">
+	  <b>Цех</b>
+        </div>
+        <div class="col s1 graylb">
+	  <b>В откч.</b>
+        </div>
+        <div class="col s1">
+	  <b>Насосы</b>
+        </div>
+        <div class="col s1">
+	  <b>Без воды</b>
+        </div>
+        <div class="col s1">
+	  <b>Скважины</b>
+        </div>
+        <div class="col s1">
+	  <b>КИПиА</b>
+        </div>
+        <div class="col s1">
+	  <b>Электр.</b>
+	</div>
+        <div class="col s1">
+	  <b>АСУ</b>
+        </div>
+        <div class="col s1">
+	  <b>ВСЕГО</b>
+        </div>
+        <div class="col s1 graylb">
+	  &nbsp;
+        </div>
+        <div class="col s1 graylb">
+	  &nbsp;
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      &nbsp;
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s1">
+          СГВ
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.num_rab', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.rem_otkach.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.rem_nasos.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.rem_bezvod.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.rem_skvag.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.rem_kipa.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.rem_elec.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.rem_asu.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.rem_all.num_rem', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.num_otkl', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.sgv.num_res', style=>'small')
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'skvag-sgv-itogo', style=>'small')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s1">
+          ЮГВ
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.num_rab', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.rem_otkach.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.rem_nasos.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.rem_bezvod.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.rem_skvag.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.rem_kipa.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.rem_elec.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.rem_asu.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.rem_all.num_rem', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.num_otkl', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.uv.num_res', style=>'small')
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'skvag-uv-itogo', style=>'small')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s1">
+          Дёма
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.num_rab', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.rem_otkach.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.rem_nasos.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.rem_bezvod.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.rem_skvag.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.rem_kipa.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.rem_elec.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.rem_asu.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.rem_all.num_rem', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.num_otkl', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.dema.num_res', style=>'small')
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'skvag-dema-itogo', style=>'small')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s1">
+          Изяк
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.num_rab', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.rem_otkach.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.rem_nasos.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.rem_bezvod.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.rem_skvag.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.rem_kipa.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.rem_elec.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.rem_asu.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.rem_all.num_rem', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.num_otkl', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.iz.num_res', style=>'small')
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'skvag-iz-itogo', style=>'small')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s1">
+          Шакша
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.num_rab', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.rem_otkach.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.rem_nasos.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.rem_bezvod.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.rem_skvag.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.rem_kipa.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.rem_elec.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.rem_asu.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.rem_all.num_rem', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.num_otkl', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.sh.num_res', style=>'small')
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'skvag-sh-itogo', style=>'small')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s1">
+          Кооп-ая поляна
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.num_rab', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.rem_otkach.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.rem_nasos.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.rem_bezvod.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.rem_skvag.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.rem_kipa.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.rem_elec.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.rem_asu.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.rem_all.num_rem', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.num_otkl', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.kp.num_res', style=>'small')
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'skvag-kp-itogo', style=>'small')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s1">
+          Нагаево
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.num_rab', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.rem_otkach.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.rem_nasos.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.rem_bezvod.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.rem_skvag.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.rem_kipa.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.rem_elec.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.rem_asu.num_rem', style=>'small')
+        </div>
+        <div class="col s1">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.rem_all.num_rem', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.num_otkl', style=>'small')
+        </div>
+        <div class="col s1 graylb">
+	  %== form_el(class=>'textcb', metric=>'skvag.nag.num_res', style=>'small')
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'skvag-nag-itogo', style=>'small')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s11">
+      <div class="row">
+        <div class="col s1 graybg">
+	  <b>Итого:</b>
+        </div>
+        <div class="col s1 graybg">
+	  %== form_formula_el(id=>'skvag-num_rab-itogo', label=>'В работе')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-rem_otkach-num_rem-itogo', label=>'В откч.')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-rem_nasos-num_rem-itogo', label=>'Насосы')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-rem_bezvod-num_rem-itogo', label=>'Без воды')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-rem_skvag-num_rem-itogo', label=>'Скважины')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-rem_kipa-num_rem-itogo', label=>'КИПиА')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-rem_elec-num_rem-itogo', label=>'Электр.')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-rem_asu-num_rem-itogo', label=>'АСУ')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-rem_all-num_rem-itogo', label=>'Всего')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-num_otkl-itogo', label=>'Откл.')
+        </div>
+        <div class="col s1 graybg">
+          %== form_formula_el(id=>'skvag-num_res-itogo', label=>'Резерв')
+        </div>
+      </div>
+    </div>
+    <div class="col s1 graybg">
+      %== form_formula_el(id=>'skvag-all-itogo', label=>'Всего')
+    </div>
+  </div>
+  <br>
+</div>
+</main>
+% content_for script0 => begin
+<script src="/js/jquery.matchHeight-min.js"></script>
+<script src="/js/numeral.min.js"></script>
+<script src="/js/base64.min.js"></script>
+<script src="/js/formutils.js?v=021"></script>
+<script src="/js/jquery.tabbable.min.js"></script>
+<script>
+$(document).ready(function(){
+  % my $idslt = stash 'idslt';
+  var idm=idmapper('<%== $idslt->[0] %>', <%== $idslt->[1] %>);
+
+  $('.dropdown-trigger').dropdown({coverTrigger:false,constrainWidth:false});
+  $('.refreshnav').click(function(){location.reload()});
+  $('select').formSelect();
+  $('.graybg').matchHeight();
+
+  var update_itogo_fields = function(){
+    var d = {sgv:{},uv:{},dema:{},iz:{},sh:{},kp:{},nag:{}};
+    d.sgv.num_rab = idm.zint('skvag.sgv.num_rab');
+    d.sgv.rem_all_num_rem = idm.zint('skvag.sgv.rem_all.num_rem');
+    d.sgv.num_otkl = idm.zint('skvag.sgv.num_otkl');
+    d.sgv.num_res = idm.zint('skvag.sgv.num_res');
+    d.sgv.rem_otkach_num_rem = idm.zint('skvag.sgv.rem_otkach.num_rem');
+    d.sgv.rem_nasos_num_rem = idm.zint('skvag.sgv.rem_nasos.num_rem');
+    d.sgv.rem_bezvod_num_rem = idm.zint('skvag.sgv.rem_bezvod.num_rem');
+    d.sgv.rem_skvag_num_rem = idm.zint('skvag.sgv.rem_skvag.num_rem');
+    d.sgv.rem_kipa_num_rem = idm.zint('skvag.sgv.rem_kipa.num_rem');
+    d.sgv.rem_elec_num_rem = idm.zint('skvag.sgv.rem_elec.num_rem');
+    d.sgv.rem_asu_num_rem = idm.zint('skvag.sgv.rem_asu.num_rem');
+
+    d.uv.num_rab = idm.zint('skvag.uv.num_rab');
+    d.uv.rem_all_num_rem = idm.zint('skvag.uv.rem_all.num_rem');
+    d.uv.num_otkl = idm.zint('skvag.uv.num_otkl');
+    d.uv.num_res = idm.zint('skvag.uv.num_res');
+    d.uv.rem_otkach_num_rem = idm.zint('skvag.uv.rem_otkach.num_rem');
+    d.uv.rem_nasos_num_rem = idm.zint('skvag.uv.rem_nasos.num_rem');
+    d.uv.rem_bezvod_num_rem = idm.zint('skvag.uv.rem_bezvod.num_rem');
+    d.uv.rem_skvag_num_rem = idm.zint('skvag.uv.rem_skvag.num_rem');
+    d.uv.rem_kipa_num_rem = idm.zint('skvag.uv.rem_kipa.num_rem');
+    d.uv.rem_elec_num_rem = idm.zint('skvag.uv.rem_elec.num_rem');
+    d.uv.rem_asu_num_rem = idm.zint('skvag.uv.rem_asu.num_rem');
+
+    d.dema.num_rab = idm.zint('skvag.dema.num_rab');
+    d.dema.rem_all_num_rem = idm.zint('skvag.dema.rem_all.num_rem');
+    d.dema.num_otkl = idm.zint('skvag.dema.num_otkl');
+    d.dema.num_res = idm.zint('skvag.dema.num_res');
+    d.dema.rem_otkach_num_rem = idm.zint('skvag.dema.rem_otkach.num_rem');
+    d.dema.rem_nasos_num_rem = idm.zint('skvag.dema.rem_nasos.num_rem');
+    d.dema.rem_bezvod_num_rem = idm.zint('skvag.dema.rem_bezvod.num_rem');
+    d.dema.rem_skvag_num_rem = idm.zint('skvag.dema.rem_skvag.num_rem');
+    d.dema.rem_kipa_num_rem = idm.zint('skvag.dema.rem_kipa.num_rem');
+    d.dema.rem_elec_num_rem = idm.zint('skvag.dema.rem_elec.num_rem');
+    d.dema.rem_asu_num_rem = idm.zint('skvag.dema.rem_asu.num_rem');
+
+    d.iz.num_rab = idm.zint('skvag.iz.num_rab');
+    d.iz.rem_all_num_rem = idm.zint('skvag.iz.rem_all.num_rem');
+    d.iz.num_otkl = idm.zint('skvag.iz.num_otkl');
+    d.iz.num_res = idm.zint('skvag.iz.num_res');
+    d.iz.rem_otkach_num_rem = idm.zint('skvag.iz.rem_otkach.num_rem');
+    d.iz.rem_nasos_num_rem = idm.zint('skvag.iz.rem_nasos.num_rem');
+    d.iz.rem_bezvod_num_rem = idm.zint('skvag.iz.rem_bezvod.num_rem');
+    d.iz.rem_skvag_num_rem = idm.zint('skvag.iz.rem_skvag.num_rem');
+    d.iz.rem_kipa_num_rem = idm.zint('skvag.iz.rem_kipa.num_rem');
+    d.iz.rem_elec_num_rem = idm.zint('skvag.iz.rem_elec.num_rem');
+    d.iz.rem_asu_num_rem = idm.zint('skvag.iz.rem_asu.num_rem');
+
+    d.sh.num_rab = idm.zint('skvag.sh.num_rab');
+    d.sh.rem_all_num_rem = idm.zint('skvag.sh.rem_all.num_rem');
+    d.sh.num_otkl = idm.zint('skvag.sh.num_otkl');
+    d.sh.num_res = idm.zint('skvag.sh.num_res');
+    d.sh.rem_otkach_num_rem = idm.zint('skvag.sh.rem_otkach.num_rem');
+    d.sh.rem_nasos_num_rem = idm.zint('skvag.sh.rem_nasos.num_rem');
+    d.sh.rem_bezvod_num_rem = idm.zint('skvag.sh.rem_bezvod.num_rem');
+    d.sh.rem_skvag_num_rem = idm.zint('skvag.sh.rem_skvag.num_rem');
+    d.sh.rem_kipa_num_rem = idm.zint('skvag.sh.rem_kipa.num_rem');
+    d.sh.rem_elec_num_rem = idm.zint('skvag.sh.rem_elec.num_rem');
+    d.sh.rem_asu_num_rem = idm.zint('skvag.sh.rem_asu.num_rem');
+
+    d.kp.num_rab = idm.zint('skvag.kp.num_rab');
+    d.kp.rem_all_num_rem = idm.zint('skvag.kp.rem_all.num_rem');
+    d.kp.num_otkl = idm.zint('skvag.kp.num_otkl');
+    d.kp.num_res = idm.zint('skvag.kp.num_res');
+    d.kp.rem_otkach_num_rem = idm.zint('skvag.kp.rem_otkach.num_rem');
+    d.kp.rem_nasos_num_rem = idm.zint('skvag.kp.rem_nasos.num_rem');
+    d.kp.rem_bezvod_num_rem = idm.zint('skvag.kp.rem_bezvod.num_rem');
+    d.kp.rem_skvag_num_rem = idm.zint('skvag.kp.rem_skvag.num_rem');
+    d.kp.rem_kipa_num_rem = idm.zint('skvag.kp.rem_kipa.num_rem');
+    d.kp.rem_elec_num_rem = idm.zint('skvag.kp.rem_elec.num_rem');
+    d.kp.rem_asu_num_rem = idm.zint('skvag.kp.rem_asu.num_rem');
+
+    d.nag.num_rab = idm.zint('skvag.nag.num_rab');
+    d.nag.rem_all_num_rem = idm.zint('skvag.nag.rem_all.num_rem');
+    d.nag.num_otkl = idm.zint('skvag.nag.num_otkl');
+    d.nag.num_res = idm.zint('skvag.nag.num_res');
+    d.nag.rem_otkach_num_rem = idm.zint('skvag.nag.rem_otkach.num_rem');
+    d.nag.rem_nasos_num_rem = idm.zint('skvag.nag.rem_nasos.num_rem');
+    d.nag.rem_bezvod_num_rem = idm.zint('skvag.nag.rem_bezvod.num_rem');
+    d.nag.rem_skvag_num_rem = idm.zint('skvag.nag.rem_skvag.num_rem');
+    d.nag.rem_kipa_num_rem = idm.zint('skvag.nag.rem_kipa.num_rem');
+    d.nag.rem_elec_num_rem = idm.zint('skvag.nag.rem_elec.num_rem');
+    d.nag.rem_asu_num_rem = idm.zint('skvag.nag.rem_asu.num_rem');
+
+    $('#skvag-sgv-itogo').val(d.sgv.num_rab + d.sgv.rem_all_num_rem + d.sgv.num_otkl + d.sgv.num_res);
+    $('#skvag-uv-itogo').val(d.uv.num_rab + d.uv.rem_all_num_rem + d.uv.num_otkl + d.uv.num_res);
+    $('#skvag-dema-itogo').val(d.dema.num_rab + d.dema.rem_all_num_rem + d.dema.num_otkl + d.dema.num_res);
+    $('#skvag-iz-itogo').val(d.iz.num_rab + d.iz.rem_all_num_rem + d.iz.num_otkl + d.iz.num_res);
+    $('#skvag-sh-itogo').val(d.sh.num_rab + d.sh.rem_all_num_rem + d.sh.num_otkl + d.sh.num_res);
+    $('#skvag-kp-itogo').val(d.kp.num_rab + d.kp.rem_all_num_rem + d.kp.num_otkl + d.kp.num_res);
+    $('#skvag-nag-itogo').val(d.nag.num_rab + d.nag.rem_all_num_rem + d.nag.num_otkl + d.nag.num_res);
+
+    var itogo = {
+      num_rab:0,
+      rem_all_num_rem:0,
+      num_otkl:0,
+      num_res:0,
+      rem_otkach_num_rem:0,
+      rem_nasos_num_rem:0,
+      rem_bezvod_num_rem:0,
+      rem_skvag_num_rem:0,
+      rem_kipa_num_rem:0,
+      rem_elec_num_rem:0,
+      rem_asu_num_rem:0
+    };
+    for (var k in d) { 
+      for (var ki in itogo) {
+        itogo[ki] += d[k][ki];
+      }
+    }
+    $('#skvag-num_rab-itogo').val(itogo.num_rab);
+    $('#skvag-rem_all-num_rem-itogo').val(itogo.rem_all_num_rem);
+    $('#skvag-num_otkl-itogo').val(itogo.num_otkl);
+    $('#skvag-num_res-itogo').val(itogo.num_res);
+    $('#skvag-rem_otkach-num_rem-itogo').val(itogo.rem_otkach_num_rem);
+    $('#skvag-rem_nasos-num_rem-itogo').val(itogo.rem_nasos_num_rem);
+    $('#skvag-rem_bezvod-num_rem-itogo').val(itogo.rem_bezvod_num_rem);
+    $('#skvag-rem_skvag-num_rem-itogo').val(itogo.rem_skvag_num_rem);
+    $('#skvag-rem_kipa-num_rem-itogo').val(itogo.rem_kipa_num_rem);
+    $('#skvag-rem_elec-num_rem-itogo').val(itogo.rem_elec_num_rem);
+    $('#skvag-rem_asu-num_rem-itogo').val(itogo.rem_asu_num_rem);
+
+    $('#skvag-all-itogo').val(itogo.num_rab + itogo.rem_all_num_rem + itogo.num_otkl + itogo.num_res);
+    M.updateTextFields();
+  };
+
+  var process_submit = function(s,url,update_func){
+    var p=$.post(url,{id:s.get(0).id,v:s.val()});
+    p.done(function(d){
+      s.removeClass('invalid').addClass('valid');
+      s.siblings('.helper-text').attr('data-success',d.msg);
+      if('v' in d){
+        s.val(d.v);
+        if(update_func!==undefined){update_func()}
+      };
+    });
+    p.fail(function(o,t){
+      s.removeClass('valid').addClass('invalid');
+      s.siblings('.helper-text').attr('data-error',o.responseJSON.msg);
+      if('v' in o.responseJSON){s.val(o.responseJSON.v)};
+    });
+  };
+
+  $('input.textcb').change(function(){process_submit($(this), '/disp/plk/submit1', update_itogo_fields)});
+  update_itogo_fields();
+
+  $('input.textcb').keypress(function(e){if(e.which==13){e.preventDefault();$.tabNext();}});
+});
+</script>
+% end
+

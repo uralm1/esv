@@ -1,0 +1,208 @@
+@media only screen and (min-width: 993px) {
+  body.has-fixed-sidenav {
+    padding-left:270px;
+  }
+}
+
+.sidenav {
+  box-shadow:none;
+  background-color:#66bb6a;
+  width:270px;
+  height:100%;
+}
+
+.sidenav>li {
+  width:100%;
+}
+
+.sidenav .logo-container {
+  padding: 0 16px;
+  height:64px;
+  line-height:64px;
+  font-size:22px;
+  /*border-bottom:1px solid rgba(255,255,255,0.5);*/
+  background-image:url(/img/bg3.png);
+  box-sizing: content-box;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.sidenav .logo-container i.material-icons {
+  line-height: inherit;
+}
+
+.sidenav .collapsible {
+  border-top:1px solid rgba(255,255,255,0.3);
+  border-bottom:1px solid rgba(0,0,0,0.2);
+}
+
+.sidenav .collapsible>.active .collapsible-header .chevron {
+  transform: rotate(-90deg);
+}
+
+.sidenav .collapsible>li {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  transition: background-color .2s
+}
+
+.sidenav .collapsible>li:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.sidenav .collapsible>li.waves-effect {
+  display:block;
+}
+
+.sidenav .collapsible>li:last-child {
+  border-bottom:0;
+}
+
+.sidenav .collapsible .collapsible-header {
+  text-transform:uppercase;
+  height:64px;
+  line-height:64px;
+  color:#fff;
+}
+
+.sidenav .collapsible .collapsible-header:hover {
+  background-color: transparent;
+}
+
+.sidenav .collapsible .collapsible-header .chevron {
+  float:right;
+  height:24px;
+  width:24px;
+  line-height:24px;
+  margin:20px 0 0 0;
+  transition: transform .2s;
+}
+
+.sidenav .collapsible .collapsible-body {
+  padding-bottom:16px;
+  background-color:transparent;
+}
+
+.sidenav .collapsible .collapsible-body li>a {
+  padding:0 16px;
+  transition: background-color .2s ease-out;
+}
+
+.sidenav .collapsible .collapsible-body li>a:hover,
+.sidenav .collapsible .collapsible-body li>a:active {
+  background-color:rgba(0,0,0,0.07);
+}
+
+.sidenav .collapsible .collapsible-body li>a>i.material-icons {
+  margin-right:16px;
+}
+
+.sidenav li.active>a,
+.sidenav li:hover>a,
+.sidenav li>a:hover,
+.sidenav li>a.active {
+  background-color:transparent;
+}
+
+.sidenav li.active>a::before,
+.sidenav li:hover>a::before,
+.sidenav li>a:hover::before,
+.sidenav li>a.active::before {
+  transform: scaleY(1);
+}
+
+.sidenav li>a {
+  position:relative;
+  padding:0 16px;
+  font-weight:600;
+}
+
+.sidenav li>a::before {
+  left:auto;
+  right:0;
+}
+
+.keyboard-focused .sidenav .collapsible-header:focus {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.keyboard-focused .sidenav .collapsible-body li>a:focus {
+  background-color: rgba(0,0,0,0.07);
+  outline:none;
+}
+
+.navbar-fixed nav.navbar {
+  width:100%;
+  left:0;
+}
+
+@media only screen and (min-width:993px) {
+  .has-fixed-sidenav .navbar-fixed nav.navbar {
+    width:calc(100% - 270px);
+    left:270px;
+  }
+
+  body:not(.has-fixed-sidenav) nav a.sidenav-trigger {
+    display:block;
+  }
+
+  body:not(.has-fixed-sidenav) nav.navbar .brand-logo {
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+  }
+}
+
+@media only screen and (max-width:992px) {
+  nav.navbar a.brand-logo {
+    position:absolute;
+  }
+}
+
+nav.navbar {
+  z-index:10;
+  transition: box-shadow .3s, background-color .3s;
+  padding:0 14px;
+  background-color:#fff;
+  color:rgba(0,0,0,0.87);
+}
+
+nav.navbar .brand-logo {
+  position:relative;
+  float:left;
+  font-size:22px;
+  white-space:nowrap;
+}
+
+nav.navbar .brand-logo i {
+  line-height:inherit;
+  transition:color .2s;
+}
+
+nav.navbar .nav-wrapper>ul>li>a {
+  display:block;
+}
+
+nav.navbar .sidenav-trigger {
+  margin:0;
+}
+
+nav.navbar ul>li.active>a::before,
+nav.navbar ul>li>a.active::before,
+nav.navbar ul>li>a:hover::before {
+  transform:scaleX(1);
+}
+
+nav.navbar ul li.active {
+  background-color:transparent;
+}
+
+nav.navbar ul a {
+  color:rgba(0,0,0,0.87);
+  position:relative;
+  transition:color .2s;
+}
+
+nav.navbar ul a:focus {
+  outline:none;
+}
+

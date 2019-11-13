@@ -1,0 +1,17 @@
+[Unit]
+Description=ESV hypnotoad
+After=network.target
+
+[Service]
+Type=forking
+User=esv
+Group=esv
+PIDFile=/opt/esv/run/hypnotoad.pid
+ExecStartPre=/opt/esv/script/check_db_hosts
+ExecStart=/usr/local/bin/hypnotoad /opt/esv/script/esv
+#ExecStop=/usr/local/bin/hypnotoad -s /opt/esv/script/esv
+ExecReload=/usr/local/bin/hypnotoad /opt/esv/script/esv
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

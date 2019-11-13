@@ -1,0 +1,21 @@
+% layout 'default', title => 'Тест запроса';
+<div class="container">
+<table>
+<tr>
+<th>Измерение: <%= $r->{name} %></th>
+<th>Поднято</th>
+<th>Подано в город</th>
+<th>+/- с начала месяца</th>
+</tr>
+% for my $h (@{$r->{values}}) {
+<tr>
+<td><%= $h->{dest}.', '.$h->{dest_spec}.', '.$h->{rep_spec} %></td>
+<td><%= $h->{podyom} %></td>
+<td><%= $h->{gorod} %></td>
+<td><%= $h->{deltamonth} %></td>
+</tr>
+% }
+</table>
+</div>
+
+

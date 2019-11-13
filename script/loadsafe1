@@ -1,0 +1,8 @@
+#!/bin/bash
+
+APP_DIR='/opt/esv'
+#APP_DIR='/home/sv/src/esv'
+
+cd $APP_DIR
+export MOJO_MODE=production
+script/esv loadsafe1 >> $APP_DIR/log/loadsafe1.log 2>&1

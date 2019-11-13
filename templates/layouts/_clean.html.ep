@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  % if (my $t = stash 'title') {
+  <title><%= $t %></title> 
+  % } else {
+  <title>Ежедневная сводка</title>
+  % }
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <!--link rel="stylesheet" href="/css/fonts-roboto.css"-->
+  <link rel="stylesheet" href="/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/material-icons-esv.css">
+</head>
+<body>
+%= content
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+</body>
+</html>

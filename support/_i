@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#groupadd esv
+#useradd -N -g esv -M -d /opt/esv/run -s /bin/false -c "ESV user" esv
+
+#chown -R esv:esv /opt/esv/run
+#chmod 0755 /opt/esv/run
+
+#chown -R esv:esv /opt/esv
+#find /opt/esv -type d -print0 | xargs -0 chmod 0755
+#find /opt/esv -type f -print0 | xargs -0 chmod 0644

@@ -1,0 +1,54 @@
+body {
+  font:10pt Helvetica,sans-serif;
+  font-weight:normal;
+}
+
+table,th,td {
+  border:1px solid black;
+  border-collapse:collapse;
+}
+
+th,.sel {
+  background:#f0f0f0;
+}
+
+th,td {
+  padding:2px 5px 2px 5px;
+}
+
+th.dest {
+  font-style:italic;
+}
+
+th.secondary {
+  font-size:8.6pt;
+}
+
+th.temp {
+  padding:2px 25px 2px 25px;
+}
+
+p.date {
+  font-size:12pt;
+  font-weight:bold;
+}
+
+.w100 {
+  width:100%;
+}
+
+@media print {
+table.nb {
+  page-break-inside:avoid;
+}
+div.block {
+  page-break-inside:avoid;
+}
+table.br {
+  page-break-inside:auto;
+}
+.nba {
+  page-break-after:avoid;
+}
+}
+

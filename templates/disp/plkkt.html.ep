@@ -1,0 +1,200 @@
+% layout 'default';
+<header>
+<div class="navbar-fixed">
+  <nav class="navbar green lighten-2 white-text">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Диспетчер&nbsp;ЦАДС</a>
+      <ul id="nav-mobile" class="right">
+	<li><a href="javascript:void(0)" class="refreshnav waves-effect" title="Обновить страницу"><i class="material-icons">refresh</i></a></li>
+	<li><a href="#!" data-target="dropdown-other" class="dropdown-trigger waves-effect" title="Инструменты"><i class="material-icons">settings</i></a></li>
+      </ul>
+      <a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
+    </div>
+  </nav>
+</div>
+%= include 'sidenav', sidenav_active_page => 'kontpoint'
+%= include 'dropdown-other'
+</header>
+
+<main>
+<div class="">
+  <div class="row anchorfix" id="h-kontpoint">
+    <div class="col s12">
+      <h5>Давление в контрольных точках</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 graybg">
+      <b>Контрольные точки</b>
+    </div>
+    <div class="col s2 graybg">
+      <b>Справочное</b>
+    </div>
+    <div class="col s4 graybg">
+      <div class="center-align"><b>Фактическое давление</b></div>
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-kontpoint-sgv2p">
+    <div class="col s2 center-label-form">
+      II-подъём СГВ
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.sgv_2p.sprav')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.sgv_2p.fact.min')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.sgv_2p.fact.max')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-kontpoint-sgv3p">
+    <div class="col s2 center-label-form evenbg">
+      III-подъём СГВ
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.sgv_3p.sprav')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.sgv_3p.fact.min')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.sgv_3p.fact.max')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-kontpoint-gors">
+    <div class="col s2 center-label-form">
+      Горсовет
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.gors.sprav')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.gors.fact.min')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.gors.fact.max')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-kontpoint-plk">
+    <div class="col s2 center-label-form evenbg">
+      ПЛК
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.plk.sprav')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.plk.fact.min')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.plk.fact.max')
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-kontpoint-other">
+    <div class="col s2 center-label-form">
+      Драмтеатр
+    </div>
+    <div class="col s2">
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.dram.fact.min')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.dram.fact.max')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 center-label-form evenbg">
+      Октябрьский РВК
+    </div>
+    <div class="col s2 evenbg">
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.oktrvk.fact.min')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.oktrvk.fact.max')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 center-label-form">
+      Телецентр
+    </div>
+    <div class="col s2">
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.telc.fact.min')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.telc.fact.max')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 center-label-form evenbg">
+      Стадион Динамо
+    </div>
+    <div class="col s2 evenbg">
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.dynamo.fact.min')
+    </div>
+    <div class="col s2 evenbg">
+      %== form_el(class=>'textcb', metric=>'kt.dynamo.fact.max')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 center-label-form">
+      Подано птицефабрика
+    </div>
+    <div class="col s2">
+    </div>
+    <div class="col s2">
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'kt.ptfab.podacha')
+    </div>
+  </div>
+
+</div>
+</main>
+% content_for script0 => begin
+<script src="/js/jquery.matchHeight-min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.dropdown-trigger').dropdown({coverTrigger:false,constrainWidth:false});
+  $('.refreshnav').click(function(){location.reload()});
+  $('.evenbg').matchHeight();
+  $('.graybg').matchHeight();
+
+  var process_submit = function(s,url,update_func){
+    var p=$.post(url,{id:s.get(0).id,v:s.val()});
+    p.done(function(d){
+      s.removeClass('invalid').addClass('valid');
+      s.siblings('.helper-text').attr('data-success','Сохранено: '+d.msg);
+      if('v' in d){
+        s.val(d.v);
+        if(update_func!==undefined){update_func()}
+      };
+    });
+    p.fail(function(o,t){
+      s.removeClass('valid').addClass('invalid');
+      s.siblings('.helper-text').attr('data-error','Ошибка: '+o.responseJSON.msg);
+      if('v' in o.responseJSON){s.val(o.responseJSON.v)};
+    });
+  };
+
+  $('input.textcb').change(function(){process_submit($(this), '/disp/plk/submit1')});
+});
+</script>
+% end
+

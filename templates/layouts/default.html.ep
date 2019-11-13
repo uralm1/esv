@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  % if (my $t = stash 'title') {
+  <title><%= $t %></title> 
+  % } else {
+  <title>Ежедневная сводка</title>
+  % }
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <!--link rel="stylesheet" href="/css/fonts-roboto.css"-->
+  <link rel="stylesheet" href="/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/material-icons-esv.css">
+  <link rel="stylesheet" href="/css/styles.css?v=020">
+  <link rel="stylesheet" href="/css/nav.css?v=020">
+</head>
+<body class="<%== 'has-fixed-sidenav' unless stash 'fullscreen' %>">
+% my $checkbrowser = check_browser;
+%== $checkbrowser if $checkbrowser;
+% my $newversion = check_newversion;
+%== $newversion if $newversion;
+%= content
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+% if ($checkbrowser) {
+<script>$(document).ready(function(){$('#oldbrowser-modal').modal();$('#oldbrowser-modal').modal('open');});</script>
+% }
+% if ($newversion) {
+<script>$(document).ready(function(){$('#newversion-modal').modal();$('#newversion-modal').modal('open');});</script>
+% }
+%= content 'script_sidenav'
+%= content 'done_toast'
+%= content 'script0'
+</body>
+</html>
+

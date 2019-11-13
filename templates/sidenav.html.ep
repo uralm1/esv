@@ -1,0 +1,101 @@
+<ul id="sidenav-left" class="sidenav <%== 'sidenav-fixed' unless stash 'fullscreen' %>">
+  <li>
+    <%= link_to '/' => (class => 'logo-container white-text') => begin %>Ежедневная сводка<% end %>
+  </li>
+  % unless (stash 'sidenav_no_date' or stash 'sidenav_no_menu') {
+  <li class="no-padding">
+    <form action="<%== url_with %>" class="" id="date-form" method="GET">
+      <div class="input-field">
+	<i class="material-icons prefix white-text" title="Дата формирования сводки">watch_later</i>
+	<input id="date-main" class="datepicker" type="text" name="date" value="<%== get_oper_date(1) %>">
+	<label class="active date-label" for="date-main">Дата формирования</label>
+	<span class="helper-text">Выберите дату</span>
+      </div>
+    </form>
+  </li>
+  % }
+  % unless (stash 'sidenav_no_menu') {
+  <li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+      <li class="bold<%== ($sidenav_active_page eq 'podano2') && ' active' %>">
+	<a class="collapsible-header no-body" data-href="/disp/plk2">Подано воды</a>
+      </li>
+      <li class="bold<%== ($sidenav_active_page eq 'other') && ' active' %>">
+	<a class="collapsible-header" data-href="/disp/plk/oth#h-other">Прочие показатели<i class="material-icons chevron">chevron_left</i></a>
+	<div class="collapsible-body">
+	  <ul>
+	    <li><a href="/disp/plk/oth#h-other" class="waves-effect">Средняя температура воздуха</a></li>
+	    <li><a href="/disp/plk/oth#h-other-pavl" class="waves-effect">Павловское водохранилище</a></li>
+	    <li><a href="/disp/plk/oth#h-other-reka" class="waves-effect">Уровень реки и мутность</a></li>
+	    <li><a href="/disp/plk/oth#h-other-gosk" class="waves-effect">Правый берег ОСК и ДЦК</a></li>
+	    <li><a href="/disp/plk/oth#h-other-lgosk" class="waves-effect">Левый берег ОСК</a></li>
+	  </ul>
+	</div>
+      </li>
+      <li class="bold<%== ($sidenav_active_page eq 'skvazh2') && ' active' %>">
+	<a class="collapsible-header no-body" data-href="/disp/plk/skv2">Работа скважин</a>
+      </li>
+      <li class="bold<%== ($sidenav_active_page eq 'kontpoint2') && ' active' %>">
+	<a class="collapsible-header no-body" data-href="/disp/plk/kt2">Контрольные точки</a>
+      </li>
+      <li class="bold<%== ($sidenav_active_page eq 'otkl') && ' active' %>">
+	<a class="collapsible-header" data-href="/disp/plk/otkl#h-otkl">Отключения<i class="material-icons chevron">chevron_left</i></a>
+	<div class="collapsible-body">
+	  <ul>
+	    <li><a href="/disp/plk/otkl#h-otkl" class="waves-effect">Плановые</a></li>
+	    <li><a href="/disp/plk/otkl#h-otkl-noplan" class="waves-effect">Внеплановые (аварийные)</a></li>
+	  </ul>
+	</div>
+      </li>
+      <li class="bold<%== ($sidenav_active_page eq 'rep') && ' active' %>">
+	<a class="collapsible-header yellow-text" data-href="/disp/plk/otkl#h-otkl">Отчёты<i class="material-icons chevron">chevron_left</i></a>
+	<div class="collapsible-body">
+	  <ul>
+	    <li><%= link_to url_for('reppreview')->query(rep => 'gendir') => (class => 'waves-effect') => begin %>Для генерального директора<% end %></li>
+	    <li><%= link_to url_for('reppreview')->query(rep => 'tehdir') => (class => 'waves-effect') => begin %>Для технического директора<% end %></li>
+	    <!--li><%= link_to url_for('reppreview')->query(rep => 'temp') => (class => 'waves-effect') => begin %>Температура<% end %></li-->
+            <!--li><a href="<%= config 'dashboard_url' %>" class="waves-effect" target="_blank">Графики</a></li-->
+	    <li><%= link_to url_for('repperiod') => (class => 'waves-effect') => begin %>Отчёты по периодам...<% end %></li>
+	  </ul>
+	</div>
+      </li>
+    </ul>
+  </li>
+  % }
+  <li class="current-date">
+    Сегодня: <%= current_date_frm %>
+  </li>
+  <li class="current-user">
+    Пользователь: <%= $remote_user %>
+  </li>
+  <li class="copyright">
+    <span>ЦАДС</span>
+    <span title="Версия: <%== $version %>. Автор: Урал Хасанов"> &#x00b7 МУП "Уфаводоканал" &#x00b7 2019 </span>
+  </li>
+</ul>
+
+% content_for script_sidenav => begin
+<script>
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+  $('.collapsible').collapsible();
+
+  $('.datepicker').datepicker({firstDay:1,format:'dd.mm.yyyy',
+    i18n:{cancel:'Отмена',done:'Выбрать',
+    months:['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    monthsShort:['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+    weekdays:['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+    weekdaysShort:['Вск','Пнд','Втр','Срд','Чтв','Птн','Сбт'],
+    weekdaysAbbrev:['Вс','Пн','Вт','Ср','Чт','Пт','Сб']},
+    autoClose:false,
+    container:document.getElementsByTagName('body'),
+    defaultDate:new Date(),
+  });
+  $('#date-main').change(function(){$('#date-form').submit()});
+  var altjump_handler = function(e){e.preventDefault();var h=$(this).attr('data-href');if(h){location.href=h}};
+  $('.sidenav a.collapsible-header').dblclick(altjump_handler);
+  $('.sidenav a.collapsible-header').contextmenu(altjump_handler);
+  $('.sidenav a.collapsible-header.no-body').click(altjump_handler);
+});
+</script>
+% end

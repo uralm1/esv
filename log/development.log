@@ -1,0 +1,1579 @@
+[2019-05-12 19:32:12.13429] [28556] [debug] Users catalog created
+[2019-05-12 19:32:12.14703] [28556] [debug] Metrics catalog created
+[2019-05-12 19:44:11.10226] [28665] [debug] Users catalog created
+[2019-05-12 19:44:11.11315] [28665] [debug] Metrics catalog created
+[2019-05-12 19:44:18.12132] [28676] [debug] Users catalog created
+[2019-05-12 19:44:18.13161] [28676] [debug] Metrics catalog created
+[2019-05-12 19:44:25.15135] [28687] [debug] Users catalog created
+[2019-05-12 19:44:25.16180] [28687] [debug] Metrics catalog created
+[2019-05-12 19:44:32.17214] [28698] [debug] Users catalog created
+[2019-05-12 19:44:32.18251] [28698] [debug] Metrics catalog created
+[2019-05-12 19:44:39.19614] [28709] [debug] Users catalog created
+[2019-05-12 19:44:39.21130] [28709] [debug] Metrics catalog created
+[2019-05-12 19:44:45.22815] [28730] [debug] Users catalog created
+[2019-05-12 19:44:45.23962] [28730] [debug] Metrics catalog created
+[2019-05-12 19:44:50.24381] [28732] [debug] Users catalog created
+[2019-05-12 19:44:50.25552] [28732] [debug] Metrics catalog created
+[2019-05-12 19:44:58.27224] [28743] [debug] Users catalog created
+[2019-05-12 19:44:58.28514] [28743] [debug] Metrics catalog created
+[2019-05-12 19:46:57.61408] [28763] [debug] Users catalog created
+[2019-05-12 19:46:57.62650] [28763] [debug] Metrics catalog created
+[2019-05-12 19:48:23.85835] [28766] [debug] Users catalog created
+[2019-05-12 19:48:23.87101] [28766] [debug] Metrics catalog created
+[2019-05-12 19:58:00.44384] [28773] [debug] Users catalog created
+[2019-05-12 19:58:00.45593] [28773] [debug] Metrics catalog created
+[2019-05-12 20:00:05.80733] [28775] [debug] Users catalog created
+[2019-05-12 20:00:05.82218] [28775] [debug] Metrics catalog created
+[2019-05-12 20:20:03.02786] [28834] [debug] Users catalog created
+[2019-05-12 20:20:03.03931] [28834] [debug] Metrics catalog created
+[2019-05-12 20:23:37.59903] [28838] [debug] Users catalog created
+[2019-05-12 20:23:37.61027] [28838] [debug] Metrics catalog created
+[2019-05-12 20:28:24.38841] [28886] [debug] Users catalog created
+[2019-05-12 20:28:24.40274] [28886] [debug] Metrics catalog created
+[2019-05-12 20:28:56.51963] [28886] [debug] GET "/" (3a2658e5)
+[2019-05-12 20:28:56.52066] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-12 20:28:56.52076] [28886] [info] Redirected role: asu, user: ural => asu
+[2019-05-12 20:28:56.52108] [28886] [debug] 302 Found (0.001443s, 693.001/s)
+[2019-05-12 20:28:56.71335] [28886] [debug] GET "/asu" (cc5ae4ef)
+[2019-05-12 20:28:56.71404] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-12 20:28:56.71472] [28886] [debug] Rendering template "index/asu.html.ep"
+[2019-05-12 20:28:56.72183] [28886] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 20:28:56.72726] [28886] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 20:28:56.72921] [28886] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 20:28:56.73099] [28886] [debug] 200 OK (0.017621s, 56.750/s)
+[2019-05-12 20:29:04.76157] [28886] [debug] GET "/asu" (f2c5af96)
+[2019-05-12 20:29:04.76232] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-12 20:29:04.76275] [28886] [debug] Rendering cached template "index/asu.html.ep"
+[2019-05-12 20:29:04.76318] [28886] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:29:04.76553] [28886] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:29:04.76877] [28886] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:29:04.77014] [28886] [debug] 200 OK (0.00853s, 117.233/s)
+[2019-05-12 20:29:10.62103] [28886] [debug] GET "/" (d71c4cdd)
+[2019-05-12 20:29:10.62174] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-12 20:29:10.62200] [28886] [info] Redirected role: asu, user: ural => asu
+[2019-05-12 20:29:10.62262] [28886] [debug] 302 Found (0.001553s, 643.915/s)
+[2019-05-12 20:29:10.80463] [28886] [debug] GET "/asu" (1cf49437)
+[2019-05-12 20:29:10.80516] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-12 20:29:10.80557] [28886] [debug] Rendering cached template "index/asu.html.ep"
+[2019-05-12 20:29:10.80592] [28886] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:29:10.80817] [28886] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:29:10.81107] [28886] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:29:10.81148] [28886] [debug] 200 OK (0.006853s, 145.921/s)
+[2019-05-12 20:29:14.63212] [28886] [debug] GET "/disp/plk2" (f42f456f)
+[2019-05-12 20:29:14.63911] [28886] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-12 20:29:14.64036] [28886] [debug] Rendering template "disp/plk2.html.ep"
+[2019-05-12 20:29:14.64841] [28886] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:29:14.65023] [28886] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:29:14.84445] [28886] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:29:14.84686] [28886] [debug] 200 OK (0.214705s, 4.658/s)
+[2019-05-12 20:29:22.70802] [28886] [debug] GET "/rep/period" (016c7ab2)
+[2019-05-12 20:29:22.72768] [28886] [debug] Routing to controller "Esv::Controller::Rep" and action "period"
+[2019-05-12 20:29:22.72943] [28886] [debug] Rendering template "rep/period.html.ep"
+[2019-05-12 20:29:22.73222] [28886] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:29:22.73365] [28886] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:29:22.73460] [28886] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:29:22.73503] [28886] [debug] 200 OK (0.027027s, 37.000/s)
+[2019-05-12 20:30:20.15110] [28886] [debug] GET "/" (db4f2b0d)
+[2019-05-12 20:30:20.15181] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-12 20:30:20.15208] [28886] [info] Redirected role: asu, user: ural => asu
+[2019-05-12 20:30:20.15270] [28886] [debug] 302 Found (0.001569s, 637.349/s)
+[2019-05-12 20:30:20.82890] [28886] [debug] GET "/asu" (8d44f5a3)
+[2019-05-12 20:30:20.82945] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-12 20:30:20.82985] [28886] [debug] Rendering cached template "index/asu.html.ep"
+[2019-05-12 20:30:20.83021] [28886] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:30:20.83251] [28886] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:30:20.83567] [28886] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:30:20.83705] [28886] [debug] 200 OK (0.008121s, 123.138/s)
+[2019-05-12 20:31:50.21309] [28886] [debug] GET "/" (ab3563b1)
+[2019-05-12 20:31:50.21379] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-12 20:31:50.21405] [28886] [info] Redirected role: asu, user: ural => asu
+[2019-05-12 20:31:50.21467] [28886] [debug] 302 Found (0.001554s, 643.501/s)
+[2019-05-12 20:31:50.37646] [28886] [debug] GET "/asu" (78505f3b)
+[2019-05-12 20:31:50.37699] [28886] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-12 20:31:50.37738] [28886] [debug] Rendering cached template "index/asu.html.ep"
+[2019-05-12 20:31:50.37774] [28886] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:31:50.38000] [28886] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:31:50.38316] [28886] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:31:50.38480] [28886] [debug] 200 OK (0.008304s, 120.424/s)
+[2019-05-12 20:32:03.65116] [28886] [debug] GET "/disp/plk2" (b82bc94b)
+[2019-05-12 20:32:03.65192] [28886] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-12 20:32:03.65520] [28886] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-05-12 20:32:03.65560] [28886] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:32:03.65957] [28886] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:32:03.66411] [28886] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:32:03.66477] [28886] [debug] 200 OK (0.01362s, 73.421/s)
+[2019-05-12 20:32:16.59102] [28886] [debug] GET "/disp/plk/oth" (5a7392e9)
+[2019-05-12 20:32:16.59204] [28886] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:32:16.59404] [28886] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 20:32:16.60030] [28886] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:32:16.60198] [28886] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:32:16.61128] [28886] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:32:16.61201] [28886] [debug] 200 OK (0.021007s, 47.603/s)
+[2019-05-12 20:35:20.52379] [28914] [debug] Users catalog created
+[2019-05-12 20:35:20.53945] [28914] [debug] Metrics catalog created
+[2019-05-12 20:36:21.68683] [28930] [debug] Users catalog created
+[2019-05-12 20:36:21.69835] [28930] [debug] Metrics catalog created
+[2019-05-12 20:36:35.42252] [28930] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 20:36:35.42524] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:36:35.42648] [28930] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 20:36:35.43266] [28930] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 20:36:35.43846] [28930] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 20:36:35.46077] [28930] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 20:36:35.46372] [28930] [debug] 200 OK (0.041217s, 24.262/s)
+[2019-05-12 20:37:02.43751] [28930] [debug] GET "/disp/plk/oth" (cc5ae4ef)
+[2019-05-12 20:37:02.43827] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:37:02.44014] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:37:02.44055] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:37:02.44615] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:37:02.45370] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:37:02.45445] [28930] [debug] 200 OK (0.016952s, 58.990/s)
+[2019-05-12 20:37:24.22398] [28930] [debug] GET "/disp/plk/oth" (f2c5af96)
+[2019-05-12 20:37:24.22470] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:37:24.22644] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:37:24.22681] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:37:24.22855] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:37:24.23535] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:37:24.23599] [28930] [debug] 200 OK (0.01202s, 83.195/s)
+[2019-05-12 20:40:35.18176] [28930] [debug] GET "/disp/plk/oth" (d71c4cdd)
+[2019-05-12 20:40:35.18252] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:40:35.18434] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:40:35.18454] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:40:35.18722] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:40:35.19835] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:40:35.19949] [28930] [debug] 200 OK (0.01773s, 56.402/s)
+[2019-05-12 20:40:44.97622] [28930] [debug] GET "/disp/plk/oth" (1cf49437)
+[2019-05-12 20:40:44.97693] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:40:44.97865] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:40:44.97905] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:40:44.98442] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:40:44.99272] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:40:44.99338] [28930] [debug] 200 OK (0.017172s, 58.234/s)
+[2019-05-12 20:41:03.14937] [28930] [debug] GET "/disp/plk/oth" (f42f456f)
+[2019-05-12 20:41:03.15012] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:41:03.15310] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:41:03.15351] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:41:03.15670] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:41:03.16590] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:41:03.16704] [28930] [debug] 200 OK (0.017661s, 56.622/s)
+[2019-05-12 20:41:24.13783] [28930] [debug] GET "/disp/plk/oth" (016c7ab2)
+[2019-05-12 20:41:24.13854] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:41:24.14028] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:41:24.14066] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:41:24.14387] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:41:24.15056] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:41:24.15135] [28930] [debug] 200 OK (0.01353s, 73.910/s)
+[2019-05-12 20:41:28.88379] [28930] [debug] GET "/disp/plk/oth" (db4f2b0d)
+[2019-05-12 20:41:28.88449] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:41:28.88620] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:41:28.88657] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:41:28.89195] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:41:28.90056] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:41:28.90121] [28930] [debug] 200 OK (0.01743s, 57.372/s)
+[2019-05-12 20:42:04.07841] [28930] [debug] GET "/disp/plk/oth" (8d44f5a3)
+[2019-05-12 20:42:04.07922] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:42:04.08099] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:42:04.08139] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:42:04.08705] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:42:04.09772] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:42:04.12119] [28930] [debug] 200 OK (0.042784s, 23.373/s)
+[2019-05-12 20:42:26.75786] [28930] [debug] GET "/disp/plk/oth" (ab3563b1)
+[2019-05-12 20:42:26.75857] [28930] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:42:26.75942] [28930] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:42:26.75953] [28930] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:42:26.76115] [28930] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:42:26.76812] [28930] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:42:26.76876] [28930] [debug] 200 OK (0.010915s, 91.617/s)
+[2019-05-12 20:49:13.79154] [29024] [debug] Users catalog created
+[2019-05-12 20:49:13.80265] [29024] [debug] Metrics catalog created
+[2019-05-12 20:49:30.11455] [29024] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 20:49:30.12013] [29024] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:49:30.12140] [29024] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 20:49:30.12760] [29024] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 20:49:30.13340] [29024] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 20:49:30.15468] [29024] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 20:49:30.15751] [29024] [debug] 200 OK (0.042991s, 23.261/s)
+[2019-05-12 20:50:00.92805] [29028] [debug] Users catalog created
+[2019-05-12 20:50:00.94331] [29028] [debug] Metrics catalog created
+[2019-05-12 20:51:02.10094] [29045] [debug] Users catalog created
+[2019-05-12 20:51:02.11364] [29045] [debug] Metrics catalog created
+[2019-05-12 20:52:24.32710] [29048] [debug] Users catalog created
+[2019-05-12 20:52:24.33869] [29048] [debug] Metrics catalog created
+[2019-05-12 20:52:50.40621] [29066] [debug] Users catalog created
+[2019-05-12 20:52:50.41853] [29066] [debug] Metrics catalog created
+[2019-05-12 20:53:15.34671] [29066] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 20:53:15.35088] [29066] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:53:15.35289] [29066] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 20:53:15.36167] [29066] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 20:53:15.36765] [29066] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 20:53:15.38968] [29066] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 20:53:15.39197] [29066] [debug] 200 OK (0.045258s, 22.096/s)
+[2019-05-12 20:57:22.14641] [29084] [debug] Users catalog created
+[2019-05-12 20:57:22.15893] [29084] [debug] Metrics catalog created
+[2019-05-12 20:57:25.65179] [29084] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 20:57:25.65638] [29084] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:57:25.65761] [29084] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 20:57:25.66381] [29084] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 20:57:25.66976] [29084] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 20:57:25.69105] [29084] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 20:57:25.69374] [29084] [debug] 200 OK (0.04197s, 23.827/s)
+[2019-05-12 20:57:43.18931] [29084] [debug] GET "/disp/plk/oth" (cc5ae4ef)
+[2019-05-12 20:57:43.18970] [29084] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 20:57:43.19059] [29084] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 20:57:43.19079] [29084] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 20:57:43.19355] [29084] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 20:57:43.20188] [29084] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 20:57:43.20272] [29084] [debug] 200 OK (0.013397s, 74.644/s)
+[2019-05-12 20:59:24.49424] [29087] [debug] Users catalog created
+[2019-05-12 20:59:24.50526] [29087] [debug] Metrics catalog created
+[2019-05-12 21:01:01.75451] [29102] [debug] Users catalog created
+[2019-05-12 21:01:01.76473] [29102] [debug] Metrics catalog created
+[2019-05-12 21:01:17.24359] [29102] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 21:01:17.24601] [29102] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:01:17.24725] [29102] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 21:01:17.25339] [29102] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 21:01:17.25918] [29102] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 21:01:17.27978] [29102] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 21:01:17.28254] [29102] [debug] 200 OK (0.038926s, 25.690/s)
+[2019-05-12 21:01:59.91807] [29104] [debug] Users catalog created
+[2019-05-12 21:01:59.92879] [29104] [debug] Metrics catalog created
+[2019-05-12 21:03:07.10714] [29107] [debug] Users catalog created
+[2019-05-12 21:03:07.11762] [29107] [debug] Metrics catalog created
+[2019-05-12 21:03:28.66373] [29107] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 21:03:28.66836] [29107] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:03:28.66960] [29107] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 21:03:28.67579] [29107] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 21:03:28.68160] [29107] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 21:03:28.70180] [29107] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 21:03:28.70435] [29107] [debug] 200 OK (0.040644s, 24.604/s)
+[2019-05-12 21:04:03.08542] [29107] [debug] GET "/disp/plk/oth" (cc5ae4ef)
+[2019-05-12 21:04:03.08616] [29107] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:04:03.08928] [29107] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 21:04:03.08969] [29107] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 21:04:03.09506] [29107] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 21:04:03.10171] [29107] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 21:04:03.10251] [29107] [debug] 200 OK (0.017106s, 58.459/s)
+[2019-05-12 21:07:06.94106] [29107] [debug] GET "/disp/plk/oth" (f2c5af96)
+[2019-05-12 21:07:06.94181] [29107] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:07:06.94365] [29107] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 21:07:06.94406] [29107] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 21:07:06.94783] [29107] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 21:07:06.95480] [29107] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 21:07:06.95549] [29107] [debug] 200 OK (0.014439s, 69.257/s)
+[2019-05-12 21:28:10.25677] [29660] [debug] Users catalog created
+[2019-05-12 21:28:10.27011] [29660] [debug] Metrics catalog created
+[2019-05-12 21:28:47.22059] [29662] [debug] Users catalog created
+[2019-05-12 21:28:47.23083] [29662] [debug] Metrics catalog created
+[2019-05-12 21:31:17.64067] [29678] [debug] Users catalog created
+[2019-05-12 21:31:17.65451] [29678] [debug] Metrics catalog created
+[2019-05-12 21:31:38.69703] [29680] [debug] Users catalog created
+[2019-05-12 21:31:38.70964] [29680] [debug] Metrics catalog created
+[2019-05-12 21:32:24.30492] [29680] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 21:32:24.31167] [29680] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:32:24.31294] [29680] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 21:32:24.31917] [29680] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 21:32:24.32519] [29680] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 21:32:24.34660] [29680] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 21:32:24.34927] [29680] [debug] 200 OK (0.044374s, 22.536/s)
+[2019-05-12 21:32:42.81670] [29680] [debug] GET "/disp/plk/oth" (cc5ae4ef)
+[2019-05-12 21:32:42.81740] [29680] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:32:42.81911] [29680] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 21:32:42.81949] [29680] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 21:32:42.82482] [29680] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 21:32:42.83362] [29680] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 21:32:42.83461] [29680] [debug] 200 OK (0.017919s, 55.807/s)
+[2019-05-12 21:35:48.37183] [29683] [debug] Users catalog created
+[2019-05-12 21:35:48.38568] [29683] [debug] Metrics catalog created
+[2019-05-12 21:36:04.14494] [29683] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 21:36:04.15167] [29683] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:36:04.15294] [29683] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 21:36:04.15918] [29683] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 21:36:04.16521] [29683] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 21:36:04.18841] [29683] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 21:36:04.19206] [29683] [debug] 200 OK (0.047151s, 21.208/s)
+[2019-05-12 21:44:50.84132] [29735] [debug] Users catalog created
+[2019-05-12 21:44:50.85609] [29735] [debug] Metrics catalog created
+[2019-05-12 21:46:52.16456] [29737] [debug] Users catalog created
+[2019-05-12 21:46:52.17642] [29737] [debug] Metrics catalog created
+[2019-05-12 21:47:25.24787] [29739] [debug] Users catalog created
+[2019-05-12 21:47:25.26000] [29739] [debug] Metrics catalog created
+[2019-05-12 21:48:00.34933] [29762] [debug] Users catalog created
+[2019-05-12 21:48:00.36161] [29762] [debug] Metrics catalog created
+[2019-05-12 21:48:04.67033] [29762] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 21:48:04.67885] [29762] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:48:04.68022] [29762] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 21:48:04.68648] [29762] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 21:48:04.69253] [29762] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 21:48:04.71367] [29762] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 21:48:04.71610] [29762] [debug] 200 OK (0.045794s, 21.837/s)
+[2019-05-12 21:48:21.24570] [29762] [debug] GET "/disp/plk/oth" (cc5ae4ef)
+[2019-05-12 21:48:21.24641] [29762] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:48:21.24817] [29762] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 21:48:21.24855] [29762] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 21:48:21.25182] [29762] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 21:48:21.25898] [29762] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 21:48:21.26000] [29762] [debug] 200 OK (0.014303s, 69.915/s)
+[2019-05-12 21:50:00.68311] [29764] [debug] Users catalog created
+[2019-05-12 21:50:00.69522] [29764] [debug] Metrics catalog created
+[2019-05-12 21:52:04.02079] [29766] [debug] Users catalog created
+[2019-05-12 21:52:04.03488] [29766] [debug] Metrics catalog created
+[2019-05-12 21:52:22.79350] [29766] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 21:52:22.79925] [29766] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:52:22.80047] [29766] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 21:52:22.80666] [29766] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 21:52:22.81252] [29766] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 21:52:22.83488] [29766] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 21:52:22.83842] [29766] [debug] 200 OK (0.044923s, 22.260/s)
+[2019-05-12 21:53:02.18410] [29768] [debug] Users catalog created
+[2019-05-12 21:53:02.19776] [29768] [debug] Metrics catalog created
+[2019-05-12 21:53:11.33225] [29768] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 21:53:11.33945] [29768] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 21:53:11.34068] [29768] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 21:53:11.34688] [29768] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 21:53:11.35272] [29768] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 21:53:11.37517] [29768] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 21:53:11.37868] [29768] [debug] 200 OK (0.04647s, 21.519/s)
+[2019-05-12 21:59:09.18001] [29810] [debug] Users catalog created
+[2019-05-12 21:59:09.19352] [29810] [debug] Metrics catalog created
+[2019-05-12 22:00:19.36840] [29832] [debug] Users catalog created
+[2019-05-12 22:00:19.38180] [29832] [debug] Metrics catalog created
+[2019-05-12 22:00:35.20825] [29832] [debug] GET "/disp/plk/oth" (3a2658e5)
+[2019-05-12 22:00:35.21066] [29832] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 22:00:35.21190] [29832] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 22:00:35.21806] [29832] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 22:00:35.22388] [29832] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 22:00:35.24604] [29832] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 22:00:35.24907] [29832] [debug] 200 OK (0.040812s, 24.503/s)
+[2019-05-12 22:01:12.51528] [29834] [debug] Users catalog created
+[2019-05-12 22:01:12.52909] [29834] [debug] Metrics catalog created
+[2019-05-12 22:09:01.76461] [29839] [debug] Users catalog created
+[2019-05-12 22:09:01.77651] [29839] [debug] Metrics catalog created
+[2019-05-12 22:09:20.81967] [29889] [debug] Users catalog created
+[2019-05-12 22:09:20.83369] [29889] [debug] Metrics catalog created
+[2019-05-12 22:09:26.31467] [29892] [debug] Users catalog created
+[2019-05-12 22:09:26.32655] [29892] [debug] Metrics catalog created
+[2019-05-12 22:09:32.35185] [29892] [debug] GET "/disp/plk/oth" (9498f2f8)
+[2019-05-12 22:09:32.35668] [29892] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 22:09:32.35905] [29892] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-05-12 22:09:32.36726] [29892] [debug] Rendering template "sidenav.html.ep"
+[2019-05-12 22:09:32.37305] [29892] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-12 22:09:32.39451] [29892] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-12 22:09:32.39667] [29892] [debug] 200 OK (0.044826s, 22.308/s)
+[2019-05-12 22:09:54.15773] [29892] [debug] GET "/disp/plk/oth" (335aed18)
+[2019-05-12 22:09:54.15844] [29892] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-05-12 22:09:54.15991] [29892] [debug] Rendering cached template "disp/plkoth.html.ep"
+[2019-05-12 22:09:54.16019] [29892] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-12 22:09:54.16416] [29892] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-12 22:09:54.17332] [29892] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-12 22:09:54.17421] [29892] [debug] 200 OK (0.016485s, 60.661/s)
+[2019-05-12 22:10:22.47394] [29907] [debug] Users catalog created
+[2019-05-12 22:10:22.48684] [29907] [debug] Metrics catalog created
+[2019-05-13 08:57:18.40038] [1926] [debug] Users catalog created
+[2019-05-13 08:57:18.41507] [1926] [debug] Metrics catalog created
+[2019-05-13 08:58:33.44287] [1926] [debug] GET "/" (5f73f949)
+[2019-05-13 08:58:33.44391] [1926] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 08:58:33.44401] [1926] [info] Redirected role: asu, user: ural => asu
+[2019-05-13 08:58:33.44434] [1926] [debug] 302 Found (0.001468s, 681.199/s)
+[2019-05-13 08:58:33.45360] [1926] [debug] GET "/asu" (6e439c1e)
+[2019-05-13 08:58:33.45437] [1926] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 08:58:33.45509] [1926] [debug] Rendering template "index/asu.html.ep"
+[2019-05-13 08:58:33.45786] [1926] [debug] Rendering template "sidenav.html.ep"
+[2019-05-13 08:58:33.46284] [1926] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-13 08:58:33.46621] [1926] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-13 08:58:33.46933] [1926] [debug] 200 OK (0.015692s, 63.727/s)
+[2019-05-13 08:58:35.64747] [1926] [debug] GET "/disp/plk2" (933056e6)
+[2019-05-13 08:58:35.65075] [1926] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 08:58:35.65272] [1926] [debug] Rendering template "disp/plk2.html.ep"
+[2019-05-13 08:58:35.66157] [1926] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 08:58:35.66434] [1926] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 08:58:36.30560] [1926] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 08:58:36.30640] [1926] [debug] 200 OK (0.658927s, 1.518/s)
+[2019-05-13 08:58:47.21838] [1926] [debug] GET "/about" (d2743a22)
+[2019-05-13 08:58:47.21888] [1926] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-05-13 08:58:47.22743] [1926] [debug] Rendering template "index/about.html.ep"
+[2019-05-13 08:58:47.22928] [1926] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 08:58:47.23019] [1926] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 08:58:47.23104] [1926] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 08:58:47.23169] [1926] [debug] 200 OK (0.013299s, 75.194/s)
+[2019-05-13 08:59:44.21971] [1926] [debug] GET "/about" (3bdcab86)
+[2019-05-13 08:59:44.22011] [1926] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-05-13 08:59:44.22768] [1926] [debug] Rendering cached template "index/about.html.ep"
+[2019-05-13 08:59:44.22792] [1926] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 08:59:44.22898] [1926] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 08:59:44.22994] [1926] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 08:59:44.23062] [1926] [debug] 200 OK (0.0109s, 91.743/s)
+[2019-05-13 08:59:49.05941] [1926] [debug] GET "/" (15d63fc5)
+[2019-05-13 08:59:49.05970] [1926] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 08:59:49.05981] [1926] [info] Redirected role: asu, user: ural => asu
+[2019-05-13 08:59:49.06006] [1926] [debug] 302 Found (0.000646s, 1547.988/s)
+[2019-05-13 08:59:49.06388] [1926] [debug] GET "/asu" (bb7f7024)
+[2019-05-13 08:59:49.06413] [1926] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 08:59:49.06432] [1926] [debug] Rendering cached template "index/asu.html.ep"
+[2019-05-13 08:59:49.06450] [1926] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 08:59:49.06553] [1926] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 08:59:49.06661] [1926] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 08:59:49.06716] [1926] [debug] 200 OK (0.003265s, 306.279/s)
+[2019-05-13 08:59:51.36206] [1926] [debug] GET "/disp/plk2" (bd365ea3)
+[2019-05-13 08:59:51.36249] [1926] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 08:59:51.36387] [1926] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-05-13 08:59:51.36409] [1926] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 08:59:51.36628] [1926] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 08:59:51.37283] [1926] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 08:59:51.37355] [1926] [debug] 200 OK (0.011485s, 87.070/s)
+[2019-05-13 08:59:54.40998] [1926] [debug] GET "/settings" (ed61758f)
+[2019-05-13 08:59:54.41083] [1926] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 08:59:54.41117] [1926] [debug] Rendering template "settings/index.html.ep"
+[2019-05-13 08:59:54.41346] [1926] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 08:59:54.41458] [1926] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 08:59:54.41634] [1926] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 08:59:54.41684] [1926] [debug] 200 OK (0.006837s, 146.263/s)
+[2019-05-13 09:00:01.36484] [1926] [debug] GET "/" (9395929f)
+[2019-05-13 09:00:01.36510] [1926] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 09:00:01.36518] [1926] [info] Redirected role: asu, user: ural => asu
+[2019-05-13 09:00:01.36540] [1926] [debug] 302 Found (0.000549s, 1821.494/s)
+[2019-05-13 09:00:01.37835] [1926] [debug] GET "/asu" (4f7894d6)
+[2019-05-13 09:00:01.37857] [1926] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 09:00:01.37872] [1926] [debug] Rendering cached template "index/asu.html.ep"
+[2019-05-13 09:00:01.37884] [1926] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 09:00:01.37963] [1926] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 09:00:01.38053] [1926] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 09:00:01.38098] [1926] [debug] 200 OK (0.002625s, 380.952/s)
+[2019-05-13 09:12:44.77611] [2340] [debug] Users catalog created
+[2019-05-13 09:12:44.79120] [2340] [debug] Metrics catalog created
+[2019-05-13 09:12:53.74159] [2343] [debug] Users catalog created
+[2019-05-13 09:12:53.75373] [2343] [debug] Metrics catalog created
+[2019-05-13 09:13:41.86459] [2358] [debug] Users catalog created
+[2019-05-13 09:13:41.87703] [2358] [debug] Metrics catalog created
+[2019-05-13 09:38:12.03514] [2495] [debug] Users catalog created
+[2019-05-13 09:38:12.04821] [2495] [debug] Metrics catalog created
+[2019-05-13 09:38:22.05577] [2508] [debug] Users catalog created
+[2019-05-13 09:38:22.06692] [2508] [debug] Metrics catalog created
+[2019-05-13 09:54:54.92422] [2508] [debug] GET "/asu" (5f73f949)
+[2019-05-13 09:54:54.92605] [2508] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 09:54:54.92831] [2508] [debug] Rendering template "index/asu.html.ep"
+[2019-05-13 09:54:54.93135] [2508] [debug] Rendering template "sidenav.html.ep"
+[2019-05-13 09:54:54.93701] [2508] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-13 09:54:54.93977] [2508] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-13 09:54:54.94182] [2508] [debug] 200 OK (0.017587s, 56.860/s)
+[2019-05-13 09:54:59.50951] [2508] [debug] GET "/disp/plk2" (6e439c1e)
+[2019-05-13 09:54:59.51258] [2508] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 09:54:59.51385] [2508] [debug] Rendering template "disp/plk2.html.ep"
+[2019-05-13 09:54:59.52417] [2508] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 09:54:59.52785] [2508] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 09:54:59.55086] [2508] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 09:54:59.55185] [2508] [debug] 200 OK (0.042335s, 23.621/s)
+[2019-05-13 10:04:23.28129] [2757] [debug] Users catalog created
+[2019-05-13 10:04:23.29131] [2757] [debug] Metrics catalog created
+[2019-05-13 10:06:24.04067] [2757] [debug] GET "/disp/plk2" (5f73f949)
+[2019-05-13 10:06:24.04408] [2757] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 10:06:24.04589] [2757] [debug] Rendering template "disp/plk2.html.ep"
+[2019-05-13 10:06:24.05548] [2757] [debug] Rendering template "sidenav.html.ep"
+[2019-05-13 10:06:24.06406] [2757] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-13 10:06:24.08567] [2757] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-13 10:06:24.09015] [2757] [debug] 200 OK (0.049454s, 20.221/s)
+[2019-05-13 10:06:28.66146] [2757] [debug] GET "/settings" (6e439c1e)
+[2019-05-13 10:06:28.66292] [2757] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 10:06:28.66384] [2757] [debug] Rendering template "settings/index.html.ep"
+[2019-05-13 10:06:28.66966] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:06:28.67142] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:06:28.67277] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:06:28.67329] [2757] [debug] 200 OK (0.011824s, 84.574/s)
+[2019-05-13 10:06:38.85395] [2757] [debug] GET "/" (933056e6)
+[2019-05-13 10:06:38.85514] [2757] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 10:06:38.85526] [2757] [info] Redirected role: asu, user: ural => asu
+[2019-05-13 10:06:38.85553] [2757] [debug] 302 Found (0.001571s, 636.537/s)
+[2019-05-13 10:06:38.86122] [2757] [debug] GET "/asu" (d2743a22)
+[2019-05-13 10:06:38.86170] [2757] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 10:06:38.86192] [2757] [debug] Rendering template "index/asu.html.ep"
+[2019-05-13 10:06:38.86366] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:06:38.86469] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:06:38.86578] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:06:38.86633] [2757] [debug] 200 OK (0.005096s, 196.232/s)
+[2019-05-13 10:06:44.61829] [2757] [debug] GET "/settings" (3bdcab86)
+[2019-05-13 10:06:44.61860] [2757] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 10:06:44.61880] [2757] [debug] Rendering cached template "settings/index.html.ep"
+[2019-05-13 10:06:44.61928] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:06:44.62024] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:06:44.62145] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:06:44.62197] [2757] [debug] 200 OK (0.003662s, 273.075/s)
+[2019-05-13 10:06:50.26354] [2757] [debug] POST "/settings" (15d63fc5)
+[2019-05-13 10:06:50.26413] [2757] [debug] Routing to controller "Esv::Controller::Settings" and action "apply"
+[2019-05-13 10:06:50.26537] [2757] [debug] 302 Found (0.001818s, 550.055/s)
+[2019-05-13 10:06:50.27377] [2757] [debug] GET "/settings" (bb7f7024)
+[2019-05-13 10:06:50.27410] [2757] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 10:06:50.27433] [2757] [debug] Rendering cached template "settings/index.html.ep"
+[2019-05-13 10:06:50.27489] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:06:50.27590] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:06:50.27715] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:06:50.27770] [2757] [debug] 200 OK (0.003908s, 255.885/s)
+[2019-05-13 10:06:52.26196] [2757] [debug] GET "/" (bd365ea3)
+[2019-05-13 10:06:52.26233] [2757] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 10:06:52.26247] [2757] [info] Redirected role: asu, user: ural => asu
+[2019-05-13 10:06:52.26279] [2757] [debug] 302 Found (0.00082s, 1219.512/s)
+[2019-05-13 10:06:52.27185] [2757] [debug] GET "/asu" (ed61758f)
+[2019-05-13 10:06:52.27214] [2757] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 10:06:52.27233] [2757] [debug] Rendering cached template "index/asu.html.ep"
+[2019-05-13 10:06:52.27247] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:06:52.27350] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:06:52.27476] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:06:52.27531] [2757] [debug] 200 OK (0.003461s, 288.934/s)
+[2019-05-13 10:06:53.83492] [2757] [debug] GET "/disp/plk2" (9395929f)
+[2019-05-13 10:06:53.83567] [2757] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 10:06:53.83690] [2757] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-05-13 10:06:53.83714] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:06:53.83980] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:06:53.84623] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:06:53.84706] [2757] [debug] 200 OK (0.012168s, 82.183/s)
+[2019-05-13 10:07:04.91982] [2757] [debug] GET "/rep/period" (4f7894d6)
+[2019-05-13 10:07:04.93981] [2757] [debug] Routing to controller "Esv::Controller::Rep" and action "period"
+[2019-05-13 10:07:04.94185] [2757] [debug] Rendering template "rep/period.html.ep"
+[2019-05-13 10:07:04.94509] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:07:04.94767] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:07:04.94976] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:07:04.95057] [2757] [debug] 200 OK (0.030722s, 32.550/s)
+[2019-05-13 10:07:06.60614] [2757] [debug] GET "/rep/preview" (b63ba585)
+[2019-05-13 10:07:06.60673] [2757] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-05-13 10:07:06.60799] [2757] [debug] Rendering template "rep/preview.html.ep"
+[2019-05-13 10:07:06.61077] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:07:06.61393] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:07:06.61545] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:07:06.61610] [2757] [debug] 200 OK (0.009939s, 100.614/s)
+[2019-05-13 10:07:06.69739] [2757] [debug] GET "/rep/tehdir" (7a18c03a)
+[2019-05-13 10:07:06.69792] [2757] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-05-13 10:07:06.69914] [2757] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-05-13 10:07:06.78997] [2757] [debug] Rendering template "layouts/print.html.ep"
+[2019-05-13 10:07:06.79139] [2757] [debug] 200 OK (0.093975s, 10.641/s)
+[2019-05-13 10:07:13.75355] [2757] [debug] GET "/" (7e59e958)
+[2019-05-13 10:07:13.75387] [2757] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 10:07:13.75397] [2757] [info] Redirected role: asu, user: ural => asu
+[2019-05-13 10:07:13.75424] [2757] [debug] 302 Found (0.000679s, 1472.754/s)
+[2019-05-13 10:07:13.76154] [2757] [debug] GET "/asu" (8a4d5f73)
+[2019-05-13 10:07:13.76183] [2757] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 10:07:13.76203] [2757] [debug] Rendering cached template "index/asu.html.ep"
+[2019-05-13 10:07:13.76217] [2757] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:07:13.76331] [2757] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:07:13.76452] [2757] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:07:13.76512] [2757] [debug] 200 OK (0.00356s, 280.899/s)
+[2019-05-13 10:14:02.07809] [3112] [debug] Users catalog created
+[2019-05-13 10:14:02.09085] [3112] [debug] Metrics catalog created
+[2019-05-13 10:14:02.36560] [3112] [debug] GET "/asu" (5f73f949)
+[2019-05-13 10:14:02.36763] [3112] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 10:14:02.36841] [3112] [debug] Rendering template "index/asu.html.ep"
+[2019-05-13 10:14:02.37075] [3112] [debug] Rendering template "sidenav.html.ep"
+[2019-05-13 10:14:02.37665] [3112] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-13 10:14:02.37963] [3112] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-13 10:14:02.38179] [3112] [debug] 200 OK (0.016181s, 61.801/s)
+[2019-05-13 10:14:06.46316] [3112] [debug] GET "/settings" (6e439c1e)
+[2019-05-13 10:14:06.46402] [3112] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 10:14:06.46427] [3112] [debug] Rendering template "settings/index_cds.html.ep"
+[2019-05-13 10:14:06.46618] [3112] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:14:06.46703] [3112] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:14:06.46810] [3112] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:14:06.46859] [3112] [debug] 200 OK (0.005414s, 184.706/s)
+[2019-05-13 10:16:37.14800] [3157] [debug] Users catalog created
+[2019-05-13 10:16:37.16267] [3157] [debug] Metrics catalog created
+[2019-05-13 10:17:54.33023] [3183] [debug] Users catalog created
+[2019-05-13 10:17:54.34336] [3183] [debug] Metrics catalog created
+[2019-05-13 10:18:17.38557] [3206] [debug] Users catalog created
+[2019-05-13 10:18:17.39826] [3206] [debug] Metrics catalog created
+[2019-05-13 10:18:35.43224] [3227] [debug] Users catalog created
+[2019-05-13 10:18:35.44406] [3227] [debug] Metrics catalog created
+[2019-05-13 10:19:28.55865] [3245] [debug] Users catalog created
+[2019-05-13 10:19:28.56950] [3245] [debug] Metrics catalog created
+[2019-05-13 10:20:26.72320] [3263] [debug] Users catalog created
+[2019-05-13 10:20:26.73340] [3263] [debug] Metrics catalog created
+[2019-05-13 10:21:22.85828] [3269] [debug] Users catalog created
+[2019-05-13 10:21:22.86988] [3269] [debug] Metrics catalog created
+[2019-05-13 10:21:28.19928] [3269] [debug] GET "/" (5f73f949)
+[2019-05-13 10:21:28.20088] [3269] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 10:21:28.20105] [3269] [info] Redirected role: asu, user: ural => asu
+[2019-05-13 10:21:28.20161] [3269] [debug] 302 Found (0.00231s, 432.900/s)
+[2019-05-13 10:21:28.20979] [3269] [debug] GET "/asu" (6e439c1e)
+[2019-05-13 10:21:28.21061] [3269] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-05-13 10:21:28.21155] [3269] [debug] Rendering template "index/asu.html.ep"
+[2019-05-13 10:21:28.21432] [3269] [debug] Rendering template "sidenav.html.ep"
+[2019-05-13 10:21:28.22099] [3269] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-13 10:21:28.22428] [3269] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-13 10:21:28.22756] [3269] [debug] 200 OK (0.017736s, 56.382/s)
+[2019-05-13 10:21:35.80315] [3269] [debug] GET "/settings" (933056e6)
+[2019-05-13 10:21:35.80417] [3269] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 10:21:35.80429] [3269] [info] Redirected settings for role: asu, user: ural => settings/index_asu
+[2019-05-13 10:21:35.80451] [3269] [debug] Rendering template "settings/index_asu.html.ep"
+[2019-05-13 10:21:35.80677] [3269] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:21:35.80771] [3269] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:21:35.80871] [3269] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:21:35.80912] [3269] [debug] 200 OK (0.005962s, 167.729/s)
+[2019-05-13 10:22:13.99794] [3296] [debug] Users catalog created
+[2019-05-13 10:22:14.01156] [3296] [debug] Metrics catalog created
+[2019-05-13 10:22:30.03370] [3309] [debug] Users catalog created
+[2019-05-13 10:22:30.05385] [3309] [debug] Metrics catalog created
+[2019-05-13 10:22:34.14351] [3309] [debug] GET "/settings" (5f73f949)
+[2019-05-13 10:22:34.14548] [3309] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 10:22:34.14565] [3309] [info] Redirected settings for role: asu, user: ural => settings/index_asu
+[2019-05-13 10:22:34.14662] [3309] [debug] Rendering template "settings/index_asu.html.ep"
+[2019-05-13 10:22:34.15074] [3309] [debug] Rendering template "sidenav.html.ep"
+[2019-05-13 10:22:34.15575] [3309] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-13 10:22:34.15917] [3309] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-13 10:22:34.16126] [3309] [debug] 200 OK (0.017742s, 56.363/s)
+[2019-05-13 10:23:30.18966] [3330] [debug] Users catalog created
+[2019-05-13 10:23:30.20027] [3330] [debug] Metrics catalog created
+[2019-05-13 10:24:10.28145] [3345] [debug] Users catalog created
+[2019-05-13 10:24:10.29224] [3345] [debug] Metrics catalog created
+[2019-05-13 10:24:14.00336] [3345] [debug] GET "/settings" (5f73f949)
+[2019-05-13 10:24:14.01178] [3345] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 10:24:14.01202] [3345] [info] Redirected settings for role: asu, user: ural => settings/index_asu
+[2019-05-13 10:24:14.01291] [3345] [debug] Rendering template "settings/index_asu.html.ep"
+[2019-05-13 10:24:14.01618] [3345] [debug] Rendering template "sidenav.html.ep"
+[2019-05-13 10:24:14.02145] [3345] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-13 10:24:14.02426] [3345] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-13 10:24:14.02648] [3345] [debug] 200 OK (0.023094s, 43.301/s)
+[2019-05-13 10:24:33.32559] [3370] [debug] Users catalog created
+[2019-05-13 10:24:33.33559] [3370] [debug] Metrics catalog created
+[2019-05-13 10:24:34.68254] [3370] [debug] GET "/settings" (5f73f949)
+[2019-05-13 10:24:34.68436] [3370] [debug] Routing to controller "Esv::Controller::Settings" and action "index"
+[2019-05-13 10:24:34.68452] [3370] [info] Redirected settings for role: cds, user: cds_tech@uwc.ufanet.ru => settings/index_cds
+[2019-05-13 10:24:34.68524] [3370] [debug] Rendering template "settings/index_cds.html.ep"
+[2019-05-13 10:24:34.68803] [3370] [debug] Rendering template "sidenav.html.ep"
+[2019-05-13 10:24:34.69497] [3370] [debug] Rendering template "dropdown-other.html.ep"
+[2019-05-13 10:24:34.69747] [3370] [debug] Rendering template "layouts/default.html.ep"
+[2019-05-13 10:24:34.70050] [3370] [debug] 200 OK (0.017942s, 55.735/s)
+[2019-05-13 10:24:41.27610] [3370] [debug] GET "/disp/plk2" (6e439c1e)
+[2019-05-13 10:24:41.27855] [3370] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 10:24:41.27987] [3370] [debug] Rendering template "disp/plk2.html.ep"
+[2019-05-13 10:24:41.29000] [3370] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:24:41.29265] [3370] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:24:41.36596] [3370] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:24:41.36686] [3370] [debug] 200 OK (0.090741s, 11.020/s)
+[2019-05-13 10:24:47.39860] [3370] [debug] GET "/" (933056e6)
+[2019-05-13 10:24:47.39969] [3370] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 10:24:47.39980] [3370] [info] Redirected role: cds, user: cds_tech@uwc.ufanet.ru => dispplk2
+[2019-05-13 10:24:47.40007] [3370] [debug] 302 Found (0.001456s, 686.813/s)
+[2019-05-13 10:24:47.40967] [3370] [debug] GET "/disp/plk2" (d2743a22)
+[2019-05-13 10:24:47.40992] [3370] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 10:24:47.41059] [3370] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-05-13 10:24:47.41071] [3370] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:24:47.41242] [3370] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:24:47.41795] [3370] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:24:47.41871] [3370] [debug] 200 OK (0.009024s, 110.816/s)
+[2019-05-13 10:24:49.43312] [3370] [debug] GET "/" (3bdcab86)
+[2019-05-13 10:24:49.43346] [3370] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 10:24:49.43359] [3370] [info] Redirected role: cds, user: cds_tech@uwc.ufanet.ru => dispplk2
+[2019-05-13 10:24:49.43389] [3370] [debug] 302 Found (0.000766s, 1305.483/s)
+[2019-05-13 10:24:49.44012] [3370] [debug] GET "/disp/plk2" (15d63fc5)
+[2019-05-13 10:24:49.44045] [3370] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 10:24:49.44141] [3370] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-05-13 10:24:49.44159] [3370] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:24:49.44420] [3370] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:24:49.45347] [3370] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:24:49.45422] [3370] [debug] 200 OK (0.014089s, 70.977/s)
+[2019-05-13 10:24:58.48545] [3370] [debug] GET "/rep/period" (bb7f7024)
+[2019-05-13 10:24:58.51024] [3370] [debug] Routing to controller "Esv::Controller::Rep" and action "period"
+[2019-05-13 10:24:58.51318] [3370] [debug] Rendering template "rep/period.html.ep"
+[2019-05-13 10:24:58.51607] [3370] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:24:58.51761] [3370] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:24:58.51860] [3370] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:24:58.51907] [3370] [debug] 200 OK (0.033621s, 29.743/s)
+[2019-05-13 10:25:02.25109] [3370] [debug] GET "/about" (bd365ea3)
+[2019-05-13 10:25:02.25179] [3370] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-05-13 10:25:02.26576] [3370] [debug] Rendering template "index/about.html.ep"
+[2019-05-13 10:25:02.26773] [3370] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:25:02.26872] [3370] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:25:02.26966] [3370] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:25:02.27037] [3370] [debug] 200 OK (0.019262s, 51.916/s)
+[2019-05-13 10:25:06.59284] [3370] [debug] GET "/" (ed61758f)
+[2019-05-13 10:25:06.59326] [3370] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 10:25:06.59342] [3370] [info] Redirected role: cds, user: cds_tech@uwc.ufanet.ru => dispplk2
+[2019-05-13 10:25:06.59381] [3370] [debug] 302 Found (0.00095s, 1052.632/s)
+[2019-05-13 10:25:06.60266] [3370] [debug] GET "/disp/plk2" (9395929f)
+[2019-05-13 10:25:06.60297] [3370] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 10:25:06.60376] [3370] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-05-13 10:25:06.60391] [3370] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 10:25:06.60593] [3370] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 10:25:06.61148] [3370] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 10:25:06.61219] [3370] [debug] 200 OK (0.009532s, 104.910/s)
+[2019-05-13 11:00:09.37831] [3370] [debug] GET "/rep/period" (4f7894d6)
+[2019-05-13 11:00:09.37867] [3370] [debug] Routing to controller "Esv::Controller::Rep" and action "period"
+[2019-05-13 11:00:09.38178] [3370] [debug] Rendering cached template "rep/period.html.ep"
+[2019-05-13 11:00:09.38210] [3370] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 11:00:09.38425] [3370] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 11:00:09.38565] [3370] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 11:00:09.38640] [3370] [debug] 200 OK (0.008074s, 123.854/s)
+[2019-05-13 11:11:43.97209] [3370] [debug] GET "/" (b63ba585)
+[2019-05-13 11:11:43.97242] [3370] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-05-13 11:11:43.97256] [3370] [info] Redirected role: cds, user: cds_tech@uwc.ufanet.ru => dispplk2
+[2019-05-13 11:11:43.97288] [3370] [debug] 302 Found (0.000788s, 1269.036/s)
+[2019-05-13 11:11:43.98200] [3370] [debug] GET "/disp/plk2" (7a18c03a)
+[2019-05-13 11:11:43.98226] [3370] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-05-13 11:11:43.98306] [3370] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-05-13 11:11:43.98319] [3370] [debug] Rendering cached template "sidenav.html.ep"
+[2019-05-13 11:11:43.98517] [3370] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-05-13 11:11:43.99175] [3370] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-05-13 11:11:43.99267] [3370] [debug] 200 OK (0.010645s, 93.941/s)
+[2019-06-13 14:33:59.27811] [1267] [debug] Users catalog created
+[2019-06-13 14:33:59.33338] [1267] [debug] Metrics catalog created
+[2019-06-13 14:34:02.79303] [1267] [debug] GET "/" (3604dab7)
+[2019-06-13 14:34:02.82434] [1267] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-06-13 14:34:02.82450] [1267] [info] Redirected role: asu, user: ural => asu
+[2019-06-13 14:34:02.82490] [1267] [debug] 302 Found (0.031861s, 31.386/s)
+[2019-06-13 14:34:02.89059] [1267] [debug] GET "/asu" (3fdc0127)
+[2019-06-13 14:34:02.89146] [1267] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-06-13 14:34:02.89223] [1267] [debug] Rendering template "index/asu.html.ep"
+[2019-06-13 14:34:02.97147] [1267] [debug] Rendering template "sidenav.html.ep"
+[2019-06-13 14:34:03.06319] [1267] [debug] Rendering template "dropdown-other.html.ep"
+[2019-06-13 14:34:03.08460] [1267] [debug] Rendering template "layouts/default.html.ep"
+[2019-06-13 14:34:03.13852] [1267] [debug] 200 OK (0.247906s, 4.034/s)
+[2019-06-13 14:34:24.37135] [1267] [debug] GET "/disp/plk2" (0be604df)
+[2019-06-13 14:34:24.41145] [1267] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-06-13 14:34:24.41310] [1267] [debug] Rendering template "disp/plk2.html.ep"
+[2019-06-13 14:34:24.42512] [1267] [debug] Rendering cached template "sidenav.html.ep"
+[2019-06-13 14:34:24.42725] [1267] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-06-13 14:34:24.55158] [1267] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-06-13 14:34:24.55249] [1267] [debug] 200 OK (0.181121s, 5.521/s)
+[2019-06-13 14:34:39.52082] [1267] [debug] GET "/disp/plk2" (d264ccd5)
+[2019-06-13 14:34:39.52117] [1267] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-06-13 14:34:39.52221] [1267] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-06-13 14:34:39.52239] [1267] [debug] Rendering cached template "sidenav.html.ep"
+[2019-06-13 14:34:39.52459] [1267] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-06-13 14:34:39.53629] [1267] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-06-13 14:34:39.53705] [1267] [debug] 200 OK (0.016215s, 61.671/s)
+[2019-06-13 14:34:44.02258] [1267] [debug] GET "/about" (122d11b8)
+[2019-06-13 14:34:44.02317] [1267] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-06-13 14:34:44.03257] [1267] [debug] Rendering template "index/about.html.ep"
+[2019-06-13 14:34:44.04862] [1267] [debug] Rendering cached template "sidenav.html.ep"
+[2019-06-13 14:34:44.04950] [1267] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-06-13 14:34:44.05020] [1267] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-06-13 14:34:44.05081] [1267] [debug] 200 OK (0.028216s, 35.441/s)
+[2019-09-04 14:58:41.52621] [2681] [debug] Users catalog created
+[2019-09-04 14:58:41.54947] [2681] [debug] Metrics catalog created
+[2019-09-04 14:58:44.99593] [2681] [debug] GET "/" (93acd811)
+[2019-09-04 14:58:44.99740] [2681] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-04 14:58:44.99755] [2681] [info] Redirected role: asu, user: ural => asu
+[2019-09-04 14:58:44.99796] [2681] [debug] 302 Found (0.002036s, 491.159/s)
+[2019-09-04 14:58:45.00265] [2681] [debug] GET "/asu" (23871cb4)
+[2019-09-04 14:58:45.00356] [2681] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-04 14:58:45.00482] [2681] [debug] Rendering template "index/asu.html.ep"
+[2019-09-04 14:58:45.03948] [2681] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 14:58:45.07845] [2681] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 14:58:45.08255] [2681] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 14:58:45.08539] [2681] [debug] 200 OK (0.082711s, 12.090/s)
+[2019-09-04 14:58:48.55463] [2681] [debug] GET "/" (ab6d893d)
+[2019-09-04 14:58:48.55520] [2681] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-04 14:58:48.55534] [2681] [info] Redirected role: asu, user: ural => asu
+[2019-09-04 14:58:48.55569] [2681] [debug] 302 Found (0.001048s, 954.198/s)
+[2019-09-04 14:58:48.56117] [2681] [debug] GET "/asu" (eb55cbac)
+[2019-09-04 14:58:48.56155] [2681] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-04 14:58:48.56181] [2681] [debug] Rendering cached template "index/asu.html.ep"
+[2019-09-04 14:58:48.56197] [2681] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 14:58:48.56330] [2681] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 14:58:48.56442] [2681] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 14:58:48.56498] [2681] [debug] 200 OK (0.003805s, 262.812/s)
+[2019-09-04 14:58:50.59963] [2681] [debug] GET "/disp/plk2" (808b731f)
+[2019-09-04 14:58:50.60322] [2681] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-04 14:58:50.60585] [2681] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-04 14:58:50.61565] [2681] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 14:58:50.61835] [2681] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 14:58:50.83162] [2681] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 14:58:50.83388] [2681] [debug] 200 OK (0.234216s, 4.270/s)
+[2019-09-04 14:59:14.70387] [2681] [debug] GET "/about" (2e128c4b)
+[2019-09-04 14:59:14.70439] [2681] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-09-04 14:59:14.75057] [2681] [debug] Rendering template "index/about.html.ep"
+[2019-09-04 14:59:14.75300] [2681] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 14:59:14.75458] [2681] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 14:59:14.75659] [2681] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 14:59:14.75777] [2681] [debug] 200 OK (0.053845s, 18.572/s)
+[2019-09-04 14:59:56.41572] [2681] [debug] GET "/" (ac2cf849)
+[2019-09-04 14:59:56.41601] [2681] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-04 14:59:56.41611] [2681] [info] Redirected role: asu, user: ural => asu
+[2019-09-04 14:59:56.41635] [2681] [debug] 302 Found (0.00062s, 1612.903/s)
+[2019-09-04 14:59:56.42284] [2681] [debug] GET "/asu" (9e81464c)
+[2019-09-04 14:59:56.42309] [2681] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-04 14:59:56.42325] [2681] [debug] Rendering cached template "index/asu.html.ep"
+[2019-09-04 14:59:56.42337] [2681] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 14:59:56.42431] [2681] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 14:59:56.42542] [2681] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 14:59:56.42596] [2681] [debug] 200 OK (0.003112s, 321.337/s)
+[2019-09-04 15:00:03.70151] [2681] [debug] GET "/disp/plk2" (1b0f5b64)
+[2019-09-04 15:00:03.70191] [2681] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-04 15:00:03.70286] [2681] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-04 15:00:03.70307] [2681] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:00:03.70567] [2681] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:00:03.71458] [2681] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:00:03.71559] [2681] [debug] 200 OK (0.014056s, 71.144/s)
+[2019-09-04 15:00:06.84539] [2681] [debug] GET "/disp/plk/kt2" (160b2a1b)
+[2019-09-04 15:00:06.84578] [2681] [debug] Routing to controller "Esv::Controller::Disp" and action "plkkt2"
+[2019-09-04 15:00:06.84647] [2681] [debug] Rendering template "disp/plkkt2.html.ep"
+[2019-09-04 15:00:06.85055] [2681] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:00:06.85360] [2681] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:00:06.85986] [2681] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:00:06.86073] [2681] [debug] 200 OK (0.015305s, 65.338/s)
+[2019-09-04 15:00:11.89672] [2681] [debug] GET "/rep/preview" (13647421)
+[2019-09-04 15:00:11.98033] [2681] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:00:11.98141] [2681] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:00:11.98324] [2681] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:00:11.98499] [2681] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:00:11.98615] [2681] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:00:11.98668] [2681] [debug] 200 OK (0.089937s, 11.119/s)
+[2019-09-04 15:00:12.02037] [2681] [debug] GET "/rep/tehdir" (c2290bd4)
+[2019-09-04 15:00:12.02078] [2681] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:00:12.02166] [2681] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:00:12.10199] [2681] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:00:12.10393] [2681] [debug] 200 OK (0.083508s, 11.975/s)
+[2019-09-04 15:02:31.58523] [2808] [debug] Users catalog created
+[2019-09-04 15:02:31.60053] [2808] [debug] Metrics catalog created
+[2019-09-04 15:02:41.36979] [2810] [debug] Users catalog created
+[2019-09-04 15:02:41.38288] [2810] [debug] Metrics catalog created
+[2019-09-04 15:03:33.84083] [2815] [debug] Users catalog created
+[2019-09-04 15:03:33.85215] [2815] [debug] Metrics catalog created
+[2019-09-04 15:03:39.05264] [2818] [debug] Users catalog created
+[2019-09-04 15:03:39.06337] [2818] [debug] Metrics catalog created
+[2019-09-04 15:03:42.09465] [2818] [debug] GET "/" (cdd8e6a6)
+[2019-09-04 15:03:42.09634] [2818] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-04 15:03:42.09665] [2818] [info] Redirected role: asu, user: ural => asu
+[2019-09-04 15:03:42.09729] [2818] [debug] 302 Found (0.002621s, 381.534/s)
+[2019-09-04 15:03:42.10462] [2818] [debug] GET "/asu" (164ab6e4)
+[2019-09-04 15:03:42.10575] [2818] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-04 15:03:42.10671] [2818] [debug] Rendering template "index/asu.html.ep"
+[2019-09-04 15:03:42.10953] [2818] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:03:42.11667] [2818] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:03:42.12098] [2818] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:03:42.12447] [2818] [debug] 200 OK (0.019803s, 50.497/s)
+[2019-09-04 15:03:43.83900] [2818] [debug] GET "/disp/plk2" (b2eaf448)
+[2019-09-04 15:03:43.84196] [2818] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-04 15:03:43.84306] [2818] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-04 15:03:43.85367] [2818] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:03:43.85728] [2818] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:03:43.88043] [2818] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:03:43.88146] [2818] [debug] 200 OK (0.042448s, 23.558/s)
+[2019-09-04 15:03:51.91278] [2818] [debug] GET "/" (cbf35c67)
+[2019-09-04 15:03:51.91309] [2818] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-04 15:03:51.91322] [2818] [info] Redirected role: asu, user: ural => asu
+[2019-09-04 15:03:51.91352] [2818] [debug] 302 Found (0.000728s, 1373.626/s)
+[2019-09-04 15:03:51.92088] [2818] [debug] GET "/asu" (3ea41cfc)
+[2019-09-04 15:03:51.92133] [2818] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-04 15:03:51.92158] [2818] [debug] Rendering cached template "index/asu.html.ep"
+[2019-09-04 15:03:51.92184] [2818] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:03:51.92301] [2818] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:03:51.92427] [2818] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:03:51.92484] [2818] [debug] 200 OK (0.003967s, 252.080/s)
+[2019-09-04 15:23:00.18190] [3239] [debug] Users catalog created
+[2019-09-04 15:23:00.19476] [3239] [debug] Metrics catalog created
+[2019-09-04 15:23:21.57258] [3239] [debug] GET "/" (c04e5f71)
+[2019-09-04 15:23:21.57387] [3239] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-04 15:23:21.57401] [3239] [info] Redirected role: asu, user: ural => asu
+[2019-09-04 15:23:21.57439] [3239] [debug] 302 Found (0.001821s, 549.149/s)
+[2019-09-04 15:23:21.58737] [3239] [debug] GET "/asu" (189348e8)
+[2019-09-04 15:23:21.58815] [3239] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-04 15:23:21.58888] [3239] [debug] Rendering template "index/asu.html.ep"
+[2019-09-04 15:23:21.59119] [3239] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:23:21.60038] [3239] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:23:21.60270] [3239] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:23:21.60487] [3239] [debug] 200 OK (0.017474s, 57.228/s)
+[2019-09-04 15:23:28.22474] [3239] [debug] GET "/disp/plk2" (889ff513)
+[2019-09-04 15:23:28.22744] [3239] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-04 15:23:28.22837] [3239] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-04 15:23:28.23902] [3239] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:23:28.24145] [3239] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:23:28.26366] [3239] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:23:28.26459] [3239] [debug] 200 OK (0.039831s, 25.106/s)
+[2019-09-04 15:23:32.47568] [3239] [debug] GET "/rep/preview" (9c438096)
+[2019-09-04 15:23:32.49432] [3239] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:23:32.49569] [3239] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:23:32.49755] [3239] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:23:32.49928] [3239] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:23:32.50028] [3239] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:23:32.50078] [3239] [debug] 200 OK (0.025081s, 39.871/s)
+[2019-09-04 15:23:32.52760] [3239] [debug] GET "/rep/tehdir" (ac0e64ae)
+[2019-09-04 15:23:32.52824] [3239] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:23:32.52999] [3239] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:23:32.60648] [3239] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:23:32.61244] [3239] [debug] 200 OK (0.084784s, 11.795/s)
+[2019-09-04 15:23:59.35102] [3299] [debug] Users catalog created
+[2019-09-04 15:23:59.36305] [3299] [debug] Metrics catalog created
+[2019-09-04 15:24:02.73640] [3299] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:24:02.75411] [3299] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:24:02.75583] [3299] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:24:02.75812] [3299] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:24:02.76394] [3299] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:24:02.76658] [3299] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:24:02.76888] [3299] [debug] 200 OK (0.032478s, 30.790/s)
+[2019-09-04 15:24:02.80382] [3299] [debug] GET "/rep/tehdir" (189348e8)
+[2019-09-04 15:24:02.80434] [3299] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:24:02.80544] [3299] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:24:02.89365] [3299] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:24:02.89509] [3299] [debug] 200 OK (0.091244s, 10.960/s)
+[2019-09-04 15:27:15.90115] [3311] [debug] Users catalog created
+[2019-09-04 15:27:15.91195] [3311] [debug] Metrics catalog created
+[2019-09-04 15:27:15.92143] [3311] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:27:15.93706] [3311] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:27:15.93876] [3311] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:27:15.94110] [3311] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:27:15.94709] [3311] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:27:15.94944] [3311] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:27:15.95139] [3311] [debug] 200 OK (0.029974s, 33.362/s)
+[2019-09-04 15:27:15.98560] [3311] [debug] GET "/rep/tehdir" (189348e8)
+[2019-09-04 15:27:15.98612] [3311] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:27:15.98725] [3311] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:27:16.06999] [3311] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:27:16.07158] [3311] [debug] 200 OK (0.085944s, 11.635/s)
+[2019-09-04 15:29:56.32717] [3320] [debug] Users catalog created
+[2019-09-04 15:29:56.33836] [3320] [debug] Metrics catalog created
+[2019-09-04 15:29:56.34640] [3320] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:29:56.36353] [3320] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:29:56.36541] [3320] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:29:56.36782] [3320] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:29:56.37404] [3320] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:29:56.37614] [3320] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:29:56.37796] [3320] [debug] 200 OK (0.031552s, 31.694/s)
+[2019-09-04 15:29:56.40939] [3320] [debug] GET "/rep/tehdir" (189348e8)
+[2019-09-04 15:29:56.40997] [3320] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:29:56.41139] [3320] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:29:56.49952] [3320] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:29:56.50107] [3320] [debug] 200 OK (0.091656s, 10.910/s)
+[2019-09-04 15:30:36.44333] [3328] [debug] Users catalog created
+[2019-09-04 15:30:36.45471] [3328] [debug] Metrics catalog created
+[2019-09-04 15:30:36.46508] [3328] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:30:36.48128] [3328] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:30:36.48321] [3328] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:30:36.48576] [3328] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:30:36.49230] [3328] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:30:36.49441] [3328] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:30:36.49630] [3328] [debug] 200 OK (0.031208s, 32.043/s)
+[2019-09-04 15:30:36.52093] [3328] [debug] GET "/rep/tehdir" (189348e8)
+[2019-09-04 15:30:36.52149] [3328] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:30:36.52265] [3328] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:30:36.60572] [3328] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:30:36.60708] [3328] [debug] 200 OK (0.086134s, 11.610/s)
+[2019-09-04 15:31:08.52053] [3331] [debug] Users catalog created
+[2019-09-04 15:31:08.53104] [3331] [debug] Metrics catalog created
+[2019-09-04 15:31:08.53984] [3331] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:31:08.55609] [3331] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:31:08.55781] [3331] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:31:08.56011] [3331] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:31:08.56612] [3331] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:31:08.56848] [3331] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:31:08.57037] [3331] [debug] 200 OK (0.030532s, 32.753/s)
+[2019-09-04 15:31:08.60488] [3331] [debug] GET "/rep/tehdir" (189348e8)
+[2019-09-04 15:31:08.60542] [3331] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:31:08.60657] [3331] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:31:08.68009] [3331] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:31:08.68175] [3331] [debug] 200 OK (0.076837s, 13.015/s)
+[2019-09-04 15:31:36.60805] [3335] [debug] Users catalog created
+[2019-09-04 15:31:36.62726] [3335] [debug] Metrics catalog created
+[2019-09-04 15:32:54.81219] [3338] [debug] Users catalog created
+[2019-09-04 15:32:54.82399] [3338] [debug] Metrics catalog created
+[2019-09-04 15:32:54.83146] [3338] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:32:54.84751] [3338] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:32:54.84938] [3338] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:32:54.85174] [3338] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:32:54.85768] [3338] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:32:54.85976] [3338] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:32:54.86166] [3338] [debug] 200 OK (0.030184s, 33.130/s)
+[2019-09-04 15:32:54.88643] [3338] [debug] GET "/rep/tehdir" (189348e8)
+[2019-09-04 15:32:54.88693] [3338] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:32:54.88802] [3338] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:32:54.97013] [3338] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:32:54.97154] [3338] [debug] 200 OK (0.085082s, 11.753/s)
+[2019-09-04 15:33:19.88550] [3344] [debug] Users catalog created
+[2019-09-04 15:33:19.89587] [3344] [debug] Metrics catalog created
+[2019-09-04 15:33:34.93352] [3346] [debug] Users catalog created
+[2019-09-04 15:33:34.94412] [3346] [debug] Metrics catalog created
+[2019-09-04 15:33:35.07373] [3346] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:33:35.09121] [3346] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:33:35.09303] [3346] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:33:35.09538] [3346] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:33:35.10151] [3346] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:33:35.10356] [3346] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:33:35.10538] [3346] [debug] 200 OK (0.031667s, 31.579/s)
+[2019-09-04 15:33:35.12657] [3346] [debug] GET "/rep/tehdir" (189348e8)
+[2019-09-04 15:33:35.12706] [3346] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:33:35.12816] [3346] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:33:35.20927] [3346] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:33:35.21046] [3346] [debug] 200 OK (0.083876s, 11.922/s)
+[2019-09-04 15:33:58.42801] [3346] [debug] GET "/rep/preview" (889ff513)
+[2019-09-04 15:33:58.42829] [3346] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:33:58.42920] [3346] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-04 15:33:58.42933] [3346] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:33:58.43098] [3346] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:33:58.43194] [3346] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:33:58.43246] [3346] [debug] 200 OK (0.004425s, 225.989/s)
+[2019-09-04 15:33:58.47869] [3346] [debug] GET "/rep/gendir" (9c438096)
+[2019-09-04 15:33:58.47936] [3346] [debug] Routing to controller "Esv::Controller::Rep" and action "gendir"
+[2019-09-04 15:33:58.48065] [3346] [debug] Rendering template "rep/gendir.html.ep"
+[2019-09-04 15:33:58.55652] [3346] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-04 15:33:58.55750] [3346] [debug] 200 OK (0.078766s, 12.696/s)
+[2019-09-04 15:34:06.09896] [3346] [debug] GET "/rep/preview" (ac0e64ae)
+[2019-09-04 15:34:06.09922] [3346] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:34:06.10010] [3346] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-04 15:34:06.10023] [3346] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:34:06.10186] [3346] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:34:06.10308] [3346] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:34:06.10359] [3346] [debug] 200 OK (0.004615s, 216.685/s)
+[2019-09-04 15:34:06.14173] [3346] [debug] GET "/rep/tehdir" (c757dfcc)
+[2019-09-04 15:34:06.14202] [3346] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:34:06.14320] [3346] [debug] Rendering cached template "rep/tehdir.html.ep"
+[2019-09-04 15:34:06.18844] [3346] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-04 15:34:06.18888] [3346] [debug] 200 OK (0.047152s, 21.208/s)
+[2019-09-04 15:34:50.08220] [3346] [debug] GET "/rep/preview" (1fffa810)
+[2019-09-04 15:34:50.08263] [3346] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:34:50.08461] [3346] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-04 15:34:50.08496] [3346] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:34:50.08790] [3346] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:34:50.08918] [3346] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:34:50.08973] [3346] [debug] 200 OK (0.007512s, 133.120/s)
+[2019-09-04 15:34:50.12211] [3346] [debug] GET "/rep/gendir" (502d72bf)
+[2019-09-04 15:34:50.12244] [3346] [debug] Routing to controller "Esv::Controller::Rep" and action "gendir"
+[2019-09-04 15:34:50.12357] [3346] [debug] Rendering cached template "rep/gendir.html.ep"
+[2019-09-04 15:34:50.16718] [3346] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-04 15:34:50.16773] [3346] [debug] 200 OK (0.045599s, 21.930/s)
+[2019-09-04 15:36:21.38640] [3359] [debug] Users catalog created
+[2019-09-04 15:36:21.39896] [3359] [debug] Metrics catalog created
+[2019-09-04 15:36:56.48487] [3361] [debug] Users catalog created
+[2019-09-04 15:36:56.49504] [3361] [debug] Metrics catalog created
+[2019-09-04 15:37:38.60271] [3364] [debug] Users catalog created
+[2019-09-04 15:37:38.61453] [3364] [debug] Metrics catalog created
+[2019-09-04 15:37:40.15291] [3364] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:37:40.16985] [3364] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:37:40.17156] [3364] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:37:40.17398] [3364] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:37:40.18010] [3364] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:37:40.18229] [3364] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:37:40.18433] [3364] [debug] 200 OK (0.031432s, 31.815/s)
+[2019-09-04 15:37:40.20765] [3364] [debug] GET "/rep/gendir" (189348e8)
+[2019-09-04 15:37:40.20812] [3364] [debug] Routing to controller "Esv::Controller::Rep" and action "gendir"
+[2019-09-04 15:37:40.20901] [3364] [debug] Rendering template "rep/gendir.html.ep"
+[2019-09-04 15:37:40.29696] [3364] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:37:40.29855] [3364] [debug] 200 OK (0.090866s, 11.005/s)
+[2019-09-04 15:37:42.16086] [3364] [debug] GET "/rep/preview" (889ff513)
+[2019-09-04 15:37:42.16144] [3364] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:37:42.16521] [3364] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-04 15:37:42.19479] [3364] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:37:42.19729] [3364] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:37:42.19832] [3364] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:37:42.19897] [3364] [debug] 200 OK (0.038089s, 26.254/s)
+[2019-09-04 15:37:42.23449] [3364] [debug] GET "/rep/tehdir" (9c438096)
+[2019-09-04 15:37:42.23508] [3364] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:37:42.23651] [3364] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:37:42.30917] [3364] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-04 15:37:42.30980] [3364] [debug] 200 OK (0.075271s, 13.285/s)
+[2019-09-04 15:38:47.78471] [3374] [debug] Users catalog created
+[2019-09-04 15:38:47.79640] [3374] [debug] Metrics catalog created
+[2019-09-04 15:39:16.85716] [3430] [debug] Users catalog created
+[2019-09-04 15:39:16.87042] [3430] [debug] Metrics catalog created
+[2019-09-04 15:39:17.27673] [3430] [debug] GET "/rep/preview" (c04e5f71)
+[2019-09-04 15:39:17.29359] [3430] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 15:39:17.29536] [3430] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 15:39:17.29769] [3430] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 15:39:17.30412] [3430] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 15:39:17.30668] [3430] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 15:39:17.30932] [3430] [debug] 200 OK (0.03256s, 30.713/s)
+[2019-09-04 15:39:17.33738] [3430] [debug] GET "/rep/tehdir" (189348e8)
+[2019-09-04 15:39:17.33784] [3430] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 15:39:17.33874] [3430] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 15:39:17.42752] [3430] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 15:39:17.42894] [3430] [debug] 200 OK (0.091526s, 10.926/s)
+[2019-09-04 15:39:36.65145] [3430] [debug] GET "/disp/plk2" (889ff513)
+[2019-09-04 15:39:36.65385] [3430] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-04 15:39:36.65488] [3430] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-04 15:39:36.66462] [3430] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:39:36.66872] [3430] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:39:36.68047] [3430] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:39:36.68198] [3430] [debug] 200 OK (0.030482s, 32.806/s)
+[2019-09-04 15:40:33.12261] [3430] [debug] GET "/disp/plk2" (9c438096)
+[2019-09-04 15:40:33.12291] [3430] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-04 15:40:33.12362] [3430] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-04 15:40:33.12379] [3430] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 15:40:33.12694] [3430] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 15:40:33.14170] [3430] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 15:40:33.14253] [3430] [debug] 200 OK (0.019899s, 50.254/s)
+[2019-09-04 16:25:37.89710] [4062] [debug] Users catalog created
+[2019-09-04 16:25:37.90902] [4062] [debug] Metrics catalog created
+[2019-09-04 16:25:41.44329] [4062] [debug] GET "/disp/plk2" (13eba864)
+[2019-09-04 16:25:41.44663] [4062] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-04 16:25:41.44881] [4062] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-04 16:25:41.45797] [4062] [debug] Rendering template "sidenav.html.ep"
+[2019-09-04 16:25:41.46405] [4062] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-04 16:25:41.48878] [4062] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-04 16:25:41.49194] [4062] [debug] 200 OK (0.048535s, 20.604/s)
+[2019-09-04 16:25:47.00641] [4062] [debug] GET "/rep/preview" (8dc118fa)
+[2019-09-04 16:25:47.02469] [4062] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 16:25:47.02601] [4062] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-04 16:25:47.02824] [4062] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 16:25:47.03059] [4062] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 16:25:47.03191] [4062] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 16:25:47.03243] [4062] [debug] 200 OK (0.026001s, 38.460/s)
+[2019-09-04 16:25:47.06328] [4062] [debug] GET "/rep/tehdir" (45005858)
+[2019-09-04 16:25:47.06450] [4062] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-04 16:25:47.06626] [4062] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-04 16:25:47.13015] [4062] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-04 16:25:47.13197] [4062] [debug] 200 OK (0.068679s, 14.560/s)
+[2019-09-04 16:25:56.40544] [4062] [debug] GET "/rep/preview" (1f00bd6c)
+[2019-09-04 16:25:56.40580] [4062] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-04 16:25:56.40703] [4062] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-04 16:25:56.40723] [4062] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 16:25:56.41002] [4062] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 16:25:56.41189] [4062] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 16:25:56.41236] [4062] [debug] 200 OK (0.006917s, 144.571/s)
+[2019-09-04 16:25:56.45033] [4062] [debug] GET "/rep/gendir" (4eb54f7a)
+[2019-09-04 16:25:56.45081] [4062] [debug] Routing to controller "Esv::Controller::Rep" and action "gendir"
+[2019-09-04 16:25:56.45174] [4062] [debug] Rendering template "rep/gendir.html.ep"
+[2019-09-04 16:25:56.51835] [4062] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-04 16:25:56.51883] [4062] [debug] 200 OK (0.068456s, 14.608/s)
+[2019-09-04 16:26:01.71653] [4062] [debug] GET "/about" (d78de803)
+[2019-09-04 16:26:01.71776] [4062] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-09-04 16:26:01.72803] [4062] [debug] Rendering template "index/about.html.ep"
+[2019-09-04 16:26:01.73045] [4062] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 16:26:01.73176] [4062] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 16:26:01.73293] [4062] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 16:26:01.73363] [4062] [debug] 200 OK (0.017084s, 58.534/s)
+[2019-09-04 16:26:27.33703] [4062] [debug] GET "/" (ba6f7c39)
+[2019-09-04 16:26:27.33741] [4062] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-04 16:26:27.33751] [4062] [info] Redirected role: asu, user: ural => asu
+[2019-09-04 16:26:27.33775] [4062] [debug] 302 Found (0.000704s, 1420.455/s)
+[2019-09-04 16:26:27.34266] [4062] [debug] GET "/asu" (577a28d0)
+[2019-09-04 16:26:27.34353] [4062] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-04 16:26:27.34392] [4062] [debug] Rendering template "index/asu.html.ep"
+[2019-09-04 16:26:27.34602] [4062] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-04 16:26:27.34766] [4062] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-04 16:26:27.34968] [4062] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-04 16:26:27.35142] [4062] [debug] 200 OK (0.008738s, 114.443/s)
+[2019-09-04 16:49:58.69374] [5102] [debug] Users catalog created
+[2019-09-04 16:49:58.70630] [5102] [debug] Metrics catalog created
+[2019-09-04 16:50:04.74142] [5104] [debug] Users catalog created
+[2019-09-04 16:50:04.75339] [5104] [debug] Metrics catalog created
+[2019-09-13 12:18:24.05226] [16901] [debug] Users catalog created
+[2019-09-13 12:18:24.09917] [16901] [debug] Metrics catalog created
+[2019-09-13 12:18:25.48556] [16901] [debug] GET "/" (457b6534)
+[2019-09-13 12:18:25.52380] [16901] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-13 12:18:25.52398] [16901] [info] Redirected role: asu, user: ural => asu
+[2019-09-13 12:18:25.52450] [16901] [debug] 302 Found (0.038937s, 25.683/s)
+[2019-09-13 12:18:25.57023] [16901] [debug] GET "/asu" (16db4058)
+[2019-09-13 12:18:25.57104] [16901] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-13 12:18:25.57174] [16901] [debug] Rendering template "index/asu.html.ep"
+[2019-09-13 12:18:25.67936] [16901] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 12:18:25.73109] [16901] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 12:18:25.75097] [16901] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 12:18:25.82849] [16901] [debug] 200 OK (0.258188s, 3.873/s)
+[2019-09-13 12:18:31.34693] [16901] [debug] GET "/disp/plk2" (d6ad5f4a)
+[2019-09-13 12:18:31.39491] [16901] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 12:18:31.39677] [16901] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 12:18:31.40823] [16901] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:18:31.41392] [16901] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:18:32.09280] [16901] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:18:32.09471] [16901] [debug] 200 OK (0.747742s, 1.337/s)
+[2019-09-13 12:18:40.88740] [16901] [debug] GET "/disp/plk2" (13fc5b4d)
+[2019-09-13 12:18:40.88775] [16901] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 12:18:40.88905] [16901] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 12:18:40.88931] [16901] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:18:40.89609] [16901] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:18:40.95565] [16901] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:18:40.95649] [16901] [debug] 200 OK (0.069072s, 14.478/s)
+[2019-09-13 12:18:49.68976] [16901] [debug] GET "/rep/preview" (4c1acd78)
+[2019-09-13 12:18:49.84548] [16901] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-13 12:18:49.84704] [16901] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-13 12:18:49.85884] [16901] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:18:49.86097] [16901] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:18:49.86185] [16901] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:18:49.86226] [16901] [debug] 200 OK (0.172504s, 5.797/s)
+[2019-09-13 12:18:49.93062] [16901] [debug] GET "/rep/tehdir" (db8592d7)
+[2019-09-13 12:18:49.93117] [16901] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-13 12:18:49.93501] [16901] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-13 12:18:50.05368] [16901] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-13 12:18:50.07204] [16901] [debug] 200 OK (0.141351s, 7.075/s)
+[2019-09-13 12:19:25.11536] [16901] [debug] GET "/rep/preview" (b6e2d63e)
+[2019-09-13 12:19:25.11569] [16901] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-13 12:19:25.11677] [16901] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-13 12:19:25.11696] [16901] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:19:25.11917] [16901] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:19:25.12034] [16901] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:19:25.12084] [16901] [debug] 200 OK (0.005466s, 182.949/s)
+[2019-09-13 12:19:25.17062] [16901] [debug] GET "/rep/gendir" (5e9eb905)
+[2019-09-13 12:19:25.17105] [16901] [debug] Routing to controller "Esv::Controller::Rep" and action "gendir"
+[2019-09-13 12:19:25.17209] [16901] [debug] Rendering template "rep/gendir.html.ep"
+[2019-09-13 12:19:25.25546] [16901] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-13 12:19:25.25625] [16901] [debug] 200 OK (0.085601s, 11.682/s)
+[2019-09-13 12:24:11.95935] [16978] [debug] Users catalog created
+[2019-09-13 12:24:11.99864] [16978] [debug] Metrics catalog created
+[2019-09-13 12:24:13.41054] [16978] [debug] GET "/rep/preview" (524f6807)
+[2019-09-13 12:24:13.42771] [16978] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-13 12:24:13.42941] [16978] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-13 12:24:13.43178] [16978] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 12:24:13.43760] [16978] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 12:24:13.43955] [16978] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 12:24:13.44133] [16978] [debug] 200 OK (0.030796s, 32.472/s)
+[2019-09-13 12:24:13.48405] [16978] [debug] GET "/rep/gendir" (6332ccea)
+[2019-09-13 12:24:13.48463] [16978] [debug] Routing to controller "Esv::Controller::Rep" and action "gendir"
+[2019-09-13 12:24:13.48586] [16978] [debug] Rendering template "rep/gendir.html.ep"
+[2019-09-13 12:24:13.58256] [16978] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-13 12:24:13.58547] [16978] [debug] 200 OK (0.101355s, 9.866/s)
+[2019-09-13 12:28:33.24149] [16978] [debug] GET "/rep/period" (ca987e80)
+[2019-09-13 12:28:33.24214] [16978] [debug] Routing to controller "Esv::Controller::Rep" and action "period"
+[2019-09-13 12:28:33.24436] [16978] [debug] Rendering template "rep/period.html.ep"
+[2019-09-13 12:28:33.26492] [16978] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:28:33.26712] [16978] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:28:33.26966] [16978] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:28:33.27070] [16978] [debug] 200 OK (0.029173s, 34.278/s)
+[2019-09-13 12:28:34.48241] [16978] [debug] POST "/rep/preview" (43b7a336)
+[2019-09-13 12:28:34.48299] [16978] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-13 12:28:34.48463] [16978] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-13 12:28:34.48481] [16978] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:28:34.48651] [16978] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:28:34.48774] [16978] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:28:34.48844] [16978] [debug] 200 OK (0.005977s, 167.308/s)
+[2019-09-13 12:28:34.53800] [16978] [debug] GET "/rep/per" (daa3e159)
+[2019-09-13 12:28:34.53849] [16978] [debug] Routing to controller "Esv::Controller::Rep" and action "per"
+[2019-09-13 12:28:34.53941] [16978] [debug] Rendering template "rep/per.html.ep"
+[2019-09-13 12:28:34.57741] [16978] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-13 12:28:34.57798] [16978] [debug] 200 OK (0.039951s, 25.031/s)
+[2019-09-13 12:44:14.94770] [17248] [debug] Users catalog created
+[2019-09-13 12:44:14.97448] [17248] [debug] Metrics catalog created
+[2019-09-13 12:44:31.64578] [17248] [debug] GET "/" (cb6b9079)
+[2019-09-13 12:44:31.64710] [17248] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-13 12:44:31.64728] [17248] [info] Redirected role: asu, user: ural => asu
+[2019-09-13 12:44:31.64780] [17248] [debug] 302 Found (0.002011s, 497.265/s)
+[2019-09-13 12:44:31.66567] [17248] [debug] GET "/asu" (9b008500)
+[2019-09-13 12:44:31.66656] [17248] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-13 12:44:31.66739] [17248] [debug] Rendering template "index/asu.html.ep"
+[2019-09-13 12:44:31.67025] [17248] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 12:44:31.67574] [17248] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 12:44:31.67846] [17248] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 12:44:31.68116] [17248] [debug] 200 OK (0.015447s, 64.737/s)
+[2019-09-13 12:44:34.01598] [17248] [debug] GET "/disp/plk2" (028fe772)
+[2019-09-13 12:44:34.01894] [17248] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 12:44:34.02033] [17248] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 12:44:34.02915] [17248] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:44:34.03123] [17248] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:44:34.05400] [17248] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:44:34.05484] [17248] [debug] 200 OK (0.038855s, 25.737/s)
+[2019-09-13 12:44:43.79878] [17248] [debug] GET "/rep/preview" (58d4e2f0)
+[2019-09-13 12:44:43.81931] [17248] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-13 12:44:43.82088] [17248] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-13 12:44:43.82303] [17248] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:44:43.82539] [17248] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:44:43.82638] [17248] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:44:43.82687] [17248] [debug] 200 OK (0.028096s, 35.592/s)
+[2019-09-13 12:44:43.86257] [17248] [debug] GET "/rep/tehdir" (91eaa696)
+[2019-09-13 12:44:43.86326] [17248] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-13 12:44:43.86510] [17248] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-13 12:44:43.95048] [17248] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-13 12:44:43.95183] [17248] [debug] 200 OK (0.089242s, 11.205/s)
+[2019-09-13 12:44:50.45498] [17248] [debug] GET "/rep/preview" (e8115f45)
+[2019-09-13 12:44:50.45536] [17248] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-13 12:44:50.45663] [17248] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-13 12:44:50.45685] [17248] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:44:50.45921] [17248] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:44:50.46140] [17248] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:44:50.46194] [17248] [debug] 200 OK (0.006952s, 143.843/s)
+[2019-09-13 12:44:50.49404] [17248] [debug] GET "/rep/gendir" (e6665f88)
+[2019-09-13 12:44:50.49483] [17248] [debug] Routing to controller "Esv::Controller::Rep" and action "gendir"
+[2019-09-13 12:44:50.49690] [17248] [debug] Rendering template "rep/gendir.html.ep"
+[2019-09-13 12:44:50.57037] [17248] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-13 12:44:50.57091] [17248] [debug] 200 OK (0.076863s, 13.010/s)
+[2019-09-13 12:44:55.18526] [17248] [debug] GET "/disp/plk2" (a0940d19)
+[2019-09-13 12:44:55.18565] [17248] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 12:44:55.18663] [17248] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 12:44:55.18687] [17248] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 12:44:55.18961] [17248] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 12:44:55.20110] [17248] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 12:44:55.20248] [17248] [debug] 200 OK (0.017195s, 58.156/s)
+[2019-09-13 12:47:36.92684] [17353] [debug] Users catalog created
+[2019-09-13 12:47:36.93902] [17353] [debug] Metrics catalog created
+[2019-09-13 12:47:37.38842] [17353] [debug] GET "/disp/plk2" (40b722aa)
+[2019-09-13 12:47:37.39183] [17353] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 12:47:37.39419] [17353] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 12:47:37.40452] [17353] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 12:47:37.41058] [17353] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 12:47:37.43452] [17353] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 12:47:37.43710] [17353] [debug] 200 OK (0.048657s, 20.552/s)
+[2019-09-13 12:47:51.91902] [17353] [debug] POST "/disp/plk/submit1" (d24e3056)
+[2019-09-13 12:47:51.91974] [17353] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 12:47:51.92006] [17353] [debug] submit1 id: zNjQ2cG9kYWNoYS5uYWcucG9keW9t, v: 123.343
+[2019-09-13 12:47:51.92015] [17353] [debug] metric: podacha.nag.podyom
+[2019-09-13 12:47:51.95899] [17353] [debug] 500 Internal Server Error (0.039939s, 25.038/s)
+[2019-09-13 12:47:55.53604] [17353] [debug] POST "/disp/plk/submit1" (82766d08)
+[2019-09-13 12:47:55.53638] [17353] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 12:47:55.53665] [17353] [debug] submit1 id: zNjQ2cG9kYWNoYS5uYWcucG9keW9t, v: 123
+[2019-09-13 12:47:55.53672] [17353] [debug] metric: podacha.nag.podyom
+[2019-09-13 12:47:55.54328] [17353] [debug] 500 Internal Server Error (0.007214s, 138.619/s)
+[2019-09-13 12:48:02.21941] [17353] [debug] POST "/disp/plk/submit1" (ea2c81a1)
+[2019-09-13 12:48:02.21974] [17353] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 12:48:02.22004] [17353] [debug] submit1 id: zNjQ2cG9kYWNoYS5uYWcucG9keW9t, v: 12
+[2019-09-13 12:48:02.22012] [17353] [debug] metric: podacha.nag.podyom
+[2019-09-13 12:48:02.22600] [17353] [debug] 500 Internal Server Error (0.006565s, 152.323/s)
+[2019-09-13 12:48:07.65940] [17353] [debug] POST "/disp/plk/submit1" (47ba37d2)
+[2019-09-13 12:48:07.65972] [17353] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 12:48:07.65999] [17353] [debug] submit1 id: zNjQ2cG9kYWNoYS5uYWcucG9keW9t, v: 129,4
+[2019-09-13 12:48:07.66006] [17353] [debug] metric: podacha.nag.podyom
+[2019-09-13 12:48:07.66668] [17353] [debug] 500 Internal Server Error (0.007263s, 137.684/s)
+[2019-09-13 13:12:17.81713] [17561] [debug] Users catalog created
+[2019-09-13 13:12:17.86057] [17561] [debug] Metrics catalog created
+[2019-09-13 13:12:23.53300] [17561] [debug] GET "/disp/plk2" (5b0d3305)
+[2019-09-13 13:12:23.53607] [17561] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 13:12:23.53767] [17561] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 13:12:23.54696] [17561] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 13:12:23.55311] [17561] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 13:12:23.57747] [17561] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 13:12:23.58034] [17561] [debug] 200 OK (0.047331s, 21.128/s)
+[2019-09-13 13:12:28.67938] [17561] [debug] POST "/disp/plk/submit1" (ecd8347d)
+[2019-09-13 13:12:28.68014] [17561] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 13:12:28.68047] [17561] [debug] submit1 id: dOTc3cG9kYWNoYS5uYWcucG9keW9t, v: 123.23
+[2019-09-13 13:12:28.68057] [17561] [debug] metric: podacha.nag.podyom
+[2019-09-13 13:12:28.69009] [17561] [debug] 200 OK (0.010682s, 93.615/s)
+[2019-09-13 13:12:34.53085] [17561] [debug] GET "/disp/plk2" (c2df5fa2)
+[2019-09-13 13:12:34.53112] [17561] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 13:12:34.53944] [17561] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 13:12:34.53964] [17561] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 13:12:34.54177] [17561] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 13:12:34.54998] [17561] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 13:12:34.55065] [17561] [debug] 200 OK (0.019789s, 50.533/s)
+[2019-09-13 13:13:15.99204] [17561] [debug] POST "/disp/plk/submit1" (73a59470)
+[2019-09-13 13:13:15.99240] [17561] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 13:13:15.99265] [17561] [debug] submit1 id: vNzY4cG9kYWNoYS5uYWcucG9keW9t, v: 12
+[2019-09-13 13:13:15.99272] [17561] [debug] metric: podacha.nag.podyom
+[2019-09-13 13:13:16.00113] [17561] [debug] 200 OK (0.00906300000000004s, 110.339/s)
+[2019-09-13 13:15:29.86788] [17595] [debug] Users catalog created
+[2019-09-13 13:15:29.88014] [17595] [debug] Metrics catalog created
+[2019-09-13 13:15:30.97406] [17595] [debug] GET "/disp/plk2" (fa2a212d)
+[2019-09-13 13:15:30.97693] [17595] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 13:15:30.97873] [17595] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 13:15:30.98795] [17595] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 13:15:30.99501] [17595] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 13:15:31.01844] [17595] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 13:15:31.02099] [17595] [debug] 200 OK (0.046903s, 21.321/s)
+[2019-09-13 13:15:33.72474] [17595] [debug] POST "/disp/plk/submit1" (38496aa9)
+[2019-09-13 13:15:33.72533] [17595] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 13:15:33.72557] [17595] [debug] submit1 id: yNzQ1cG9kYWNoYS5uYWcucG9keW9t, v: 123
+[2019-09-13 13:15:33.72564] [17595] [debug] metric: podacha.nag.podyom
+[2019-09-13 13:15:33.73273] [17595] [debug] 200 OK (0.007972s, 125.439/s)
+[2019-09-13 13:15:40.25306] [17595] [debug] POST "/disp/plk/submit1" (a68f40e9)
+[2019-09-13 13:15:40.25338] [17595] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 13:15:40.25363] [17595] [debug] submit1 id: yNzQ1cG9kYWNoYS5uYWcucG9keW9t, v: 12,asd
+[2019-09-13 13:15:40.25371] [17595] [debug] metric: podacha.nag.podyom
+[2019-09-13 13:15:40.25673] [17595] [debug] 500 Internal Server Error (0.001374s, 727.802/s)
+[2019-09-13 13:15:43.44369] [17595] [debug] POST "/disp/plk/submit1" (4ad4cec9)
+[2019-09-13 13:15:43.44401] [17595] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 13:15:43.44426] [17595] [debug] submit1 id: yNzQ1cG9kYWNoYS5uYWcucG9keW9t, v: 12,23
+[2019-09-13 13:15:43.44434] [17595] [debug] metric: podacha.nag.podyom
+[2019-09-13 13:15:43.45074] [17595] [debug] 200 OK (0.007023s, 142.389/s)
+[2019-09-13 13:15:46.84222] [17595] [debug] POST "/disp/plk/submit1" (4b10b3ec)
+[2019-09-13 13:15:46.84249] [17595] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 13:15:46.84268] [17595] [debug] submit1 id: yNzQ1cG9kYWNoYS5uYWcucG9keW9t, v: 12,6
+[2019-09-13 13:15:46.84273] [17595] [debug] metric: podacha.nag.podyom
+[2019-09-13 13:15:46.84783] [17595] [debug] 200 OK (0.005591s, 178.859/s)
+[2019-09-13 13:15:50.53687] [17595] [debug] POST "/disp/plk/submit1" (7b562ac6)
+[2019-09-13 13:15:50.53721] [17595] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 13:15:50.53751] [17595] [debug] submit1 id: yNzQ1cG9kYWNoYS5uYWcucG9keW9t, v: 12
+[2019-09-13 13:15:50.53760] [17595] [debug] metric: podacha.nag.podyom
+[2019-09-13 13:15:50.54555] [17595] [debug] 200 OK (0.008668s, 115.367/s)
+[2019-09-13 13:16:24.46449] [17595] [debug] POST "/disp/plk/submit1" (3c9166d1)
+[2019-09-13 13:16:24.46476] [17595] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 13:16:24.46496] [17595] [debug] submit1 id: yNzQ1cG9kYWNoYS5uYWcucG9keW9t, v: 45
+[2019-09-13 13:16:24.46503] [17595] [debug] metric: podacha.nag.podyom
+[2019-09-13 13:16:24.47141] [17595] [debug] 200 OK (0.00689s, 145.138/s)
+[2019-09-13 14:02:41.02283] [17595] [debug] GET "/disp/plk2" (b320e49f)
+[2019-09-13 14:02:41.02321] [17595] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:02:41.02412] [17595] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 14:02:41.02434] [17595] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:02:41.02685] [17595] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:02:41.03771] [17595] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:02:41.03859] [17595] [debug] 200 OK (0.015743s, 63.520/s)
+[2019-09-13 14:27:15.27710] [17933] [debug] Users catalog created
+[2019-09-13 14:27:15.28778] [17933] [debug] Metrics catalog created
+[2019-09-13 14:27:16.78395] [17933] [debug] GET "/about" (f749af2a)
+[2019-09-13 14:27:16.78560] [17933] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-09-13 14:27:16.80872] [17933] [debug] Rendering template "index/about.html.ep"
+[2019-09-13 14:27:16.82142] [17933] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 14:27:16.82661] [17933] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 14:27:16.82956] [17933] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 14:27:16.83197] [17933] [debug] 200 OK (0.048003s, 20.832/s)
+[2019-09-13 14:29:54.97009] [17933] [debug] GET "/about" (606de8e5)
+[2019-09-13 14:29:54.97039] [17933] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-09-13 14:29:54.97693] [17933] [debug] Rendering cached template "index/about.html.ep"
+[2019-09-13 14:29:54.97712] [17933] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:29:54.97813] [17933] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:29:54.97904] [17933] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:29:54.97980] [17933] [debug] 200 OK (0.009702s, 103.072/s)
+[2019-09-13 14:29:58.22382] [17933] [debug] GET "/" (4e3cc3a8)
+[2019-09-13 14:29:58.22429] [17933] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-13 14:29:58.22442] [17933] [info] Redirected role: asu, user: ural => asu
+[2019-09-13 14:29:58.22470] [17933] [debug] 302 Found (0.000875s, 1142.857/s)
+[2019-09-13 14:29:58.24765] [17933] [debug] GET "/asu" (3f6e1410)
+[2019-09-13 14:29:58.24813] [17933] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-13 14:29:58.24840] [17933] [debug] Rendering template "index/asu.html.ep"
+[2019-09-13 14:29:58.25013] [17933] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:29:58.25110] [17933] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:29:58.25253] [17933] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:29:58.25342] [17933] [debug] 200 OK (0.005745s, 174.064/s)
+[2019-09-13 14:29:59.26852] [17933] [debug] GET "/disp/plk2" (1a2daade)
+[2019-09-13 14:29:59.27133] [17933] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:29:59.27242] [17933] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 14:29:59.28186] [17933] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:29:59.28385] [17933] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:29:59.29210] [17933] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:29:59.29292] [17933] [debug] 200 OK (0.02441s, 40.967/s)
+[2019-09-13 14:35:03.71252] [18133] [debug] Users catalog created
+[2019-09-13 14:35:03.72486] [18133] [debug] Metrics catalog created
+[2019-09-13 14:35:03.99238] [18133] [debug] GET "/disp/plk2" (bbf998c7)
+[2019-09-13 14:35:03.99479] [18133] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:35:03.99624] [18133] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 14:35:04.00543] [18133] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 14:35:04.01254] [18133] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 14:35:04.03731] [18133] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 14:35:04.03965] [18133] [debug] 200 OK (0.0472359999999999s, 21.170/s)
+[2019-09-13 14:35:06.15045] [18133] [debug] GET "/disp/plk2" (6db6f994)
+[2019-09-13 14:35:06.15077] [18133] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:35:06.15163] [18133] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 14:35:06.15184] [18133] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:35:06.15458] [18133] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:35:06.16383] [18133] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:35:06.16453] [18133] [debug] 200 OK (0.014065s, 71.098/s)
+[2019-09-13 14:35:07.03493] [18133] [debug] GET "/disp/plk2" (9fcaf8da)
+[2019-09-13 14:35:07.03532] [18133] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:35:07.03618] [18133] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 14:35:07.03636] [18133] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:35:07.03874] [18133] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:35:07.04818] [18133] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:35:07.04901] [18133] [debug] 200 OK (0.014059s, 71.129/s)
+[2019-09-13 14:36:20.13724] [18195] [debug] Users catalog created
+[2019-09-13 14:36:20.14772] [18195] [debug] Metrics catalog created
+[2019-09-13 14:36:20.15830] [18195] [debug] GET "/disp/plk2" (14483021)
+[2019-09-13 14:36:20.16156] [18195] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:36:20.16321] [18195] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 14:36:20.17219] [18195] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 14:36:20.17832] [18195] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 14:36:20.20190] [18195] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 14:36:20.20424] [18195] [debug] 200 OK (0.045926s, 21.774/s)
+[2019-09-13 14:36:20.53659] [18195] [debug] GET "/disp/plk2" (0a53828e)
+[2019-09-13 14:36:20.53696] [18195] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:36:20.53782] [18195] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 14:36:20.53801] [18195] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:36:20.54079] [18195] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:36:20.55345] [18195] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:36:20.55421] [18195] [debug] 200 OK (0.017607s, 56.796/s)
+[2019-09-13 14:36:21.52551] [18195] [debug] GET "/disp/plk2" (7f39a3d9)
+[2019-09-13 14:36:21.52596] [18195] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:36:21.52717] [18195] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 14:36:21.52749] [18195] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:36:21.53065] [18195] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:36:21.54059] [18195] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:36:21.54148] [18195] [debug] 200 OK (0.015953s, 62.684/s)
+[2019-09-13 14:36:26.89679] [18195] [debug] POST "/disp/plk/submit1" (6bae6dfb)
+[2019-09-13 14:36:26.89736] [18195] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 14:36:26.89757] [18195] [debug] submit1 id: wODgwcG9kYWNoYS5uYWcucG9keW9t, v: 46
+[2019-09-13 14:36:26.89763] [18195] [debug] metric: podacha.nag.podyom
+[2019-09-13 14:36:26.90437] [18195] [debug] 200 OK (0.007556s, 132.345/s)
+[2019-09-13 14:36:31.66549] [18195] [debug] POST "/disp/plk/submit1" (d88c8b62)
+[2019-09-13 14:36:31.66574] [18195] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 14:36:31.66592] [18195] [debug] submit1 id: wODgwcG9kYWNoYS5uYWcucG9keW9t, v: 41
+[2019-09-13 14:36:31.66598] [18195] [debug] metric: podacha.nag.podyom
+[2019-09-13 14:36:31.67262] [18195] [debug] 200 OK (0.007091s, 141.024/s)
+[2019-09-13 14:39:04.05129] [18350] [debug] Users catalog created
+[2019-09-13 14:39:04.06288] [18350] [debug] Metrics catalog created
+[2019-09-13 14:39:04.07026] [18350] [debug] GET "/disp/plk2" (4e0ece0c)
+[2019-09-13 14:39:04.07301] [18350] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:39:04.07448] [18350] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 14:39:04.08358] [18350] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 14:39:04.09029] [18350] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 14:39:04.11362] [18350] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 14:39:04.11615] [18350] [debug] 200 OK (0.045868s, 21.802/s)
+[2019-09-13 14:39:12.49904] [18350] [debug] POST "/disp/plk/submit1" (a253d6d3)
+[2019-09-13 14:39:12.49977] [18350] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 14:39:12.50011] [18350] [debug] submit1 id: sMjg2cG9kYWNoYS5uYWcucG9keW9t, v: 41.5
+[2019-09-13 14:39:12.50019] [18350] [debug] metric: podacha.nag.podyom
+[2019-09-13 14:39:12.50862] [18350] [debug] 200 OK (0.009561s, 104.592/s)
+[2019-09-13 14:39:16.43180] [18350] [debug] POST "/disp/plk/submit1" (ad0b938d)
+[2019-09-13 14:39:16.43211] [18350] [debug] Routing to controller "Esv::Controller::Disp" and action "plksubmit1"
+[2019-09-13 14:39:16.43232] [18350] [debug] submit1 id: sMjg2cG9kYWNoYS5uYWcucG9keW9t, v: 41.4
+[2019-09-13 14:39:16.43237] [18350] [debug] metric: podacha.nag.podyom
+[2019-09-13 14:39:16.43893] [18350] [debug] 200 OK (0.007105s, 140.746/s)
+[2019-09-13 14:39:21.93006] [18350] [debug] GET "/disp/plk2" (93457422)
+[2019-09-13 14:39:21.93044] [18350] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:39:21.93150] [18350] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 14:39:21.93175] [18350] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:39:21.93456] [18350] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:39:21.94585] [18350] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:39:21.94655] [18350] [debug] 200 OK (0.016498s, 60.613/s)
+[2019-09-13 14:39:32.02898] [18350] [debug] GET "/disp/plk/oth" (574492f2)
+[2019-09-13 14:39:32.02983] [18350] [debug] Routing to controller "Esv::Controller::Disp" and action "plkoth"
+[2019-09-13 14:39:32.03102] [18350] [debug] Rendering template "disp/plkoth.html.ep"
+[2019-09-13 14:39:32.03877] [18350] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:39:32.04218] [18350] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:39:32.05460] [18350] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:39:32.05547] [18350] [debug] 200 OK (0.026483s, 37.760/s)
+[2019-09-13 14:40:03.33548] [18350] [debug] GET "/disp/plk/skv2" (a47968b8)
+[2019-09-13 14:40:03.33601] [18350] [debug] Routing to controller "Esv::Controller::Disp" and action "plkskv2"
+[2019-09-13 14:40:03.33731] [18350] [debug] Rendering template "disp/plkskv2.html.ep"
+[2019-09-13 14:40:03.35433] [18350] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:40:03.35974] [18350] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:40:03.37041] [18350] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:40:03.37244] [18350] [debug] 200 OK (0.036379s, 27.488/s)
+[2019-09-13 14:40:08.00464] [18350] [debug] GET "/disp/plk/kt2" (92276b17)
+[2019-09-13 14:40:08.00509] [18350] [debug] Routing to controller "Esv::Controller::Disp" and action "plkkt2"
+[2019-09-13 14:40:08.00674] [18350] [debug] Rendering template "disp/plkkt2.html.ep"
+[2019-09-13 14:40:08.01291] [18350] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:40:08.01629] [18350] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:40:08.02421] [18350] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:40:08.02476] [18350] [debug] 200 OK (0.02012s, 49.702/s)
+[2019-09-13 14:40:35.20193] [18368] [debug] Users catalog created
+[2019-09-13 14:40:35.21392] [18368] [debug] Metrics catalog created
+[2019-09-13 14:40:37.68573] [18368] [debug] GET "/disp/plk/skv2" (901b16ba)
+[2019-09-13 14:40:37.69067] [18368] [debug] Routing to controller "Esv::Controller::Disp" and action "plkskv2"
+[2019-09-13 14:40:37.69273] [18368] [debug] Rendering template "disp/plkskv2.html.ep"
+[2019-09-13 14:40:37.70724] [18368] [debug] Rendering template "sidenav.html.ep"
+[2019-09-13 14:40:37.71359] [18368] [debug] Rendering template "dropdown-other.html.ep"
+[2019-09-13 14:40:37.74030] [18368] [debug] Rendering template "layouts/default.html.ep"
+[2019-09-13 14:40:37.74379] [18368] [debug] 200 OK (0.058059s, 17.224/s)
+[2019-09-13 14:40:44.87270] [18368] [debug] GET "/disp/plk2" (002ec721)
+[2019-09-13 14:40:44.87307] [18368] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:40:44.87391] [18368] [debug] Rendering template "disp/plk2.html.ep"
+[2019-09-13 14:40:44.88345] [18368] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:40:44.88579] [18368] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:40:44.89364] [18368] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:40:44.89439] [18368] [debug] 200 OK (0.021673s, 46.140/s)
+[2019-09-13 14:40:56.01312] [18368] [debug] GET "/rep/preview" (f758af0e)
+[2019-09-13 14:40:56.03167] [18368] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-13 14:40:56.03379] [18368] [debug] Rendering template "rep/preview.html.ep"
+[2019-09-13 14:40:56.03739] [18368] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:40:56.03980] [18368] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:40:56.04072] [18368] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:40:56.04115] [18368] [debug] 200 OK (0.028027s, 35.680/s)
+[2019-09-13 14:40:56.08410] [18368] [debug] GET "/rep/gendir" (1c91bb46)
+[2019-09-13 14:40:56.08468] [18368] [debug] Routing to controller "Esv::Controller::Rep" and action "gendir"
+[2019-09-13 14:40:56.08570] [18368] [debug] Rendering template "rep/gendir.html.ep"
+[2019-09-13 14:40:56.15270] [18368] [debug] Rendering template "layouts/print.html.ep"
+[2019-09-13 14:40:56.15405] [18368] [debug] 200 OK (0.069931s, 14.300/s)
+[2019-09-13 14:41:04.86784] [18368] [debug] GET "/rep/preview" (2413258f)
+[2019-09-13 14:41:04.86812] [18368] [debug] Routing to controller "Esv::Controller::Rep" and action "preview"
+[2019-09-13 14:41:04.86897] [18368] [debug] Rendering cached template "rep/preview.html.ep"
+[2019-09-13 14:41:04.86910] [18368] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:41:04.87071] [18368] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:41:04.87158] [18368] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:41:04.87201] [18368] [debug] 200 OK (0.004167s, 239.981/s)
+[2019-09-13 14:41:04.91587] [18368] [debug] GET "/rep/tehdir" (c37a7064)
+[2019-09-13 14:41:04.91651] [18368] [debug] Routing to controller "Esv::Controller::Rep" and action "tehdir"
+[2019-09-13 14:41:04.91788] [18368] [debug] Rendering template "rep/tehdir.html.ep"
+[2019-09-13 14:41:04.99665] [18368] [debug] Rendering cached template "layouts/print.html.ep"
+[2019-09-13 14:41:04.99725] [18368] [debug] 200 OK (0.081361s, 12.291/s)
+[2019-09-13 14:41:19.82429] [18368] [debug] GET "/disp/plk2" (08b6e478)
+[2019-09-13 14:41:19.82475] [18368] [debug] Routing to controller "Esv::Controller::Disp" and action "plk2"
+[2019-09-13 14:41:19.82647] [18368] [debug] Rendering cached template "disp/plk2.html.ep"
+[2019-09-13 14:41:19.82682] [18368] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:41:19.83183] [18368] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:41:19.84282] [18368] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:41:19.84360] [18368] [debug] 200 OK (0.019297s, 51.822/s)
+[2019-09-13 14:41:25.17088] [18368] [debug] GET "/about" (ec8ca290)
+[2019-09-13 14:41:25.17250] [18368] [debug] Routing to controller "Esv::Controller::Index" and action "about"
+[2019-09-13 14:41:25.18122] [18368] [debug] Rendering template "index/about.html.ep"
+[2019-09-13 14:41:25.18324] [18368] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:41:25.18429] [18368] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:41:25.18517] [18368] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:41:25.18580] [18368] [debug] 200 OK (0.014917s, 67.038/s)
+[2019-09-13 14:41:28.17878] [18368] [debug] GET "/" (c2337bdc)
+[2019-09-13 14:41:28.17918] [18368] [debug] Routing to controller "Esv::Controller::Index" and action "index"
+[2019-09-13 14:41:28.17928] [18368] [info] Redirected role: asu, user: ural => asu
+[2019-09-13 14:41:28.17951] [18368] [debug] 302 Found (0.000731s, 1367.989/s)
+[2019-09-13 14:41:28.18904] [18368] [debug] GET "/asu" (24663ebf)
+[2019-09-13 14:41:28.18957] [18368] [debug] Routing to controller "Esv::Controller::Index" and action "asu"
+[2019-09-13 14:41:28.18987] [18368] [debug] Rendering template "index/asu.html.ep"
+[2019-09-13 14:41:28.19198] [18368] [debug] Rendering cached template "sidenav.html.ep"
+[2019-09-13 14:41:28.19297] [18368] [debug] Rendering cached template "dropdown-other.html.ep"
+[2019-09-13 14:41:28.19403] [18368] [debug] Rendering cached template "layouts/default.html.ep"
+[2019-09-13 14:41:28.19455] [18368] [debug] 200 OK (0.005496s, 181.951/s)

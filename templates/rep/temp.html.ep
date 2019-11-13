@@ -1,0 +1,35 @@
+% layout 'print', title => 'Температура наружного воздуха';
+<!--pre>
+%#= $d
+</pre-->
+<h1>Ежедневная сводка по предприятию &quot;Уфаводоканал&quot;</h1>
+<p class="date"><%== $r->report_date %></p>
+<p><b>Сформировано:</b> диспетчер ЦАДС, Иванова А.П., <%= $r->creation_date %></p>
+<div>
+<h2>Температура наружного воздуха</h2>
+<table class="br">
+%# my $v = $r->{podano};
+<tr>
+  <th class="temp">Дата</th>
+  <th class="temp">СКВ-1</th>
+  <th class="temp">ЮВ-2</th>
+  <th class="temp">ИВ-2</th>
+  <th class="temp">ГОСК</th>
+</tr>
+% for (0..23) {
+<tr>
+  <td>12.12.2018 0:00:00</td>
+  <td>-9 &deg;C</td>
+  <td>-8 &deg;C</td>
+  <td>-11 &deg;C</td>
+  <td></td>
+</tr>
+% }
+<tr class="sel">
+  <th>Средняя температура</th>
+  <td>-10,3 &deg;C</td>
+  <td>-7,5 &deg;C</td>
+  <td>-10,0 &deg;C</td>
+  <td></td>
+</tr>
+</table>

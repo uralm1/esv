@@ -1,0 +1,166 @@
+% layout 'default';
+<header>
+<div class="navbar-fixed">
+  <nav class="navbar green lighten-2 white-text">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Диспетчер&nbsp;ЦАДС</a>
+      <ul id="nav-mobile" class="right">
+	<li><a href="javascript:void(0)" class="refreshnav waves-effect" title="Обновить страницу"><i class="material-icons">refresh</i></a></li>
+	<li><a href="#!" data-target="dropdown-other" class="dropdown-trigger waves-effect" title="Инструменты"><i class="material-icons">settings</i></a></li>
+      </ul>
+      <a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
+    </div>
+  </nav>
+</div>
+%= include 'sidenav', sidenav_active_page => 'otkl'
+%= include 'dropdown-other'
+</header>
+
+<main>
+<div class="">
+  <div class="row anchorfix" id="h-otkl">
+    <div class="col s12">
+      <h5>Отключения</h5>
+    </div>
+  </div>
+
+  <div class="row anchorfix" id="h-otkl-plan">
+    <div class="col s12 greenbg">
+      <h6>Плановые отключения</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s10">
+      <div class="input-field textarea-input-field">
+	% my $otid = metric2id 'otkl.plan';
+	<textarea class="textcb materialize-textarea" id="<%== $otid %>"><%== get 'otkl.plan' %></textarea>
+	<label for="<%== $otid %>">Описание отключений по пунктам</label>
+        <span class="helper-text"></span>
+      </div>
+      <a class="fake-save-btn waves-effect waves-light btn-small" title="Изменённая информация также сохраняется автоматически при переводе курсора в другую ячейку">Сохранить</a>
+    </div>
+  </div>
+ 
+  <div class="row anchorfix" id="h-otkl-noplan">
+    <div class="col s12 greenbg">
+      <h6>Внеплановые (аварийные) отключения</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s2 graybg">
+      <b>ЦЕХ</b>
+    </div>
+    <div class="col s2 graybg">
+      <b>МУП УВК</b>
+    </div>
+    <div class="col s2 graybg">
+      <b>По заявкам</b>
+    </div>
+    <div class="col s2 graybg">
+      <b>Итого</b>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 center-label-form">
+      УСВС
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'otkl.usvs.uvk.num_vneplan', style=>'norm')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'otkl.usvs.zayav.num_vneplan', style=>'norm')
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'otkl-usvs-itogo-num_vneplan', label=>'Отключений', style=>'norm')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 center-label-form">
+      УЗВС
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'otkl.uzvs.uvk.num_vneplan', style=>'norm')
+    </div>
+    <div class="col s2">
+      %== form_el(class=>'textcb', metric=>'otkl.uzvs.zayav.num_vneplan', style=>'norm')
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'otkl-uzvs-itogo-num_vneplan', label=>'Отключений', style=>'norm')
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s2 graybg center-label-form">
+      <b>Итого</b>
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'otkl-uvk-itogo-num_vneplan', label=>'МУП УВК', style=>'norm')
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'otkl-zayav-itogo-num_vneplan', label=>'По заявкам', style=>'norm')
+    </div>
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'otkl-itogo-num_vneplan', label=>'Всего', style=>'norm')
+    </div>
+  </div>
+</div>
+</main>
+% content_for script0 => begin
+<script src="/js/jquery.matchHeight-min.js"></script>
+<script src="/js/numeral.min.js"></script>
+<script src="/js/base64.min.js"></script>
+<script src="/js/formutils.js?v=021"></script>
+<script src="/js/jquery.tabbable.min.js"></script>
+<script>
+$(document).ready(function(){
+  % my $idslt = stash 'idslt';
+  var idm=idmapper('<%== $idslt->[0] %>', <%== $idslt->[1] %>);
+
+  $('.dropdown-trigger').dropdown({coverTrigger:false,constrainWidth:false});
+  $('.refreshnav').click(function(){location.reload()});
+  $('.graybg').matchHeight();
+
+  var update_itogo_fields = function(){
+    var d1 = {usvs:{},uzvs:{}};
+    d1.usvs.uvk = idm.zint('otkl.usvs.uvk.num_vneplan');
+    d1.usvs.zayav = idm.zint('otkl.usvs.zayav.num_vneplan');
+    d1.uzvs.uvk = idm.zint('otkl.uzvs.uvk.num_vneplan');
+    d1.uzvs.zayav = idm.zint('otkl.uzvs.zayav.num_vneplan');
+
+    $('#otkl-usvs-itogo-num_vneplan').val(d1.usvs.uvk + d1.usvs.zayav);
+    $('#otkl-uzvs-itogo-num_vneplan').val(d1.uzvs.uvk + d1.uzvs.zayav);
+    $('#otkl-uvk-itogo-num_vneplan').val(d1.usvs.uvk + d1.uzvs.uvk);
+    $('#otkl-zayav-itogo-num_vneplan').val(d1.usvs.zayav + d1.uzvs.zayav);
+    $('#otkl-itogo-num_vneplan').val(d1.usvs.uvk + d1.usvs.zayav + d1.uzvs.uvk + d1.uzvs.zayav);
+    M.updateTextFields();
+  };
+
+  var process_submit = function(s,url,update_func){
+    var p=$.post(url,{id:s.get(0).id,v:s.val()});
+    p.done(function(d){
+      s.removeClass('invalid').addClass('valid');
+      s.siblings('.helper-text').attr('data-success','Сохранено: '+d.msg);
+      if('v' in d){
+        s.val(d.v);
+        if(update_func!==undefined){update_func()}
+      };
+    });
+    p.fail(function(o,t){
+      s.removeClass('valid').addClass('invalid');
+      s.siblings('.helper-text').attr('data-error','Ошибка: '+o.responseJSON.msg);
+      if('v' in o.responseJSON){s.val(o.responseJSON.v)};
+    });
+  };
+
+  $('textarea.textcb').change(function(){process_submit($(this), '/disp/plk/submit3')});
+  $('a.fake-save-btn').click(function(){process_submit($('textarea.textcb'), '/disp/plk/submit3')});
+  $('input.textcb').change(function(){process_submit($(this), '/disp/plk/submit1', update_itogo_fields)});
+  update_itogo_fields();
+
+  $('input.textcb').keypress(function(e){if(e.which==13){e.preventDefault();$.tabNext();}});
+});
+</script>
+% end
+

@@ -1,0 +1,51 @@
+% layout 'default', title => 'Обслуживание системы';
+<header>
+<div class="navbar-fixed">
+  <nav class="navbar brown darken-2 white-text">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Доступ&nbsp;персонала&nbsp;АСУ</a>
+      <ul id="nav-mobile" class="right">
+	<li><a href="javascript:void(0)" class="refreshnav waves-effect white-text" title="Обновить страницу"><i class="material-icons">refresh</i></a></li>
+	<li><a href="#!" data-target="dropdown-other" class="dropdown-trigger waves-effect white-text" title="Инструменты"><i class="material-icons">settings</i></a></li>
+      </ul>
+      <a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons white-text">menu</i></a>
+    </div>
+  </nav>
+</div>
+%= include 'sidenav', sidenav_active_page => '', sidenav_no_menu => '1'
+%= include 'dropdown-other'
+</header>
+
+<main>
+<div class="scont">
+<h5 id="top">Обслуживание системы</h5>
+<div class="row">
+  <div class="col s10">
+    <p class="asutext">Система автоматически определила, что Вы являетесь специалистом службы АСУ.</p>
+    <p class="asutext"><b>Переход к разделам пользователей:</b></p>
+    <ul>
+      <li><%= link_to 'dispplk2' => (class=>'asutext') => begin %>Диспетчер ЦАДС<% end %></li>
+      <!--li><a class="asutext-dis" href="#" title="Нереализовано">Генеральный директор предприятия</a></li-->
+      <!--li><a class="asutext-dis" href="#" title="Нереализовано">Технический директор предприятия</a></li-->
+    </ul>
+    <br>
+    <p>
+    <b>Учёт замечаний по программе:</b><br>
+    <a href="https://faq.uwc.ufanet.ru/doku.php?id=esv:zam" target="_blank">Информация по замечаниям и работе над ними</a>
+    </p>
+    <br>
+    <p>Данное окно отображается только для сотрудников службы АСУ и предназначено для упрощения процесса обслуживания.<br>
+    Пользователи системы после входа автоматически переадресуются к собственным разделам, минуя это окно.
+    </p>
+  </div>
+</div>
+</div>
+</main>
+% content_for script0 => begin
+<script>
+$(document).ready(function(){
+  $('.dropdown-trigger').dropdown({coverTrigger:false,constrainWidth:false});
+  $('.refreshnav').click(function(){location.reload()});
+});
+</script>
+% end

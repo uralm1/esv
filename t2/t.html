@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прототип UI</title>
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <!--link rel="stylesheet" href="/css/fonts-roboto.css"-->
+  <link rel="stylesheet" href="/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/material-icons-esv.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/nav.css">
+</head>
+
+<body class="has-fixed-sidenav">
+
+<header>
+  <div class="navbar-fixed">
+    <nav class="navbar green lighten-2 white-text">
+      <div class="nav-wrapper">
+	<a href="#!" class="brand-logo">Диспетчер ЦАДС</a>
+	<ul id="nav-mobile" class="right">
+	  <li><a href="javascript:void(0)" class="refreshnav waves-effect" title="Обновить страницу"><i class="material-icons">refresh</i></a></li>
+	  <li><a href="#!" data-target="dropdown-other" class="dropdown-trigger waves-effect" title="Действия"><i class="material-icons">settings</i></a></li>
+	</ul>
+	<a href=#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
+      </div>
+    </nav>
+  </div>
+
+  <ul id="sidenav-left" class="sidenav sidenav-fixed">
+    <li><a href="#" class="logo-container white-text">Ежедневная сводка</a></li>
+    <li class="no-padding">
+      <form action="<%== url_for %>" class="" id="date-form" method="GET">
+	<div class="input-field">
+	  <i class="material-icons prefix white-text" title="Дата формирования сводки">watch_later</i>
+	  <input id="date-main" class="datepicker" type="text" name="date" value="<%== get_oper_date(1) %>">
+	  <label class="active date-label" for="date-main">Дата формирования</label>
+	  <span class="helper-text">Выберите дату</span>
+	</div>
+      </form>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+
+	<li class="bold active">
+	  <a class="collapsible-header">Подано воды<i class="material-icons chevron">chevron_left</i></a>
+          <div class="collapsible-body">
+	    <ul>
+	      <li><a href="#" class="waves-effect active">По управлению</a></li>
+	      <li><a href="/disp/plk#h-podano-sgv" class="waves-effect">СГВ</a></li>
+	      <li><a href="/disp/plk#h-podano-skv" class="waves-effect">СКВ</a></li>
+	      <li><a href="/disp/plk#h-podano-uv" class="waves-effect">ЮГВ</a></li>
+	      <li><a href="/disp/plk#h-podano-dema" class="waves-effect">Дёма</a></li>
+	      <li><a href="/disp/plk#h-podano-iz" class="waves-effect">Изяк</a></li>
+	      <li><a href="/disp/plk#h-podano-sh" class="waves-effect">Шакша</a></li>
+	      <li><a href="/disp/plk#h-podano-kp" class="waves-effect">Кооперативная поляна</a></li>
+	      <li><a href="/disp/plk#h-podano-nag" class="waves-effect">Нагаево</a></li>
+	    </ul>
+	  </div>
+        </li>
+
+	<li class="bold">
+	  <a class="collapsible-header">Прочие показатели<i class="material-icons chevron">chevron_left</i></a>
+	  <div class="collapsible-body">
+	    <ul>
+	      <li><a href="#" class="waves-effect">Средняя температура воздуха</a></li>
+	      <li><a href="/disp/plk/oth#h-other-pavl" class="waves-effect">Павловское водохранилище</a></li>
+	      <li><a href="/disp/plk/oth#h-other-reka" class="waves-effect">Уровень реки и мутность</a></li>
+	      <li><a href="/disp/plk/oth#h-other-gosk" class="waves-effect">Правый берег ОСК и ДЦК</a></li>
+	      <li><a href="/disp/plk/oth#h-other-lgosk" class="waves-effect">Левый берег ОСК</a></li>
+	    </ul>
+	  </div>
+        </li>
+
+	<li class="bold">
+	  <a class="collapsible-header" href="/disp/plk/skv#h-skvazh">Работа скважин<i class="material-icons chevron">chevron_left</i></a>
+	  <div class="collapsible-body"></div>
+	</li>
+
+	<li class="bold">
+	  <a class="collapsible-header" href="/disp/plk/kt#h-kontpoint">Контрольные точки<i class="material-icons chevron">chevron_left</i></a>
+	  <div class="collapsible-body"></div>
+	</li>
+
+	<li class="bold">
+	  <a class="collapsible-header" href="/disp/plk/otkl#h-otkl">Отключения<i class="material-icons chevron">chevron_left</i></a>
+	  <div class="collapsible-body">
+	    <ul>
+	      <li><a href="/disp/plk/otkl#h-plan-otkl" class="waves-effect">Плановые</a></li>
+	      <li><a href="/disp/plk/otkl#h-noplan-otkl" class="waves-effect">Внеплановые</a></li>
+	    </ul>
+	  </div>
+	</li>
+
+      </ul>
+    </li>
+    <li class="current-date">
+      Сегодня: <%= current_date_frm %>
+    </li>
+    <li class="copyright">
+      <span>ЦАДС</span>
+      <span title="Версия: <%== $version %>. Автор: Урал Хасанов"> &#x00b7 МУП "Уфаводоканал" &#x00b7 2019 </span>
+    </li>
+  </ul>
+
+<ul id="dropdown-other" class="dropdown-content">
+  <li><%= link_to mc => (target=>'_blank') => begin %><i class="material-icons">extension</i>Каталог измерений<% end %></li>
+  <li class="divider" tabindex="-1"></li>
+  <li><a href="https://auth.uwc.ufanet.ru" target="_blank"><i class="material-icons">wifi</i>Корпоративная сеть</a></li>
+  <li><a href="https://rc.uwc.ufanet.ru" target="_blank"><i class="material-icons">mail_outline</i>Корпоративная почта</a></li>
+  <li><a href="https://otk.uwc.ufanet.ru/otrs/customer.pl" target="_blank"><i class="material-icons">person_outline</i>Техподдержка службы АСУ</a></li>
+  <li><a href="https://faq.uwc.ufanet.ru" target="_blank"><i class="material-icons">local_library</i>База знаний / Часто задаваемые вопросы</a></li>
+  <li class="divider" tabindex="-1"></li>
+  <li><a href="<%= config 'help_url' %>" target="_blank"><i class="material-icons">help</i>Помощь по программе</a></li>
+</ul>
+
+</header>
+
+<main>
+<div class="">
+  <div class="row" id="h-podano">
+    <div class="col s12">
+      <h5>Подано воды</h5>
+    </div>
+
+    <div class="row" id="h-podano-upr">
+      <div class="col s12 greenbg">
+	<h6>По управлению</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2 graybg">
+	%== form_formula_el(id=>'upr-podyom', label=>'Поднято 1 подъёмы', span=>'м<sup>3</sup>/сут.')
+      </div>
+      <div class="col s2 graybg">
+	%== form_formula_el(id=>'upr-gorod', label=>'Подано в город', span=>'м<sup>3</sup>/сут.')
+      </div>
+      <div class="col s2 graybg">
+	%== form_formula_el(id=>'upr-deltamonth', label=>'+/- с начала месяца', span=>'м<sup>3</sup>/сут.')
+      </div>
+      <div class="col s2 graybg">
+	%== form_formula_el(id=>'upr-deltamonth-gendir', label=>'+/- для ген.дир-ра', span=>'м<sup>3</sup>/сут.')
+      </div>
+    </div>
+
+    <div class="row" id="h-podano-sgv">
+      <div class="col s12 greenbg">
+	<h6>СГВ11111</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.podyom')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.gorod')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth')
+      </div>
+      <div class="col s2">
+	%== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'zhost.sgv.max')
+      </div>
+    </div>
+
+    <div class="row" id="h-podano-sgv">
+      <div class="col s12 greenbg">
+	<h6>СГВ22222</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.podyom')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.gorod')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth')
+      </div>
+      <div class="col s2">
+	%== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'zhost.sgv.max')
+      </div>
+    </div>
+
+    <div class="row" id="h-podano-sgv">
+      <div class="col s12 greenbg">
+	<h6>СГВ33333</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.podyom')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.gorod')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth')
+      </div>
+      <div class="col s2">
+	%== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'zhost.sgv.max')
+      </div>
+    </div>
+
+    <div class="row" id="h-podano-sgv">
+      <div class="col s12 greenbg">
+	<h6>СГВ44444</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.podyom')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.gorod')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth')
+      </div>
+      <div class="col s2">
+	%== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'zhost.sgv.max')
+      </div>
+    </div>
+
+    <div class="row" id="h-podano-sgv">
+      <div class="col s12 greenbg">
+	<h6>СГВ55555</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.podyom')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.gorod')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth')
+      </div>
+      <div class="col s2">
+	%== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'zhost.sgv.max')
+      </div>
+    </div>
+
+    <div class="row" id="h-podano-sgv">
+      <div class="col s12 greenbg">
+	<h6>СГВ66666</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.podyom')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.gorod')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth')
+      </div>
+      <div class="col s2">
+	%== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'zhost.sgv.max')
+      </div>
+    </div>
+
+    <div class="row" id="h-podano-sgv">
+      <div class="col s12 greenbg">
+	<h6>СГВ77777</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.podyom')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.gorod')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'podacha.sgv.deltamonth')
+      </div>
+      <div class="col s2">
+	%== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.sgv.max', metric_min=>'ostcl.sgv.min')
+      </div>
+      <div class="col s2">
+	%== form_el(class=>'textcb', metric=>'zhost.sgv.max')
+      </div>
+    </div>
+
+  </div>
+</div>
+</main>
+
+<footer class="page-footer green lighten-1">
+  <div class="footer-copyright">
+    <div class="scont">
+      <span class="right">(Текущий пользователь: <%# $remote_user %>)</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+  $('.dropdown-trigger').dropdown({coverTrigger:false,constrainWidth:false});
+  $('.collapsible').collapsible();
+  $('.refreshnav').click(function(){location.reload()});
+  $('.datepicker').datepicker({firstDay:1,format:'dd.mm.yyyy',
+    i18n:{cancel:'Отмена',done:'Выбрать',
+    months:['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    monthsShort:['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+    weekdays:['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+    weekdaysShort:['Вск','Пнд','Втр','Срд','Чтв','Птн','Сбт'],
+    weekdaysAbbrev:['Вс','Пн','Вт','Ср','Чт','Пт','Сб']},
+    autoClose:false,
+    container:document.getElementsByTagName('body'),
+    defaultDate:new Date(),
+  });
+});
+</script>
+
+</body>
+</html>
