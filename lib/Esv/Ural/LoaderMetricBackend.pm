@@ -49,6 +49,7 @@ sub set {
       #$db_value = sprintf('%.2f', $text_value); # round
 
       $db_value = $self->{formatter_set}->format_number($db_value, $f->{form}{round}, 1);
+      $db_value .= '.0' if $f->{form}{round} <= 0; # db value must remain float
 
     } elsif ($type eq 'int' or $type eq 'sost_lgosk') { #################
       $db_value =~ s/^\s+|\s+$//g; # trim

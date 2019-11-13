@@ -289,7 +289,7 @@
       %== form_el(class=>'textcb', metric=>'podacha.nag.podyom', style=>'small', unit=>'no')
     </div>
     <div class="col s2 evenbg">
-      %#== form_el(class=>'textcb', metric=>'podacha.nag.gorod', style=>'small', unit=>'no')
+      %== form_el(class=>'textcb', metric=>'podacha.nag.gorod', style=>'small', unit=>'no')
     </div>
     <div class="col s2 evenbg">
       %== form_el(class=>'textcb', metric=>'podacha.nag.deltamonth', style=>'small', unit=>'no')
@@ -340,7 +340,7 @@ $(document).ready(function(){
     d.iz.gorod = idm.zfloat('podacha.iz.gorod');
     d.sh.gorod = idm.zfloat('podacha.sh.gorod');
     d.kp.gorod = idm.zfloat('podacha.kp.kp_itogo.gorod');
-    d.nag.gorod = 0;//idm.zfloat('podacha.nag.gorod');
+    d.nag.gorod = 0;//idm.zfloat('podacha.nag.gorod');//FIXME
 
     d.sgv.deltamonth = idm.zfloat('podacha.sgv.deltamonth');
     d.skv.deltamonth = idm.zfloat('podacha.skv.deltamonth');

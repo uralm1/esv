@@ -59,6 +59,7 @@ sub new {
 	{ metric=>'podacha.iz.gorod', name=>'Изяк', color=>'#36a2eb' },
 	{ metric=>'podacha.sh.gorod', name=>'Шакша', color=>'#00a950' },
 	{ metric=>'podacha.kp.kp_itogo.gorod', name=>'Кооп.поляна', color=>'#acc236' },
+	{ metric=>'podacha.nag.gorod', name=>'Нагаево', color=>'#ff9f40' },
       ],
     },
     reka => {

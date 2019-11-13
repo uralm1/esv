@@ -157,7 +157,7 @@
 <tr>
   <th colspan="2" class="dest">Нагаево</td>
   <td><%== get 'podacha.nag.podyom' %></td>
-  <td>-</td>
+  <td><%== get 'podacha.nag.gorod' %></td>
   <td><%== get 'podacha.nag.deltamonth' %></td>
   <td><%== get 'zhost.nag.max' %></td>
   <td><%== get 'zhost.nag.date' %></td>
