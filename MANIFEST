@@ -1,4 +1,8 @@
+.dockerignore
 .gitattributes
+_b
+cpanfile
+Dockerfile
 esv.conf
 lib/Esv.pm
 lib/Esv/Command/load1.pm

@@ -1,7 +1,8 @@
 use strict;
 use warnings;
 
-use ExtUtils::MakeMaker;
+#use ExtUtils::MakeMaker;
+use ExtUtils::MakeMaker::CPANfile;
 
 my $inst_dir = '/opt/esv';
 
@@ -10,23 +11,23 @@ WriteMakefile(
   AUTHOR => 'Ural Khasanov <uralm@uwc.ufanet.ru>',
   DISTNAME => 'esv',
   VERSION_FROM   => 'lib/Esv.pm',
-  PREREQ_PM => {
-    'Mojolicious' => '8.09',
-    'DateTime' => 0,
-    'DateTime::Format::MySQL' => 0,
-    'Mojo::mysql' => 0,
-    'DBI' => 0,
-    'DBD::ODBC' => 0,
-    'Number::Format' => 0,
-    'AnyEvent' => 0,
-    'AnyEvent::InfluxDB' => 0,
-    'InfluxDB::LineProtocol' => 0,
-    'Regexp::Common' => 0,
-    'Encode' => 0,
-    'MIME::Base64' => 0,
-    'Text::CSV' => 0,
-    'HTTP::BrowserDetect' => '3.23',
-  },
+  #PREREQ_PM => {
+  #  'Mojolicious' => '8.09',
+  #  'DateTime' => 0,
+  #  'DateTime::Format::MySQL' => 0,
+  #  'Mojo::mysql' => 0,
+  #  'DBI' => 0,
+  #  'DBD::ODBC' => 0,
+  #  'Number::Format' => 0,
+  #  'AnyEvent' => 0,
+  #  'AnyEvent::InfluxDB' => 0,
+  #  'InfluxDB::LineProtocol' => 0,
+  #  'Regexp::Common' => 0,
+  #  'Encode' => 0,
+  #  'MIME::Base64' => 0,
+  #  'Text::CSV' => 0,
+  #  'HTTP::BrowserDetect' => '3.23',
+  #},
   test      => {TESTS => 't/*.t'},
   PREFIX => $inst_dir,
   LIB => "$inst_dir/lib",

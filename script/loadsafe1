@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 APP_DIR='/opt/esv'
 #APP_DIR='/home/sv/src/esv'
