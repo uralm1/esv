@@ -13,6 +13,7 @@ requires 'Regexp::Common';
 requires 'Encode';
 requires 'MIME::Base64';
 requires 'Text::CSV';
+requires 'Text::CSV_XS';
 requires 'HTTP::BrowserDetect', '3.23';
 requires 'ExtUtils::MakeMaker::CPANfile';
 

@@ -8,7 +8,7 @@ use Esv::Ural::MetricsCatalog;
 use Esv::Command::load1;
 use Esv::Command::loadsafe1;
 
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 
 # This method will run once at server start
 sub startup {
