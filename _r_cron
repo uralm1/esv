@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run -d --name esv-cron \
+  -v /home/sv/src/esv_cfg/esv.conf:/opt/esv/esv.conf:ro \
+  -e TZ=Asia/Yekaterinburg \
+  -u root:root \
+  --init \
+  uralm1/esv crond -f -M /bin/true -l 8

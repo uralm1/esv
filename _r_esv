@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run -d --name esv \
+  -v /home/sv/src/esv_cfg/esv.conf:/opt/esv/esv.conf:ro \
+  -v esv_public:/opt/esv/public \
+  -e TZ=Asia/Yekaterinburg \
+  -p 3000:3000 \
+  uralm1/esv
