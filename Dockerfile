@@ -4,7 +4,7 @@ COPY cpanfile /src/
 #ENV EV_EXTRA_DEFS -DEV_NO_ATFORK
 
 RUN apk update && \
-  apk add --no-cache perl perl-io-socket-ssl perl-dev g++ make wget curl mariadb-connector-c mariadb-connector-c-dev shadow dcron tzdata unixodbc unixodbc-dev freetds freetds-dev && \
+  apk add --no-cache perl perl-io-socket-ssl perl-dev g++ make wget curl mariadb-connector-c mariadb-connector-c-dev shadow dcron tzdata unixodbc unixodbc-dev freetds freetds-dev patch && \
 # install perl dependences
   curl -L https://cpanmin.us | perl - App::cpanminus && \
   cd /src && \
@@ -54,6 +54,11 @@ RUN cd /src && \
     echo 'Port = 1433'; \
     echo 'Database = sheets'; \
     echo 'UsageCount = 1'; } >> /etc/odbc.ini && \
+# patch AnyEvent::InfluxDB
+  cp /src/support/AnyEvent/InfluxDB.pm.patch /usr/local/share/perl5/site_perl/AnyEvent/ && \
+  cd /usr/local/share/perl5/site_perl/AnyEvent && \
+  patch <InfluxDB.pm.patch && \
+  rm InfluxDB.pm.patch && \
 # cleanup
   cd / && rm -rf /src
 

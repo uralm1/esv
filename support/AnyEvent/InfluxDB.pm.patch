@@ -1,0 +1,51 @@
+--- InfluxDB.pm.orig	2018-12-25 09:33:26.653960343 +0500
++++ InfluxDB.pm	2018-12-25 09:57:50.089966154 +0500
+@@ -23,6 +23,11 @@
+     default => 'http://localhost:8086',
+ );
+ 
++has 'persistent' => (
++    is => 'rw',
++    default => 1,
++);
++
+ has '_is_ssl' => (
+     is => 'lazy',
+ );
+@@ -91,7 +96,8 @@
+         headers => {
+             referer => undef,
+             'user-agent' => "AnyEvent-InfluxDB/0.13",
+-        }
++        },
++	persistent => $self->persistent
+     );
+ 
+     if ($self->has_jwt) {
+@@ -156,7 +162,7 @@
+ 
+     return $data->{measurement}
+         .(
+-            $t ?
++            %$t ?
+                     ','.
+                     join(',',
+                         map {
+@@ -319,10 +325,17 @@
+                         my $res = $_;
+ 
+                         my $cols = $res->{columns};
++			my $tags = $res->{tags};
+                         my $values = $res->{values};
+ 
+                         +{
+                             name => $res->{name},
++			    (
++			        $tags ?
++				   ( tags => $tags )
++				   :
++				   ()
++			    ),
+                             values => [
+                                 map {
+                                     +{
