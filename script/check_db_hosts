@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ip1=beko.uwc.local
-ip2=tsdb.uwc.local
+ip2=tsdb
 
 echo "System startup precheck"
 echo "Waiting for $ip1 goes online..."

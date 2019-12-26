@@ -32,10 +32,10 @@ services:
     volumes:
       - /srv/esv/esv.conf:/opt/esv/esv.conf:ro
       - public:/opt/esv/public
-    ports:
-      - 3000:3000
     environment:
       - TZ=Asia/Yekaterinburg
+    links:
+      - tsdb
     restart: unless-stopped
 
   cron:
@@ -48,6 +48,18 @@ services:
     user: root:root
     init: true
     command: crond -f -M /bin/true -l 8
+    links:
+      - tsdb
+    restart: unless-stopped
+
+  tsdb:
+    image: influxdb:1.7
+    container_name: influxdb
+    volumes:
+      - /srv/influxdb/db:/var/lib/influxdb
+      - /srv/influxdb/backups:/backups
+    environment:
+      - INFLUXDB_REPORTING_DISABLED=true
     restart: unless-stopped
 
 volumes:
