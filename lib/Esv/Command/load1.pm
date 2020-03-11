@@ -16,7 +16,7 @@ use Esv::Ural::CheckDB;
 use Esv::Ural::LoaderUtil;
 
 
-has description => 'Load old DB: podacha, zhost, ostcl, otkl, kt';
+has description => '* Load old DB: podacha, zhost, ostcl, otkl, kt';
 has usage => "Usage: APPLICATION load1\n";
 
 has loader_name => 'loader1';
@@ -359,7 +359,7 @@ WHERE h.dot > ? ORDER BY h.dot");
   $dbh->disconnect;
 
   $log->info($self->loader_name.' синхронизация закончена');
-  exit 0;
+  return 1;
 }
 
 
