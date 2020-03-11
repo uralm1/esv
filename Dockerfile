@@ -4,7 +4,7 @@ COPY cpanfile /src/
 #ENV EV_EXTRA_DEFS -DEV_NO_ATFORK
 
 RUN apk update && \
-  apk add --no-cache perl perl-io-socket-ssl perl-dev g++ make wget curl mariadb-connector-c mariadb-connector-c-dev shadow dcron tzdata unixodbc unixodbc-dev freetds freetds-dev patch && \
+  apk add --no-cache perl perl-io-socket-ssl perl-dev g++ make wget curl mariadb-connector-c mariadb-connector-c-dev shadow tzdata unixodbc unixodbc-dev freetds freetds-dev patch && \
 # install perl dependences
   curl -L https://cpanmin.us | perl - App::cpanminus && \
   cd /src && \
@@ -30,10 +30,6 @@ RUN cd /src && \
   make install && \
 # disable logs
   rm -rf /opt/esv/log && \
-# make cron files
-  echo > /var/spool/cron/crontabs/root && \
-  cat /src/support/docker-loadsafe1.cron > /var/spool/cron/crontabs/esv && \
-  #echo "* * * * * date" >> /var/spool/cron/crontabs/esv && \
 # setup alpine tds
   { echo ; \
     echo '[oper_sheets]'; \

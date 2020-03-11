@@ -15,6 +15,7 @@ requires 'MIME::Base64';
 requires 'Text::CSV';
 requires 'Text::CSV_XS';
 requires 'HTTP::BrowserDetect', '3.23';
+requires 'Algorithm::Cron', '0.10';
 requires 'ExtUtils::MakeMaker::CPANfile';
 
 on 'configure' => sub {

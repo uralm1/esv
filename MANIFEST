@@ -1,10 +1,14 @@
 .dockerignore
 .gitattributes
 _b
+_r_cron
+_r_esv
 cpanfile
+docker-compose.yml
 Dockerfile
 esv.conf
 lib/Esv.pm
+lib/Esv/Command/cron.pm
 lib/Esv/Command/load1.pm
 lib/Esv/Command/loadsafe1.pm
 lib/Esv/Controller/Disp.pm
@@ -87,7 +91,11 @@ script/esv
 script/load1
 script/loadsafe1
 support/_i
+support/AnyEvent/InfluxDB.pm
+support/AnyEvent/InfluxDB.pm.orig
+support/AnyEvent/InfluxDB.pm.patch
 support/esv.service
+support/esv.sql
 support/esv_site.conf
 support/esvloader.cron
 support/esvloader.logrotate

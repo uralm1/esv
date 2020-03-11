@@ -7,8 +7,9 @@ use Esv::Ural::UsersCatalog;
 use Esv::Ural::MetricsCatalog;
 use Esv::Command::load1;
 use Esv::Command::loadsafe1;
+use Esv::Command::cron;
 
-our $VERSION = '0.25';
+our $VERSION = '0.26';
 
 # This method will run once at server start
 sub startup {
@@ -27,6 +28,8 @@ sub startup {
   $self->secrets($config->{secrets});
   $self->sessions->cookie_name('esv');
   $self->sessions->default_expiration(0);
+
+  exit 1 unless $self->validate_config;
 
   $self->plugin('Esv::Plugin::MPagenav');
   $self->plugin('Esv::Plugin::Utils');
@@ -114,6 +117,22 @@ sub startup {
   # demo request
   # /q?date=2018-12-12
   #$r->get('/q')->to('test#testquery');
+}
+
+
+sub validate_config {
+  my $self = shift;
+  my $c = $self->config;
+
+  my $e = undef;
+  #$e = "Config parameter X is not defined.";
+
+  if ($e) {
+    say $e if $self->log->path;
+    $self->log->fatal($e);
+    return undef;
+  }
+  1;
 }
 
 
