@@ -56,7 +56,7 @@
 %   },
 %   nag => {
 %     podyom => get_formula('podacha.nag.podyom'),
-%     gorod => 0,#get_formula('podacha.nag.gorod'),
+%     gorod => get_formula('podacha.nag.gorod'),
 %     deltamonth => get_formula('podacha.nag.deltamonth'),
 %   },
 % };

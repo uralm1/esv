@@ -277,7 +277,7 @@ sub load_data {
         # podacha.upr.gen.gorod
 	my $sum = 0;
 	my $sum_gen = 0;
-	for (qw(podacha.sgv.gorod podacha.uv.gorod podacha.skv.gorod podacha.dema.dema_2p.gorod podacha.iz.gorod podacha.sh.gorod podacha.kp.kp_itogo.gorod)) {
+	for (qw(podacha.sgv.gorod podacha.uv.gorod podacha.skv.gorod podacha.dema.dema_2p.gorod podacha.iz.gorod podacha.sh.gorod podacha.kp.kp_itogo.gorod podacha.nag.gorod)) {
 	  $sum += $a->{$_} if defined $a->{$_};
 	}
 	my $gor4 = $a->{'podacha.dema.dema_2p.gorod'};

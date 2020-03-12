@@ -340,7 +340,7 @@ $(document).ready(function(){
     d.iz.gorod = idm.zfloat('podacha.iz.gorod');
     d.sh.gorod = idm.zfloat('podacha.sh.gorod');
     d.kp.gorod = idm.zfloat('podacha.kp.kp_itogo.gorod');
-    d.nag.gorod = 0;//idm.zfloat('podacha.nag.gorod');//FIXME
+    d.nag.gorod = idm.zfloat('podacha.nag.gorod');
 
     d.sgv.deltamonth = idm.zfloat('podacha.sgv.deltamonth');
     d.skv.deltamonth = idm.zfloat('podacha.skv.deltamonth');
