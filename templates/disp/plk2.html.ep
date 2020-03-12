@@ -336,7 +336,7 @@ $(document).ready(function(){
     d.sgv.gorod = idm.zfloat('podacha.sgv.gorod');
     d.skv.gorod = idm.zfloat('podacha.skv.gorod');
     d.uv.gorod = idm.zfloat('podacha.uv.gorod');
-    d.dema.gorod = idm.zfloat('podacha.dema.dema_2p.gorod');
+    d.dema.gorod = idm.zfloat('podacha.dema.podyom');//change: note 15
     d.iz.gorod = idm.zfloat('podacha.iz.gorod');
     d.sh.gorod = idm.zfloat('podacha.sh.gorod');
     d.kp.gorod = idm.zfloat('podacha.kp.kp_itogo.gorod');

@@ -37,7 +37,7 @@ sub new {
 	{ metric=>'podacha.sgv.podyom', name=>'СГВ', color=>'#ff6384' },
 	{ metric=>'podacha.uv.podyom', name=>'ЮВ', color=>'#4bc0c0' },
 	{ metric=>'podacha.skv.podyom', name=>'Ковшовый', color=>'#537bc4' },
-	{ metric=>'podacha.dema.podyom', name=>'Дёма', color=>'#9966ff' },
+	{ metric=>'podacha.dema.podyom', name=>'Дёма (I-подъём)', color=>'#9966ff' },
 	{ metric=>'podacha.iz.podyom', name=>'Изяк', color=>'#36a2eb' },
 	{ metric=>'podacha.sh.podyom', name=>'Шакша', color=>'#00a950' },
 	{ metric=>'podacha.kp.kp_itogo.podyom', name=>'Кооп.поляна', color=>'#acc236' },
@@ -49,11 +49,11 @@ sub new {
       title => 'Объёмы подачи воды в город, м<sup>3</sup>/сут.',
       unit => 'Подача (м3/сут.)',
       gr => [
-	{ metric=>'podacha.upr.gorod', formula=>1, name=>'По управлению (с дюкером)', color=>'#e53935' },
-	{ metric=>'podacha.upr.gen.gorod', formula=>1, name=>'По управлению (без дюкера)', color=>'#8549ba' },
+	{ metric=>'podacha.upr.gorod', formula=>1, name=>'По управлению', color=>'#e53935' },
 	{ metric=>'podacha.sgv.gorod', name=>'СГВ', color=>'#ff6384' },
 	{ metric=>'podacha.uv.gorod', name=>'ЮВ', color=>'#4bc0c0' },
 	{ metric=>'podacha.skv.gorod', name=>'Ковшовый', color=>'#537bc4' },
+	{ metric=>'podacha.dema.podyom', name=>'Дёма (I-подъём)', color=>'#8044b6' },
 	{ metric=>'podacha.dema.dema_2p.gorod', name=>'Дёма (II-подъём)', color=>'#9966ff' },
 	{ metric=>'podacha.dema.dema_gorod.gorod', name=>'Дёма (из города)', color=>'#ffcd56' },
 	{ metric=>'podacha.iz.gorod', name=>'Изяк', color=>'#36a2eb' },
@@ -274,25 +274,13 @@ sub load_data {
 	
       } elsif ($self->{report_type} eq 'gorod') {
         # podacha.upr.gorod
-        # podacha.upr.gen.gorod
 	my $sum = 0;
-	my $sum_gen = 0;
-	for (qw(podacha.sgv.gorod podacha.uv.gorod podacha.skv.gorod podacha.dema.dema_2p.gorod podacha.iz.gorod podacha.sh.gorod podacha.kp.kp_itogo.gorod podacha.nag.gorod)) {
+	for (qw(podacha.sgv.gorod podacha.uv.gorod podacha.skv.gorod podacha.dema.podyom podacha.iz.gorod podacha.sh.gorod podacha.kp.kp_itogo.gorod podacha.nag.gorod)) {
 	  $sum += $a->{$_} if defined $a->{$_};
 	}
-	my $gor4 = $a->{'podacha.dema.dema_2p.gorod'};
-	my $gor5 = $a->{'podacha.dema.dema_gorod.gorod'};
-	if (defined $gor4 && defined $gor5 && $gor4 - $gor5 > 0) {
-	  $sum_gen = $sum - $gor5;
-	} else {
-	  $gor4 = 0 unless defined $gor4;
-	  $sum_gen = $sum - $gor4;
-	}
-	#say "time = $t, sum = $sum, sum_gen = $sum_gen";
+	#say "time = $t, sum = $sum";
 	$a->{'podacha.upr.gorod'} = $sum;
-	$a->{'podacha.upr.gen.gorod'} = $sum_gen;
 	push @{$tmet->{'podacha.upr.gorod'}}, { time=>$t, value=>$sum };
-	push @{$tmet->{'podacha.upr.gen.gorod'}}, { time=>$t, value=>$sum_gen };
       }
     }
     #say Dumper $self->{t};

@@ -36,7 +36,7 @@
 %   },
 %   dema => {
 %     podyom => get_formula('podacha.dema.podyom'),
-%     gorod => get_formula('podacha.dema.dema_2p.gorod'),
+%     gorod => get_formula('podacha.dema.podyom'), #fix: note 15
 %     deltamonth => get_formula('podacha.dema.deltamonth'),
 %   },
 %   iz => {
