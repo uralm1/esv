@@ -8,7 +8,7 @@ numeral.nullFormat('н/д');
 
 // v0.9 rewritten with Numeral.js
 function floattext(v){
-  return numeral(v).format('0,0')
+  return numeral(v).format('0,0.00')
 }
 
 //id mapping with cache

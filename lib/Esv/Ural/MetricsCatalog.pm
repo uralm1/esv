@@ -54,11 +54,12 @@ sub _load {
     }
     $rec->finish;
     $self->{formats} = {};
-    $rec = $mdb->db->query('SELECT id,form,report FROM formats');
+    $rec = $mdb->db->query('SELECT id,form,report,reportper FROM formats');
     while (my $next = $rec->hash) {
       $self->{formats}{$next->{id}} = {
 	form => decode_json($next->{form}),
 	report => decode_json($next->{report}),
+	reportper => decode_json($next->{reportper}),
       };
     }
     $rec->finish;
