@@ -39,9 +39,6 @@
     <div class="col s2 graybg">
       %== form_formula_el(id=>'upr-deltamonth', label=>'+/- с начала месяца', span=>'м<sup>3</sup>/сут.')
     </div>
-    <div class="col s2 graybg">
-      %== form_formula_el(id=>'upr-deltamonth-gendir', label=>'+/- для ген.дир-ра', span=>'м<sup>3</sup>/сут.')
-    </div>
   </div>
 
   <div class="row anchorfix" id="h-podano-sgv">
@@ -131,8 +128,6 @@
     </div>
     <div class="col s2">
       %== form_el(class=>'textcb', metric=>'podacha.dema.deltamonth')
-      <div class="fielddivider"></div>
-      %== form_el(class=>'textcb', metric=>'podacha.dema.gendir.deltamonth')
     </div>
     <div class="col s2">
       %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.dema.svob.max', metric_min=>'ostcl.dema.svob.min')
@@ -289,18 +284,14 @@ $(document).ready(function(){
     d.kp.deltamonth = idm.zfloat('podacha.kp.deltamonth');
     d.nag.deltamonth = idm.zfloat('podacha.nag.deltamonth');
 
-    d.dema.deltamonth_gendir = idm.zfloat('podacha.dema.gendir.deltamonth');
-
-    var upr = {podyom:0,gorod:0,deltamonth:0,deltamonth_gendir:0};
+    var upr = {podyom:0,gorod:0,deltamonth:0};
     for (var k in d) {
       for (var ki in upr) {
-	var ki2 = (ki=='deltamonth_gendir' && k!='dema')?'deltamonth':ki;
-        upr[ki] += d[k][ki2];
+        upr[ki] += d[k][ki];
     }}
     $('#upr-podyom').val(floattext(upr.podyom));
     $('#upr-gorod').val(floattext(upr.gorod));
     $('#upr-deltamonth').val(floattext(upr.deltamonth));
-    $('#upr-deltamonth-gendir').val(floattext(upr.deltamonth_gendir));
     M.updateTextFields();
   };
  

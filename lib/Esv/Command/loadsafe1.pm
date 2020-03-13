@@ -143,8 +143,8 @@ WHERE h.dot > ? ORDER BY h.dot");
     $mb->set_safe('podacha.dema.dema_1p.podyom', $hr->{pod4});#always NULL
     $mb->set_safe('podacha.dema.dema_2p.gorod', $hr->{gor4});
     $mb->set_safe('podacha.dema.dema_gorod.gorod', $hr->{gor5});
-    $mb->set_safe('podacha.dema.deltamonth', $hr->{mes5});
-    $mb->set_safe('podacha.dema.gendir.deltamonth', $hr->{mes5gen});
+    $mb->set_safe('podacha.dema.deltamonth', $hr->{mes5gen}); #was {mes5}
+    #$mb->set_safe('podacha.dema.gendir.deltamonth', $hr->{mes5gen});
     $mb->set_safe('zhost.dema.max', $hr->{zhest_dem_max});
     $mb->set_safe('zhost.dema.date', $hr->{zhest_data_dem});
 
