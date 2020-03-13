@@ -68,11 +68,8 @@
     <div class="col s2 graybg">
       %== form_formula_el(id=>'upr-gorod', style=>'small')
     </div>
-    <div class="col s1 graybg">
-      %== form_formula_el(id=>'upr-deltamonth', span=>'+/-', style=>'small', font=>'small')
-    </div>
-    <div class="col s1 graybg">
-      %== form_formula_el(id=>'upr-deltamonth-gendir', span=>'+/- ген.дир.', style=>'small', font=>'small')
+    <div class="col s2 graybg">
+      %== form_formula_el(id=>'upr-deltamonth', style=>'small')
     </div>
     <div class="col s2 graybg">
     </div>
@@ -167,9 +164,8 @@
       %== form_el(class=>'textcb', metric=>'podacha.dema.dema_gorod.gorod', style=>'smallinline', unit=>'no')
     </div>
     <div class="col s2 evenbg">
+      ген.
       %== form_el(class=>'textcb', metric=>'podacha.dema.deltamonth', style=>'smallinline', unit=>'no')
-      <br>ген.
-      %== form_el(class=>'textcb', metric=>'podacha.dema.gendir.deltamonth', style=>'smallinline', unit=>'no')
     </div>
     <div class="col s2 evenbg">
       %== form_maxmin_el(class=>'maxmincb', metric_max=>'ostcl.dema.svob.max', metric_min=>'ostcl.dema.svob.min', style=>'small', unit=>'no')
@@ -351,18 +347,14 @@ $(document).ready(function(){
     d.kp.deltamonth = idm.zfloat('podacha.kp.deltamonth');
     d.nag.deltamonth = idm.zfloat('podacha.nag.deltamonth');
 
-    d.dema.deltamonth_gendir = idm.zfloat('podacha.dema.gendir.deltamonth');
-
-    var upr = {podyom:0,gorod:0,deltamonth:0,deltamonth_gendir:0};
+    var upr = {podyom:0,gorod:0,deltamonth:0};
     for (var k in d) {
       for (var ki in upr) {
-	var ki2 = (ki=='deltamonth_gendir' && k!='dema')?'deltamonth':ki;
-        upr[ki] += d[k][ki2];
+        upr[ki] += d[k][ki];
     }}
     $('#upr-podyom').val(floattext(upr.podyom));
     $('#upr-gorod').val(floattext(upr.gorod));
     $('#upr-deltamonth').val(floattext(upr.deltamonth));
-    $('#upr-deltamonth-gendir').val(floattext(upr.deltamonth_gendir));
     M.updateTextFields();
   };
  
