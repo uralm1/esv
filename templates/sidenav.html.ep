@@ -51,8 +51,7 @@
 	<a class="collapsible-header yellow-text" data-href="/disp/plk/otkl#h-otkl">Отчёты<i class="material-icons chevron">chevron_left</i></a>
 	<div class="collapsible-body">
 	  <ul>
-	    <li><%= link_to url_for('reppreview')->query(rep => 'gendir') => (class => 'waves-effect') => begin %>Для генерального директора<% end %></li>
-	    <li><%= link_to url_for('reppreview')->query(rep => 'tehdir') => (class => 'waves-effect') => begin %>Для технического директора<% end %></li>
+	    <li><%= link_to url_for('reppreview')->query(rep => 'tehdir') => (class => 'waves-effect') => begin %>Сводка по предприятию<% end %></li>
 	    <!--li><%= link_to url_for('reppreview')->query(rep => 'temp') => (class => 'waves-effect') => begin %>Температура<% end %></li-->
             <!--li><a href="<%= config 'dashboard_url' %>" class="waves-effect" target="_blank">Графики</a></li-->
 	    <li><%= link_to url_for('repperiod') => (class => 'waves-effect') => begin %>Отчёты по периодам...<% end %></li>

@@ -21,7 +21,7 @@ sub new {
 # $obj->validate_epoch($e)
 sub validate_epoch {
   my ($self, $e) = @_;
-  ($e and $e =~ m/^\d{1,10}$/ and $e >= 0 and $e <= 1609372800);
+  ($e and $e =~ m/^\d{1,10}$/ and $e >= 0);
 }
 
 

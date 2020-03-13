@@ -1,4 +1,4 @@
-% layout 'print', title => 'Сводка для технического директора';
+% layout 'print', title => 'Сводка по предприятию';
 <!--pre>
 %#= dumper session
 </pre-->

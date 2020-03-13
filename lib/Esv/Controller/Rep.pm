@@ -22,17 +22,11 @@ sub preview {
   my $bad_rep;
   my $no_date = 0;
   if (defined $type) {
-    if ($type eq 'gendir') {
-      $name = 'Отчёт:&nbsp;Для&nbsp;генерального&nbsp;директора';
-      $url = $self->url_for('repgendir')->query(date=>$epoch);
-      $filename = DateTime->from_epoch(epoch=>$epoch, time_zone=>$self->stash('utc_tz'))->ymd.
-        ' - отчет для генерального директора';
-
-    } elsif ($type eq 'tehdir') {
-      $name = 'Отчёт:&nbsp;Для&nbsp;технического&nbsp;директора';
+    if ($type eq 'tehdir') {
+      $name = 'Отчёт:&nbsp;Сводка&nbsp;по&nbsp;предприятию';
       $url = $self->url_for('reptehdir')->query(date=>$epoch);
       $filename = DateTime->from_epoch(epoch=>$epoch, time_zone=>$self->stash('utc_tz'))->ymd.
-        ' - отчет для технического директора';
+        ' - сводка по предприятию';
 
     } elsif ($type eq 'temp') {
       $name = 'Отчёт:&nbsp;Температура';
@@ -102,16 +96,6 @@ sub preview {
   $self->render(repdata => { name => $name, url => $url, filename => $filename}, sidenav_no_date => $no_date);
 }
 
-
-sub gendir {
-  my $self = shift;
-  return undef unless $self->authorize({asu=>1,cds=>1});
-
-  my $r = Esv::Ural::Report->new($self);
-  return $self->render(text => 'Ошибка') unless ($r->set_date($self->param('date')));
-
-  $self->render(r => $r);
-}
 
 sub tehdir {
   my $self = shift;

@@ -9,7 +9,7 @@ use Esv::Command::load1;
 use Esv::Command::loadsafe1;
 use Esv::Command::cron;
 
-our $VERSION = '0.26';
+our $VERSION = '0.27';
 
 # This method will run once at server start
 sub startup {
@@ -103,7 +103,6 @@ sub startup {
   $r->get('/rep/preview')->to('rep#preview');
   $r->post('/rep/preview')->to('rep#preview');
   $r->get('/rep/tehdir')->to('rep#tehdir');
-  $r->get('/rep/gendir')->to('rep#gendir');
   #$r->get('/rep/temp')->to('rep#temp');
   $r->get('/rep/period')->to('rep#period');
   $r->get('/rep/per')->to('rep#per');
