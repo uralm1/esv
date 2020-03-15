@@ -9,7 +9,7 @@ use Esv::Command::load1;
 use Esv::Command::loadsafe1;
 use Esv::Command::cron;
 
-our $VERSION = '0.27';
+our $VERSION = '0.28';
 
 # This method will run once at server start
 sub startup {
