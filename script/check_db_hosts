@@ -24,4 +24,7 @@ do
   #echo -n "$cc "
   sleep 2
 done
+
+[ -e /opt/esv/run/hypnotoad.pid ] && { echo "Removing stalled hypnotoad.pid file."; rm -f /opt/esv/run/hypnotoad.pid; }
+
 echo "All OK"
