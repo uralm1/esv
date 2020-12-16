@@ -28,14 +28,16 @@ WriteMakefile(
   #  'Text::CSV' => 0,
   #  'HTTP::BrowserDetect' => '3.23',
   #},
-  test      => {TESTS => 't/*.t'},
+  test => {TESTS => 't/*.t'},
   PREFIX => $inst_dir,
   LIB => "$inst_dir/lib",
   #PMLIBDIRS => ['lib'],
   #PM => {
   #  'lib/Esv.pm' => '$(INST_LIB)/Esv.pm',
-  #  'script/esv' => '$(INST_SCRIPT)/esv',
   #},
+  INSTALLSCRIPT => "$inst_dir/script",
+  INSTALLSITESCRIPT => "$inst_dir/script",
+  EXE_FILES => ['script/esv', 'script/check_db_hosts', 'script/load1', 'script/loadsafe1'],
   MAN1PODS => {},
   MAN3PODS => {},
 );
@@ -46,9 +48,7 @@ sub install {
   return $inherited.<<"MAKE_FRAG";
 install::
 	\$(NOECHO) \$(ECHO) "** Installing configuration, public and templates files..."
-	\$(NOECHO) install -m 0644 esv.conf \$(DESTDIR)$inst_dir
-	\$(NOECHO) install -m 0755 -d \$(DESTDIR)$inst_dir/script
-	\$(NOECHO) install -D script/* \$(DESTDIR)$inst_dir/script
+	\$(NOECHO) install -m 0644 esv.conf_empty \$(DESTDIR)$inst_dir/esv.conf
 	\$(NOECHO) for d in \$\$(find public -type d); do install -m 0755 -d \$(DESTDIR)$inst_dir/\"\$\$d\"; done
 	\$(NOECHO) for f in \$\$(find public -type f); do install -m 0644 -D \"\$\$f\" \$(DESTDIR)$inst_dir/\"\$\$f\"; done
 	\$(NOECHO) for d in \$\$(find templates -type d); do install -m 0755 -d \$(DESTDIR)$inst_dir/\"\$\$d\"; done
