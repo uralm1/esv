@@ -37,7 +37,7 @@ WriteMakefile(
   #},
   INSTALLSCRIPT => "$inst_dir/script",
   INSTALLSITESCRIPT => "$inst_dir/script",
-  EXE_FILES => ['script/esv', 'script/check_db_hosts', 'script/load1', 'script/loadsafe1'],
+  EXE_FILES => ['script/esv', 'script/start_server', 'script/check_db_hosts', 'script/load1', 'script/loadsafe1'],
   MAN1PODS => {},
   MAN3PODS => {},
 );
