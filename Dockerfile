@@ -68,5 +68,6 @@ USER esv:esv
 #VOLUME ["/opt/esv/public"]
 EXPOSE 3000
 
-CMD ["sh", "-c", "script/check_db_hosts && hypnotoad -f /opt/esv/script/esv"]
+#CMD ["sh", "-c", "script/check_db_hosts && hypnotoad -f /opt/esv/script/esv"]
+CMD ["sh", "-c", "script/check_db_hosts && script/start_server"]
 

@@ -6,7 +6,8 @@ _r_esv
 cpanfile
 docker-compose.yml
 Dockerfile
-esv.conf
+esv.conf__
+esv.conf_empty
 lib/Esv.pm
 lib/Esv/Command/cron.pm
 lib/Esv/Command/load1.pm
@@ -90,6 +91,7 @@ script/check_db_hosts
 script/esv
 script/load1
 script/loadsafe1
+script/start_server
 support/_i
 support/AnyEvent/InfluxDB.pm
 support/AnyEvent/InfluxDB.pm.orig
@@ -149,4 +151,3 @@ templates/settings/index_asu.html.ep
 templates/settings/index_cds.html.ep
 templates/sidenav.html.ep
 templates/test/testquery.html.ep
-test.conf
