@@ -116,10 +116,10 @@ sub set_period {
     }
     return undef if ($self->{period_end_epoch} - $self->{period_start_epoch} > 86400*365*5);
 
-    $self->{dt_start} = DateTime->from_epoch(epoch=>$self->{period_start_epoch}, locale=>'ru', 
-      time_zone=>$self->{c}->stash('utc_tz'));
+    $self->{dt_start} = DateTime->from_epoch(epoch=>$self->{period_start_epoch}, locale=>'ru',
+      time_zone=>$self->{c}->utc_tz);
     # offset for js epoch time hack
-    $self->{offset} = $self->{c}->stash('local_tz')->offset_for_datetime($self->{dt_start});
+    $self->{offset} = $self->{c}->local_tz->offset_for_datetime($self->{dt_start});
     #say "offset: $off";
 
     $self->{c}->stash('mb')->set_time($self->{period_start_epoch}, $self->{period_end_epoch});
@@ -183,8 +183,8 @@ sub names_list {
 sub report_period {
   my $self = shift;
 
-  my $dt_end = DateTime->from_epoch(epoch=>$self->{period_end_epoch}, locale=>'ru', 
-      time_zone=>$self->{c}->stash('utc_tz'));
+  my $dt_end = DateTime->from_epoch(epoch=>$self->{period_end_epoch}, locale=>'ru',
+      time_zone=>$self->{c}->utc_tz);
   my ($dy, $dm, $dd) = $dt_end->subtract_datetime($self->{dt_start})->add(days=>1)->in_units('years','months','days');
   my $t;
   if ($dy == 0) {
@@ -246,10 +246,10 @@ sub load_data {
     my %rsd;
     while (my ($metric, $a) = each %$tmet) {
       for (@$a) {
-	my $t = $_->{time}; 
+	my $t = $_->{time};
 	#normalize time
 	$t = int($t/86400)*86400;
-	
+
 	if (exists $rsd{$t}) {
 	  $rsd{$t}->{$metric} = $_->{value};
 	} else {
@@ -271,7 +271,7 @@ sub load_data {
 	#say "time = $t, sum = $sum";
 	$a->{'podacha.upr.podyom'} = $sum;
 	push @{$tmet->{'podacha.upr.podyom'}}, { time=>$t, value=>$sum };
-	
+
       } elsif ($self->{report_type} eq 'gorod') {
         # podacha.upr.gorod
 	my $sum = 0;
@@ -296,8 +296,8 @@ sub js_datasets {
   my $self = shift;
 
   $self->load_data;
- 
-  my $r = ''; 
+
+  my $r = '';
   my $offset = $self->{offset};
   for my $el (@{$self->{gr}}) {
     my $ser = "{label:\'$el->{name}\',borderColor:\'$el->{color}\',";
@@ -314,7 +314,7 @@ sub js_datasets {
       $ser .= "pointRadius:0,pointHoverRadius:0," if !defined $self->{type} || $self->{type} eq 'line';
     }
     $ser .= 'data:[';
-    
+
     for (@$ar) {
       my $t = ($_->{time} - $offset)*1000; # this is hack
       $ser .= "{t:new Date($t),y:$_->{value}},";
@@ -382,7 +382,7 @@ sub every_day {
 # my $csv_in_string or undef = $obj->csv;
 sub csv {
   my $self = shift;
-  
+
   my $csv = Text::CSV->new({binary=>1, sep_char=>';', eol=>"\r\n"});
   my $csvstr;
   my $fh;
@@ -395,7 +395,7 @@ sub csv {
 
   my $tabcb = sub {
     my $e = shift;
-    my $dt = DateTime->from_epoch(epoch=>$e, locale=>'ru', time_zone=>$self->{c}->stash('utc_tz'));
+    my $dt = DateTime->from_epoch(epoch=>$e, locale=>'ru', time_zone=>$self->{c}->utc_tz);
 
     my @a;
     push @a, $dt->strftime('%d.%m.%Y');

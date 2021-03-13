@@ -25,7 +25,7 @@ sub preview {
     if ($type eq 'tehdir') {
       $name = 'Отчёт:&nbsp;Сводка&nbsp;по&nbsp;предприятию';
       $url = $self->url_for('reptehdir')->query(date=>$epoch);
-      $filename = DateTime->from_epoch(epoch=>$epoch, time_zone=>$self->stash('utc_tz'))->ymd.
+      $filename = DateTime->from_epoch(epoch=>$epoch, time_zone=>$self->utc_tz)->ymd.
         ' - сводка по предприятию';
 
     } elsif ($type eq 'temp') {
@@ -67,8 +67,8 @@ sub preview {
 	gosk => 'ГОСК принято на мехочистку и БОС',
 	dck => 'ДЦК очищено сточной воды',
       };
-      $filename = DateTime->from_epoch(epoch=>$pstart, time_zone=>$self->stash('utc_tz'))->ymd.
-        '_'.DateTime->from_epoch(epoch=>$pend, time_zone=>$self->stash('utc_tz'))->ymd.
+      $filename = DateTime->from_epoch(epoch=>$pstart, time_zone=>$self->utc_tz)->ymd.
+        '_'.DateTime->from_epoch(epoch=>$pend, time_zone=>$self->utc_tz)->ymd.
         ' - отчет '.$fnh->{$type};
       $no_date = 1;
       # csv export
@@ -130,15 +130,15 @@ sub period {
   my $ps = $self->session('rds');
   my $pe = $self->session('rde');
   unless ($ps && $pe) {
-    my $d1 = DateTime->today(time_zone=>$self->stash('utc_tz'));
+    my $d1 = DateTime->today(time_zone=>$self->utc_tz);
     $pe = $d1->subtract(days=>1)->epoch;
     $ps = $d1->subtract(days=>7)->truncate(to=>'week')->epoch;
   }
 
   $self->render(def => {
-    type => $rt, 
-    pstart => DateTime->from_epoch(epoch=>$ps, time_zone=>$self->stash('utc_tz'))->dmy('.'),
-    pend => DateTime->from_epoch(epoch=>$pe, time_zone=>$self->stash('utc_tz'))->dmy('.'),
+    type => $rt,
+    pstart => DateTime->from_epoch(epoch=>$ps, time_zone=>$self->utc_tz)->dmy('.'),
+    pend => DateTime->from_epoch(epoch=>$pe, time_zone=>$self->utc_tz)->dmy('.'),
   });
 }
 

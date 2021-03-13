@@ -13,7 +13,7 @@ sub register {
   $args ||= {};
 
   # html_or_undef = check_newversion
-  $app->helper(check_newversion => sub { 
+  $app->helper(check_newversion => sub {
     my $c = shift;
     my $coo = $c->cookie('version');
     my $cur_version = $c->stash('version');
@@ -35,7 +35,7 @@ sub register {
 
 
   # html_or_undef = check_browser
-  $app->helper(check_browser => sub { 
+  $app->helper(check_browser => sub {
     my $c = shift;
     my $coo = $c->cookie('browser');
     if (!defined $coo || $coo ne '1') {
@@ -61,10 +61,10 @@ sub register {
 
 
   # 1_or_undef = check_newfeature(feature_no, feature_version)
-  # current features: 
+  # current features:
   # 1 - print button help
   # 2 - main menu button
-  $app->helper(check_newfeature => sub { 
+  $app->helper(check_newfeature => sub {
     my ($c, $fid, $fver) = @_;
     $fver = 1 unless defined $fver;
     my $coo_name = "feature$fid";
@@ -103,7 +103,7 @@ sub register {
     my ($c, %args) = @_;
     my $metric = $args{metric};
 
-    my $met_conf = $c->stash('mc')->get_metric($metric);
+    my $met_conf = $c->metric_catalog->get_metric($metric);
     my $id = $c->metric2id($metric);
     my $v = $c->stash('mb')->get($metric);
 
@@ -147,8 +147,8 @@ $label<span class=\"helper-text\">$sp</span></div>";
     my ($c, %args) = @_;
     my $metric_max = $args{metric_max};
     my $metric_min = $args{metric_min};
-    my $metmin_conf = $c->stash('mc')->get_metric($metric_min);
-    my $metmax_conf = $c->stash('mc')->get_metric($metric_max);
+    my $metmin_conf = $c->metric_catalog->get_metric($metric_min);
+    my $metmax_conf = $c->metric_catalog->get_metric($metric_max);
     my $id = $c->metric2id($metric_max.'&'.$metric_min);
     my $v = $c->stash('mb')->get($metric_max, $metric_min);
 
@@ -211,7 +211,7 @@ $label<span class=\"helper-text\">$sp</span></div>";
   $app->helper(form_sost_lgosk_el => sub {
     my ($c, %args) = @_;
     my $metric = $args{metric};
-    my $met_conf = $c->stash('mc')->get_metric($metric);
+    my $met_conf = $c->metric_catalog->get_metric($metric);
     my $id = $c->metric2id($metric);
     my $v = $c->stash('mb')->get($metric);
     $v = -1 if $v eq '';
@@ -234,7 +234,7 @@ $label<span class=\"helper-text\">$sp</span></div>";
   $app->helper(form_date_el => sub {
     my ($c, %args) = @_;
     my $metric = $args{metric};
-    my $met_conf = $c->stash('mc')->get_metric($metric);
+    my $met_conf = $c->metric_catalog->get_metric($metric);
     my $id = $c->metric2id($metric);
     my $v = $c->stash('mb')->get($metric);
 
