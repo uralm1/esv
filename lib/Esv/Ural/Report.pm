@@ -25,8 +25,8 @@ sub set_date {
   my $b = undef;
   if ($b = $self->validate_epoch($e)) {
     $self->{report_date_epoch} = $e;
-    $self->{report_date_dt} = DateTime->from_epoch(epoch=>$e, locale=>'ru', 
-      time_zone=>$self->{c}->stash('utc_tz'));
+    $self->{report_date_dt} = DateTime->from_epoch(epoch=>$e, locale=>'ru',
+      time_zone=>$self->{c}->utc_tz);
 
     $self->{c}->stash('mb')->set_time($e, $e+86400);
   }

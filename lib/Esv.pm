@@ -1,10 +1,6 @@
 package Esv;
 use Mojo::Base 'Mojolicious';
 
-use DateTime;
-use DateTime::TimeZone;
-use Esv::Ural::UsersCatalog;
-use Esv::Ural::MetricsCatalog;
 use Esv::Command::load1;
 use Esv::Command::loadsafe1;
 use Esv::Command::cron;
@@ -38,20 +34,6 @@ sub startup {
   push @{$self->commands->namespaces}, 'Esv::Command';
 
   $self->defaults(version => $VERSION);
-  $self->defaults(local_tz => DateTime::TimeZone->new(name => $self->config('time_zone')));
-  $self->defaults(utc_tz => DateTime::TimeZone->new(name => 'UTC'));
-
-  $self->defaults(uc => Esv::Ural::UsersCatalog->new($self->config));
-  unless ($self->defaults('uc')) {
-    die "Fatal error: Users catalog creation error!";
-  }
-  $self->log->debug('Users catalog created');
-
-  $self->defaults(mc => Esv::Ural::MetricsCatalog->new($self->config));
-  unless ($self->defaults('mc')) {
-    die "Fatal error: Metrics catalog creation error!";
-  }
-  $self->log->debug('Metrics catalog created');
 
   # Router authentication routine
   $self->hook(before_dispatch => sub {
@@ -73,7 +55,7 @@ sub startup {
       return undef;
     }
     $c->stash(remote_user => $remote_user);
-    $c->stash(remote_user_role => $c->stash('uc')->get_user_role($remote_user));
+    $c->stash(remote_user_role => $c->users_catalog->get_user_role($remote_user));
     unless ($c->stash('remote_user_role')) {
       $c->render(text => 'Неверный пользователь', status => 401);
       return undef;
@@ -95,7 +77,7 @@ sub startup {
   $r->get('/disp/plk/otkl')->to('disp#plkotkl');
   $r->get('/disp/plk/kt')->to('disp#plkkt');
   $r->get('/disp/plk/kt2')->to('disp#plkkt2');
-  
+
   $r->post('/disp/plk/submit1')->to('disp#plksubmit1');
   $r->post('/disp/plk/submit2')->to('disp#plksubmit2');
   $r->post('/disp/plk/submit3')->to('disp#plksubmit3');

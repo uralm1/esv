@@ -25,9 +25,9 @@
 </tr>
 % my $t = $r->data_table;
 %#= dumper $r->{t};#$t;
-% my $tabcb = sub { 
+% my $tabcb = sub {
 %   my $e = shift;
-%   my $dt = DateTime->from_epoch(epoch=>$e, locale=>'ru', time_zone=>stash('utc_tz'));
+%   my $dt = DateTime->from_epoch(epoch=>$e, locale=>'ru', time_zone=>utc_tz);
 <tr>
   <td><%== $dt->strftime('%d.%m.%Y') %></td>
   % for (@{$r->metrics_list}) {
@@ -106,7 +106,7 @@ var chart1 = new Chart(document.getElementById('chart1'), {
         ticks: {
 	  %== $r->js_suggested(2);
         }
-      }	
+      }
 % }
       ]
     },

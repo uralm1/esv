@@ -9,7 +9,7 @@ sub new {
   my ($class, $controller) = @_;
   my $self = {
     c => $controller,
-    creation_date => DateTime->now(time_zone=>$controller->stash('local_tz'))->strftime('%H:%M %d.%m.%Y'),
+    creation_date => DateTime->now(time_zone=>$controller->local_tz)->strftime('%H:%M %d.%m.%Y'),
     creation_user => $controller->stash('remote_user'),
   };
 
